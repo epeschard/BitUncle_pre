@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>732226097114-6v8k8jgt1bugubhpkp7q0u1jp9fp9fvc.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.732226097114-6v8k8jgt1bugubhpkp7q0u1jp9fp9fvc</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAOkCTFxnOHfW1D8mb4CMHhYAseVA37xt8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>732226097114</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>app.pesch.BitUncle.debug</string>
+	<key>PROJECT_ID</key>
+	<string>bituncle-debug</string>
+	<key>STORAGE_BUCKET</key>
+	<string>bituncle-debug.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:732226097114:ios:20b1aa6887019a8e</string>
+	<key>DATABASE_URL</key>
+	<string>https://bituncle-debug.firebaseio.com</string>
+</dict>
+</plist>

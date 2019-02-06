@@ -16,4 +16,17 @@ class Coordinator {
     init(window: UIWindow) {
         self.window = window
     }
+    
+    func presentSplashController() {
+        let splashScreen = Splash.makeViewController(with: actions, and: parameters)
+        window.rootViewController = splashScreen
+    }
+    
+    private var rootViewController: UIViewController? {
+        return window.rootViewController
+    }
+    
+    private var rootNavigationViewController: UINavigationController? {
+        return window.rootViewController as? UINavigationController
+    }
 }

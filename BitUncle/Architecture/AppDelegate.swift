@@ -15,7 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var appController: AppController?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        appController = AppController(with: window!)
+        appController?.start(with: application)
         return appController?.didFinishLaunching(application, with: launchOptions) ?? true
     }
     

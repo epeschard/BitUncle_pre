@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9C4E5B52220ADCF7004B15C1"
-               BuildableName = "&quot;BitUncle&quot;.app"
+               BuildableName = "BitUncle.app"
                BlueprintName = "BitUncle"
                ReferencedContainer = "container:BitUncle.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9C4E5B52220ADCF7004B15C1"
-            BuildableName = "&quot;BitUncle&quot;.app"
+            BuildableName = "BitUncle.app"
             BlueprintName = "BitUncle"
             ReferencedContainer = "container:BitUncle.xcodeproj">
          </BuildableReference>
@@ -66,7 +66,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9C4E5B52220ADCF7004B15C1"
-            BuildableName = "&quot;BitUncle&quot;.app"
+            BuildableName = "BitUncle.app"
             BlueprintName = "BitUncle"
             ReferencedContainer = "container:BitUncle.xcodeproj">
          </BuildableReference>
@@ -85,7 +85,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9C4E5B52220ADCF7004B15C1"
-            BuildableName = "&quot;BitUncle&quot;.app"
+            BuildableName = "BitUncle.app"
             BlueprintName = "BitUncle"
             ReferencedContainer = "container:BitUncle.xcodeproj">
          </BuildableReference>

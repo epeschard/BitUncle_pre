@@ -22,6 +22,20 @@
 		9C4E5B8B220AE1F1004B15C1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E5B8A220AE1F1004B15C1 /* NetworkManager.swift */; };
 		9C4E5B8D220AE24F004B15C1 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E5B8C220AE24F004B15C1 /* NetworkService.swift */; };
 		9C4E5B8F220AE279004B15C1 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E5B8E220AE279004B15C1 /* Typealias.swift */; };
+		9CC53D86220B01B700267849 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC53D85220B01B700267849 /* Configuration.swift */; };
+		9CC53D88220B01D400267849 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC53D87220B01D400267849 /* Constants.swift */; };
+		9CC53D8C220B04CE00267849 /* GoogleService-Info-Debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CC53D89220B04CE00267849 /* GoogleService-Info-Debug.plist */; };
+		9CC53D8D220B04CE00267849 /* GoogleService-Info-Stage.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CC53D8A220B04CE00267849 /* GoogleService-Info-Stage.plist */; };
+		9CC53D8E220B04CE00267849 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CC53D8B220B04CE00267849 /* GoogleService-Info.plist */; };
+		9CC53D95220B314F00267849 /* SplashActionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC53D8F220B314F00267849 /* SplashActionable.swift */; };
+		9CC53D96220B314F00267849 /* Splash.Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC53D90220B314F00267849 /* Splash.Presenter.swift */; };
+		9CC53D98220B314F00267849 /* Splash.ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC53D92220B314F00267849 /* Splash.ViewController.swift */; };
+		9CC53D99220B314F00267849 /* SplashParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC53D93220B314F00267849 /* SplashParameters.swift */; };
+		9CC53D9A220B314F00267849 /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC53D94220B314F00267849 /* Splash.swift */; };
+		9CC53D9C220B31CD00267849 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC53D9B220B31CD00267849 /* SplashView.swift */; };
+		9CC53D9F220B350F00267849 /* Wireframeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC53D9E220B350F00267849 /* Wireframeable.swift */; };
+		9CC53DA1220B3DE600267849 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC53DA0220B3DE600267849 /* UIView+Extension.swift */; };
+		9CC53DA3220B46A100267849 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC53DA2220B46A100267849 /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +72,20 @@
 		9C4E5B91220AEB21004B15C1 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		9C4E5B92220AEB31004B15C1 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		9C4E5B93220AEB3E004B15C1 /* Stage.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Stage.xcconfig; sourceTree = "<group>"; };
+		9CC53D85220B01B700267849 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		9CC53D87220B01D400267849 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9CC53D89220B04CE00267849 /* GoogleService-Info-Debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Debug.plist"; sourceTree = "<group>"; };
+		9CC53D8A220B04CE00267849 /* GoogleService-Info-Stage.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Stage.plist"; sourceTree = "<group>"; };
+		9CC53D8B220B04CE00267849 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9CC53D8F220B314F00267849 /* SplashActionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashActionable.swift; sourceTree = "<group>"; };
+		9CC53D90220B314F00267849 /* Splash.Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splash.Presenter.swift; sourceTree = "<group>"; };
+		9CC53D92220B314F00267849 /* Splash.ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splash.ViewController.swift; sourceTree = "<group>"; };
+		9CC53D93220B314F00267849 /* SplashParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashParameters.swift; sourceTree = "<group>"; };
+		9CC53D94220B314F00267849 /* Splash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
+		9CC53D9B220B31CD00267849 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		9CC53D9E220B350F00267849 /* Wireframeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wireframeable.swift; sourceTree = "<group>"; };
+		9CC53DA0220B3DE600267849 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		9CC53DA2220B46A100267849 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		A334922A936BD5D8A58D12F1 /* Pods-BitUncleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitUncleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitUncleTests/Pods-BitUncleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BD71B5F977EB659A7D4B7A72 /* Pods_BitUncleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitUncleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C45E168ADF85D538921B9E40 /* Pods-BitUncleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitUncleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitUncleTests/Pods-BitUncleTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -158,6 +186,8 @@
 				9C4E5B86220ADFCE004B15C1 /* Coordinator.swift */,
 				9C4E5B80220ADF55004B15C1 /* Parameters.swift */,
 				9C4E5B8E220AE279004B15C1 /* Typealias.swift */,
+				9CC53D85220B01B700267849 /* Configuration.swift */,
+				9CC53D87220B01D400267849 /* Constants.swift */,
 			);
 			path = Architecture;
 			sourceTree = "<group>";
@@ -170,6 +200,9 @@
 				9C4E5B91220AEB21004B15C1 /* Debug.xcconfig */,
 				9C4E5B92220AEB31004B15C1 /* Release.xcconfig */,
 				9C4E5B93220AEB3E004B15C1 /* Stage.xcconfig */,
+				9CC53D89220B04CE00267849 /* GoogleService-Info-Debug.plist */,
+				9CC53D8A220B04CE00267849 /* GoogleService-Info-Stage.plist */,
+				9CC53D8B220B04CE00267849 /* GoogleService-Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -184,6 +217,7 @@
 		9C4E5B79220ADE6E004B15C1 /* Utililties */ = {
 			isa = PBXGroup;
 			children = (
+				9CC53D9D220B34ED00267849 /* Protocols */,
 				9C4E5B7A220ADE84004B15C1 /* Extensions */,
 			);
 			path = Utililties;
@@ -192,6 +226,8 @@
 		9C4E5B7A220ADE84004B15C1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				9CC53DA0220B3DE600267849 /* UIView+Extension.swift */,
+				9CC53DA2220B46A100267849 /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -209,6 +245,12 @@
 		9C4E5B7C220ADE9F004B15C1 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				9CC53D94220B314F00267849 /* Splash.swift */,
+				9CC53D90220B314F00267849 /* Splash.Presenter.swift */,
+				9CC53D92220B314F00267849 /* Splash.ViewController.swift */,
+				9CC53D8F220B314F00267849 /* SplashActionable.swift */,
+				9CC53D93220B314F00267849 /* SplashParameters.swift */,
+				9CC53D9B220B31CD00267849 /* SplashView.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -227,6 +269,14 @@
 				9C4E5B5F220ADCF8004B15C1 /* LaunchScreen.storyboard */,
 			);
 			path = Ressources;
+			sourceTree = "<group>";
+		};
+		9CC53D9D220B34ED00267849 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9CC53D9E220B350F00267849 /* Wireframeable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +332,11 @@
 				TargetAttributes = {
 					9C4E5B52220ADCF7004B15C1 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					9C4E5B66220ADCF8004B15C1 = {
 						CreatedOnToolsVersion = 10.1;
@@ -313,8 +368,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CC53D8D220B04CE00267849 /* GoogleService-Info-Stage.plist in Resources */,
 				9C4E5B61220ADCF8004B15C1 /* LaunchScreen.storyboard in Resources */,
+				9CC53D8E220B04CE00267849 /* GoogleService-Info.plist in Resources */,
 				9C4E5B5E220ADCF8004B15C1 /* Assets.xcassets in Resources */,
+				9CC53D8C220B04CE00267849 /* GoogleService-Info-Debug.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,11 +411,17 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-BitUncle/Pods-BitUncle-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/StanwoodCore/StanwoodCore.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StanwoodCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -389,16 +453,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CC53DA3220B46A100267849 /* UIColor+Extension.swift in Sources */,
 				9C4E5B85220ADF98004B15C1 /* Actions.swift in Sources */,
+				9CC53D9C220B31CD00267849 /* SplashView.swift in Sources */,
+				9CC53D96220B314F00267849 /* Splash.Presenter.swift in Sources */,
 				9C4E5B57220ADCF7004B15C1 /* AppDelegate.swift in Sources */,
 				9C4E5B87220ADFCE004B15C1 /* Coordinator.swift in Sources */,
+				9CC53D99220B314F00267849 /* SplashParameters.swift in Sources */,
+				9CC53D9A220B314F00267849 /* Splash.swift in Sources */,
 				9C4E5B89220AE1A1004B15C1 /* DataProvider.swift in Sources */,
 				9C4E5B8F220AE279004B15C1 /* Typealias.swift in Sources */,
 				9C4E5B8D220AE24F004B15C1 /* NetworkService.swift in Sources */,
+				9CC53D95220B314F00267849 /* SplashActionable.swift in Sources */,
 				9C4E5B8B220AE1F1004B15C1 /* NetworkManager.swift in Sources */,
+				9CC53D98220B314F00267849 /* Splash.ViewController.swift in Sources */,
 				9C4E5B7F220ADEF3004B15C1 /* AppController.swift in Sources */,
 				9C4E5B83220ADF67004B15C1 /* AppData.swift in Sources */,
 				9C4E5B81220ADF55004B15C1 /* Parameters.swift in Sources */,
+				9CC53D9F220B350F00267849 /* Wireframeable.swift in Sources */,
+				9CC53D86220B01B700267849 /* Configuration.swift in Sources */,
+				9CC53DA1220B3DE600267849 /* UIView+Extension.swift in Sources */,
+				9CC53D88220B01D400267849 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,7 +627,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9C4E5B91220AEB21004B15C1 /* Debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 76898M8GJ2;
 				INFOPLIST_FILE = "BitUncle/Supporting Files/Info.plist";
@@ -569,7 +643,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9C4E5B92220AEB31004B15C1 /* Release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 76898M8GJ2;
 				INFOPLIST_FILE = "BitUncle/Supporting Files/Info.plist";
@@ -685,7 +758,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9C4E5B93220AEB3E004B15C1 /* Stage.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 76898M8GJ2;
 				INFOPLIST_FILE = "BitUncle/Supporting Files/Info.plist";

@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import Firebase
 import StanwoodCore
 
-class AppController {
+class AppController: NSObject {
     
     let appData = AppData()
     var window: UIWindow
@@ -21,9 +22,9 @@ class AppController {
     
     let networkService = NetworkService()
         
-    init(with window: UIWindow, in application: UIApplication) {
+    init(with window: UIWindow) {
         self.window = window
-        
+
         let networkManager = NetworkManager(internetRequest: networkService)
         dataProvider = DataProvider(appData: appData, networkManager: networkManager)
         
@@ -32,10 +33,17 @@ class AppController {
         coordinator = Coordinator(window: window)
         
         actions = Actions(appData: appData, dataProvider: dataProvider, coordinator: coordinator)
+        super.init()
         coordinator.actions = actions
         coordinator.parameters = parameters
     }
     
+    func start(with application: UIApplication) {
+        window.rootViewController?.removeFromParent()
+        window.rootViewController = nil
+        let splashScreen = Splash.makeViewController(with: actions, and: parameters)
+        window.rootViewController = splashScreen
+    }
 }
 
 // MARK:- AppDelegate Functions
@@ -54,7 +62,7 @@ extension AppController {
         }
         
         self.window.rootViewController = UIViewController()
-        
+        FirebaseApp.configure()
         return true
     }
     
