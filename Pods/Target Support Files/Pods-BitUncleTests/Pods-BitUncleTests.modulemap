@@ -1,0 +1,6 @@
+framework module Pods_BitUncleTests {
+  umbrella header "Pods-BitUncleTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
