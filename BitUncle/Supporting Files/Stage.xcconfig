@@ -13,3 +13,4 @@
 
 PRODUCT_BUNDLE_IDENTIFIER = app.pesch.stage.BitUncle;
 PRODUCT_NAME = BitUncle stage;
+ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon-stage;

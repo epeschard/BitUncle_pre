@@ -13,3 +13,4 @@
 
 PRODUCT_BUNDLE_IDENTIFIER = app.pesch.debug.BitUncle;
 PRODUCT_NAME = BitUncle debug;
+ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon-debug;
