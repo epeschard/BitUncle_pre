@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B60CD55B89FE1BF58C9F97B5266EF8FD"
+               BlueprintIdentifier = "F3FF3E3F5CF30CB8A5EABA4CB9934868"
                BlueprintName = "StanwoodCore"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "StanwoodCore.framework">
