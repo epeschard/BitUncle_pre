@@ -10,10 +10,6 @@ import UIKit
 
 struct Constants {
     
-    struct Translations {
-        static let UNOFFICIAL_CLIENT = "UNOFFICIAL_CLIENT".localized
-    }
-    
     enum EnvironmentType: String {
         case debug
         case stage

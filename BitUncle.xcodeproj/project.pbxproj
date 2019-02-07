@@ -23,6 +23,8 @@
 		9C4E5B8D220AE24F004B15C1 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E5B8C220AE24F004B15C1 /* NetworkService.swift */; };
 		9C4E5B8F220AE279004B15C1 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E5B8E220AE279004B15C1 /* Typealias.swift */; };
 		9C85D0F1220C2360004BEC8A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C85D0F0220C235F004BEC8A /* Localizable.strings */; };
+		9C85D0F3220C3A8A004BEC8A /* String+Translations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C85D0F2220C3A8A004BEC8A /* String+Translations.swift */; };
+		9C85D0F5220C3CFA004BEC8A /* RemoteConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C85D0F4220C3CFA004BEC8A /* RemoteConfig.plist */; };
 		9CC53D86220B01B700267849 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC53D85220B01B700267849 /* Configuration.swift */; };
 		9CC53D88220B01D400267849 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC53D87220B01D400267849 /* Constants.swift */; };
 		9CC53D8C220B04CE00267849 /* GoogleService-Info-Debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CC53D89220B04CE00267849 /* GoogleService-Info-Debug.plist */; };
@@ -74,6 +76,8 @@
 		9C4E5B92220AEB31004B15C1 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		9C4E5B93220AEB3E004B15C1 /* Stage.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Stage.xcconfig; sourceTree = "<group>"; };
 		9C85D0F0220C235F004BEC8A /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		9C85D0F2220C3A8A004BEC8A /* String+Translations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Translations.swift"; sourceTree = "<group>"; };
+		9C85D0F4220C3CFA004BEC8A /* RemoteConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RemoteConfig.plist; sourceTree = "<group>"; };
 		9CC53D85220B01B700267849 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		9CC53D87220B01D400267849 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9CC53D89220B04CE00267849 /* GoogleService-Info-Debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Debug.plist"; sourceTree = "<group>"; };
@@ -185,11 +189,11 @@
 				9C4E5B7E220ADEF3004B15C1 /* AppController.swift */,
 				9C4E5B82220ADF67004B15C1 /* AppData.swift */,
 				9C4E5B56220ADCF7004B15C1 /* AppDelegate.swift */,
+				9CC53D85220B01B700267849 /* Configuration.swift */,
+				9CC53D87220B01D400267849 /* Constants.swift */,
 				9C4E5B86220ADFCE004B15C1 /* Coordinator.swift */,
 				9C4E5B80220ADF55004B15C1 /* Parameters.swift */,
 				9C4E5B8E220AE279004B15C1 /* Typealias.swift */,
-				9CC53D85220B01B700267849 /* Configuration.swift */,
-				9CC53D87220B01D400267849 /* Constants.swift */,
 			);
 			path = Architecture;
 			sourceTree = "<group>";
@@ -264,7 +268,9 @@
 			children = (
 				9C4E5B5D220ADCF8004B15C1 /* Assets.xcassets */,
 				9C4E5B5F220ADCF8004B15C1 /* LaunchScreen.storyboard */,
+				9C85D0F2220C3A8A004BEC8A /* String+Translations.swift */,
 				9C85D0F0220C235F004BEC8A /* Localizable.strings */,
+				9C85D0F4220C3CFA004BEC8A /* RemoteConfig.plist */,
 			);
 			path = Ressources;
 			sourceTree = "<group>";
@@ -385,6 +391,7 @@
 				9CC53D8E220B04CE00267849 /* GoogleService-Info.plist in Resources */,
 				9C4E5B5E220ADCF8004B15C1 /* Assets.xcassets in Resources */,
 				9CC53D8C220B04CE00267849 /* GoogleService-Info-Debug.plist in Resources */,
+				9C85D0F5220C3CFA004BEC8A /* RemoteConfig.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +478,7 @@
 				9CC53D96220B314F00267849 /* Splash.Presenter.swift in Sources */,
 				9C4E5B57220ADCF7004B15C1 /* AppDelegate.swift in Sources */,
 				9C4E5B87220ADFCE004B15C1 /* Coordinator.swift in Sources */,
+				9C85D0F3220C3A8A004BEC8A /* String+Translations.swift in Sources */,
 				9CC53D99220B314F00267849 /* SplashParameters.swift in Sources */,
 				9CC53D9A220B314F00267849 /* Splash.swift in Sources */,
 				9C4E5B89220AE1A1004B15C1 /* DataProvider.swift in Sources */,
