@@ -16,7 +16,7 @@ extension Splash {
         
         private let logoImage: UIImageView = {
             let image = UIImageView(frame: .zero)
-            image.image = UIImage(named: "logo")
+            image.image = #imageLiteral(resourceName: "logo.pdf")
             return image
         }()
         
