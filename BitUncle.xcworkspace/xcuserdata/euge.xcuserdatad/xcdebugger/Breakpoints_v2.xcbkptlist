@@ -9,28 +9,12 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BitUncle/Modules/Splash.ViewController.swift"
-            timestampString = "571181377.468006"
+            filePath = "BitUncle/Modules/Profile/Profile.Presenter.swift"
+            timestampString = "571260657.652552"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "viewDidAppear(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BitUncle/Modules/Splash.ViewController.swift"
-            timestampString = "571181377.468091"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -41,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BitUncle/Modules/Splash.swift"
-            timestampString = "571181377.468156"
+            filePath = "BitUncle/Architecture/Coordinator.swift"
+            timestampString = "571253287.7916861"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "makeViewController(with:and:)"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "showAlert(_:from:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

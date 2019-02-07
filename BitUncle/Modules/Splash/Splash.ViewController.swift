@@ -38,9 +38,9 @@ extension Splash {
             fatalError("init(coder:) has not been implemented")
         }
         
-        init(with actions: Actions, and parameters: Parameters) {
+        init(with parameters: Parameters) {
             super.init(nibName: nil, bundle: nil)
-            presenter = Presenter(self, with: actions, and: parameters)
+            presenter = Presenter(self, with: parameters)
             presenter.viewable = self
         }
         

@@ -22,3 +22,19 @@ class Actions {
     }
     
 }
+
+extension Actions: Loadable {
+    
+    func setLoading(visible: Bool) {
+        coordinator.setLoading(visible)
+    }
+    
+}
+
+extension Actions: ErrorActionable {
+    
+    func showAlert(_ error: ApiError?, from view: UIViewController) {
+        guard let error = error else { return }
+        coordinator.showAlert(error, from: view)
+    }
+}

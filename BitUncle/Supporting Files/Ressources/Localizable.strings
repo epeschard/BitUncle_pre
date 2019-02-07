@@ -6,8 +6,6 @@
   Copyright © 2019 Eugène Peschard. All rights reserved.
 */
 
-"APP_TITLE" = "BitUncle";
-
 "UNOFFICIAL_CLIENT" = "BITrise UNofficial CLiEnt";
 
 "ERROR_UNKNOWN_DESCRIPTION" = "Unknown error appeared";

@@ -11,7 +11,7 @@ protocol SplashActions {
     func loadInitialData(onCompletion: @escaping SuccessCompletion)
 }
 
-extension Actions: SplashActions {
+extension AppController: SplashActions {
     
     func loadInitialData(onCompletion: @escaping SuccessCompletion) {
         loadRemoteConfig(onCompletion: onCompletion)

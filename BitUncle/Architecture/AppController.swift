@@ -43,8 +43,27 @@ class AppController: NSObject {
         
         window.rootViewController?.removeFromParent()
         window.rootViewController = nil
-        let splashScreen = Splash.makeViewController(with: actions, and: parameters)
+        let splashScreen = Splash.makeViewController(with: parameters)
         window.rootViewController = splashScreen
+        
+        // Delay of 500 milliseconds to wait for reachability to check for connections
+        StanwoodCore.main(deadline: .milliseconds(500)) {
+            self.networkService.request {
+                self.loadInitialData()
+            }
+        }
+    }
+    
+    private func loadInitialData() {
+        loadInitialData { [weak self] (success) in
+            if let _ = KeyChain.getToken() {
+                self?.coordinator.presentProfile()
+            } else {
+                self?.coordinator.askForToken()
+//                let token2save = "LqoGw8n2M1Ak7tGW_f2z2vFypmwH2SBVDuYh1all3cBk7HaM-i-mcIc6SooxCrVbQNQGmxX1hgbrEaxcrk4Spg".data(using: .utf8)
+//                _ = KeyChain.save(key: "token", data: token2save!)
+            }
+        }
     }
 }
 
