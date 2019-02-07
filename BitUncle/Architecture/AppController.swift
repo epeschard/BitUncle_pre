@@ -39,6 +39,8 @@ class AppController: NSObject {
     }
     
     func start(with application: UIApplication) {
+        RemoteConfig.remoteConfig().setDefaults(fromPlist: "RemoteConfig")
+        
         window.rootViewController?.removeFromParent()
         window.rootViewController = nil
         let splashScreen = Splash.makeViewController(with: actions, and: parameters)

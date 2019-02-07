@@ -20,9 +20,9 @@ extension Splash {
             return image
         }()
         
-        private let bottomLabel: UILabel = {
+        private let unofficialClient: UILabel = {
             let label = UILabel(frame: .zero)
-            label.text = Constants.Translations.UNOFFICIAL_CLIENT.localized
+            label.text = Localized.Splash.Label.unofficialClient
             label.font = .preferredFont(forTextStyle: .body)
             label.adjustsFontForContentSizeCategory = true
             label.textAlignment = .center
@@ -53,16 +53,16 @@ extension Splash {
         private func addSubviewsAndConstraints() {
             view.backgroundColor = UIColor.Bitrise.purple
             view.addAutolayoutView(logoImage)
-            view.addAutolayoutView(bottomLabel)
+            view.addAutolayoutView(unofficialClient)
             
             NSLayoutConstraint.activate([
                 logoImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
                 logoImage.centerYAnchor.constraint(equalTo: view.centerYAnchor),
                 logoImage.widthAnchor.constraint(equalToConstant: 240.0),
                 logoImage.heightAnchor.constraint(equalToConstant: 240.0),
-                bottomLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 8),
-                bottomLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 8),
-                bottomLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 8)
+                unofficialClient.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 8),
+                unofficialClient.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 8),
+                unofficialClient.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 8)
                 ])
         }
         

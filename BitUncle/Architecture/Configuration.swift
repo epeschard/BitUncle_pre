@@ -58,5 +58,5 @@ struct Configuration {
         }
     }
     
-    static var baseURL: URL = URL(string: "https://api.bitrise.io")!
+    static var baseURL: URL = URL(string: Configuration.value(for: Configuration.RemoteConfigKeys.baseUrl)!)!
 }
