@@ -18,6 +18,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         appController = AppController(with: window!)
         appController?.start(with: application)
+        
+        defer { window?.makeKeyAndVisible() }
+        
+        guard NSClassFromString("XCTest") == nil else {
+            window?.rootViewController = UIViewController()
+            return true
+        }
+        
         return appController?.didFinishLaunching(application, with: launchOptions) ?? true
     }
     

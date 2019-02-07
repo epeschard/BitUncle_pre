@@ -50,11 +50,6 @@ extension Splash {
             addSubviewsAndConstraints()
         }
         
-        override func viewDidAppear(_ animated: Bool) {
-            super.viewDidAppear(animated)
-            print("viewDidAppear")
-        }
-        
         private func addSubviewsAndConstraints() {
             view.backgroundColor = UIColor.Bitrise.purple
             view.addAutolayoutView(logoImage)
@@ -63,8 +58,8 @@ extension Splash {
             NSLayoutConstraint.activate([
                 logoImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
                 logoImage.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-                logoImage.widthAnchor.constraint(equalToConstant: 120.0),
-                logoImage.heightAnchor.constraint(equalToConstant: 120.0),
+                logoImage.widthAnchor.constraint(equalToConstant: 240.0),
+                logoImage.heightAnchor.constraint(equalToConstant: 240.0),
                 bottomLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 8),
                 bottomLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 8),
                 bottomLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 8)

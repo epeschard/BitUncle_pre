@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  BitUncle
+
+  Created by Eugène Peschard on 05/02/2019.
+  Copyright © 2019 Eugène Peschard. All rights reserved.
+*/
+
+"APP_TITLE" = "BitUncle";
+
+"UNOFFICIAL_CLIENT" = "BITrise UNofficial CLiEnt";
+
+"ERROR_UNKNOWN_DESCRIPTION" = "Unknown error appeared";
+"ERROR_TRY_AGAIN_LATER" = "Please try again later";
+
+"TOKEN_ALERT_TITLE" = "Enter your Token";
+"TOKEN_ALERT_MESSAGE" = "Please copy your token from bitrise.io";
+"TOKEN_ALERT_PLACEHOLDER" = "your Token goes here";
+"TOKEN_ALERT_OK" = "OK";
+"TOKEN_ALERT_CANCEL" = "Cancel";

@@ -51,17 +51,6 @@ class AppController: NSObject {
 extension AppController {
     
     func didFinishLaunching(_ application: UIApplication, with launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        
-        defer { self.window.makeKeyAndVisible() }
-        
-        guard NSClassFromString("XCTest") == nil else {
-            self.window.rootViewController = UIViewController()
-            return true
-        }
-        
-        self.window.rootViewController = UIViewController()
         FirebaseApp.configure()
         return true
     }

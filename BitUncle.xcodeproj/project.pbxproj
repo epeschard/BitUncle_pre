@@ -22,6 +22,7 @@
 		9C4E5B8B220AE1F1004B15C1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E5B8A220AE1F1004B15C1 /* NetworkManager.swift */; };
 		9C4E5B8D220AE24F004B15C1 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E5B8C220AE24F004B15C1 /* NetworkService.swift */; };
 		9C4E5B8F220AE279004B15C1 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E5B8E220AE279004B15C1 /* Typealias.swift */; };
+		9C85D0F1220C2360004BEC8A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C85D0F0220C235F004BEC8A /* Localizable.strings */; };
 		9CC53D86220B01B700267849 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC53D85220B01B700267849 /* Configuration.swift */; };
 		9CC53D88220B01D400267849 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC53D87220B01D400267849 /* Constants.swift */; };
 		9CC53D8C220B04CE00267849 /* GoogleService-Info-Debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CC53D89220B04CE00267849 /* GoogleService-Info-Debug.plist */; };
@@ -72,6 +73,7 @@
 		9C4E5B91220AEB21004B15C1 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		9C4E5B92220AEB31004B15C1 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		9C4E5B93220AEB3E004B15C1 /* Stage.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Stage.xcconfig; sourceTree = "<group>"; };
+		9C85D0F0220C235F004BEC8A /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		9CC53D85220B01B700267849 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		9CC53D87220B01D400267849 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9CC53D89220B04CE00267849 /* GoogleService-Info-Debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Debug.plist"; sourceTree = "<group>"; };
@@ -245,12 +247,7 @@
 		9C4E5B7C220ADE9F004B15C1 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				9CC53D94220B314F00267849 /* Splash.swift */,
-				9CC53D90220B314F00267849 /* Splash.Presenter.swift */,
-				9CC53D92220B314F00267849 /* Splash.ViewController.swift */,
-				9CC53D8F220B314F00267849 /* SplashActionable.swift */,
-				9CC53D93220B314F00267849 /* SplashParameters.swift */,
-				9CC53D9B220B31CD00267849 /* SplashView.swift */,
+				9CC53DA4220B896B00267849 /* Splash */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -267,6 +264,7 @@
 			children = (
 				9C4E5B5D220ADCF8004B15C1 /* Assets.xcassets */,
 				9C4E5B5F220ADCF8004B15C1 /* LaunchScreen.storyboard */,
+				9C85D0F0220C235F004BEC8A /* Localizable.strings */,
 			);
 			path = Ressources;
 			sourceTree = "<group>";
@@ -277,6 +275,19 @@
 				9CC53D9E220B350F00267849 /* Wireframeable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9CC53DA4220B896B00267849 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				9CC53D94220B314F00267849 /* Splash.swift */,
+				9CC53D90220B314F00267849 /* Splash.Presenter.swift */,
+				9CC53D92220B314F00267849 /* Splash.ViewController.swift */,
+				9CC53D8F220B314F00267849 /* SplashActionable.swift */,
+				9CC53D93220B314F00267849 /* SplashParameters.swift */,
+				9CC53D9B220B31CD00267849 /* SplashView.swift */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CC53D8D220B04CE00267849 /* GoogleService-Info-Stage.plist in Resources */,
+				9C85D0F1220C2360004BEC8A /* Localizable.strings in Resources */,
 				9C4E5B61220ADCF8004B15C1 /* LaunchScreen.storyboard in Resources */,
 				9CC53D8E220B04CE00267849 /* GoogleService-Info.plist in Resources */,
 				9C4E5B5E220ADCF8004B15C1 /* Assets.xcassets in Resources */,
@@ -673,7 +685,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BitUncle.app/BitUncle";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BitUncle debug.app/BitUncle debug";
 			};
 			name = Debug;
 		};
@@ -695,7 +707,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BitUncle.app/BitUncle";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BitUncle debug.app/BitUncle debug";
 			};
 			name = Release;
 		};
@@ -788,7 +800,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BitUncle.app/BitUncle";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BitUncle debug.app/BitUncle debug";
 			};
 			name = Stage;
 		};
