@@ -9,5 +9,5 @@
 import UIKit
 
 protocol ErrorActionable {
-    func showAlert(_ error: ApiError?, from view: UIViewController)
+    func showAlert(_ error: ApiError?)
 }

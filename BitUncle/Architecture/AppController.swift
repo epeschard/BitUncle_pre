@@ -59,9 +59,9 @@ class AppController: NSObject {
             if let _ = KeyChain.getToken() {
                 self?.coordinator.presentProfile()
             } else {
-                self?.coordinator.askForToken()
-//                let token2save = "LqoGw8n2M1Ak7tGW_f2z2vFypmwH2SBVDuYh1all3cBk7HaM-i-mcIc6SooxCrVbQNQGmxX1hgbrEaxcrk4Spg".data(using: .utf8)
-//                _ = KeyChain.save(key: "token", data: token2save!)
+                self?.coordinator.askForToken() {
+                    self?.loadInitialData()
+                }
             }
         }
     }
@@ -110,7 +110,8 @@ extension AppController {
     }
     
     func didBecomeActive(_ application: UIApplication) {
-        // TODO:
+        print("Came back from background")
+        loadInitialData()
     }
     
     func willEnterForeground(_ application: UIApplication) {

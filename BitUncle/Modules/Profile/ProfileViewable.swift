@@ -7,6 +7,5 @@
 //
 
 protocol ProfileViewable: class {
-    var profile: Profile.DataModel? { get set }
-    func showAlert(_ error: ApiError)
+    func reload()
 }

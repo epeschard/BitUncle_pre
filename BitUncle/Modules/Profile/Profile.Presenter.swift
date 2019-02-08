@@ -17,6 +17,12 @@ extension Profile {
         var parameters: Parameters
         var actions: Actions
         
+        var profile: DataModel? {
+            didSet {
+                viewable?.reload()
+            }
+        }
+        
         required init(_ view: Viewable? = nil, with actions: Actions, and parameters: Parameters) {
             self.viewable = view
             self.actions = actions
@@ -24,24 +30,32 @@ extension Profile {
         }
         
         func viewDidLoad() {
+            getProfile()
+        }
+        
+        func viewWillAppear() {
+            
+        }
+        
+        func getProfile() {
             actions.getProfile {
                 [weak self] result in
                 switch result {
                 case .success(let profile):
-                    self?.viewable?.profile = profile
+                    self?.profile = profile
                 case .failure(let error):
-                    self?.viewable?.showAlert(error)
+                    self?.actions.showAlert(error)
                 }
                 self?.actions.setLoading(visible: false)
             }
         }
         
         func didSelect(_ buildSlug: String) {
-            //            actionable.unfoldLogChunk(for: buildSlug)
+//            actionable.unfoldLogChunk(for: buildSlug)
         }
         
         func showAlert(_ error: ApiError, from viewController: UIViewController) {
-            actions.showAlert(error, from: viewController)
+            actions.showAlert(error)
         }
     }
 }

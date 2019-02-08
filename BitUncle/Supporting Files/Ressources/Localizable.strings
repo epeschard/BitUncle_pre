@@ -6,13 +6,21 @@
   Copyright © 2019 Eugène Peschard. All rights reserved.
 */
 
-"UNOFFICIAL_CLIENT" = "BITrise UNofficial CLiEnt";
+"SPLASH_LABEL_FOOTER" = "BITrise UNofficial CLiEnt";
 
-"ERROR_UNKNOWN_DESCRIPTION" = "Unknown error appeared";
-"ERROR_TRY_AGAIN_LATER" = "Please try again later";
+"ERROR_UNKNOWNDESCRIPTION" = "Unknown error appeared";
+"ERROR_TRYAGAIN" = "Please try again later";
+"ERROR_OK" = "OK";
 
-"TOKEN_ALERT_TITLE" = "Enter your Token";
-"TOKEN_ALERT_MESSAGE" = "Please copy your token from bitrise.io";
+"TOKEN_ALERT_TITLE" = "Enter Bitrise Token";
+"TOKEN_ALERT_MESSAGE" = "Please enter your token for bitrise.io. Tap on 'Guide Me' for instructions.";
 "TOKEN_ALERT_PLACEHOLDER" = "your Token goes here";
 "TOKEN_ALERT_OK" = "OK";
-"TOKEN_ALERT_CANCEL" = "Cancel";
+"TOKEN_ALERT_GUIDE" = "Guide me";
+
+"PROFILE_LABEL_TITLE" = "Profile";
+"PROFILE_LABEL_EMAIL" = "Email";
+"PROFILE_LABEL_USERNAME" = "Username";
+"PROFILE_LABEL_SLUG" = "Slug";
+"PROFILE_LABEL_LOGOUT" = "Log out";
+"PROFILE_LABEL_LOADING" = "Loading...";

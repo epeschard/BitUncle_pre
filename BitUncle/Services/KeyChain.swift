@@ -12,20 +12,23 @@ import Foundation
 
 class KeyChain {
     
-    static func save(token: String) {
-        if let data = token.data(using: .utf8) {
-            _ = self.save(key: "token", data: data)
-        }
-    }
-    
-    static func getToken() -> String? {
-        if let token = self.load(key: "token") {
-            return String(data: token, encoding: .utf8)
+    class func getToken() -> String? {
+        if let data = self.load(key: "token"),
+            let token = String(data: data, encoding: .utf8) {
+            return token
         }
         return nil
     }
     
-    static func save(key: String, data: Data) -> OSStatus {
+    class func deleteToken() {
+        let query = [
+            kSecClass as String       : kSecClassGenericPassword as String,
+            kSecAttrAccount as String : "token"] as [String : Any]
+        
+        SecItemDelete(query as CFDictionary)
+    }
+    
+    class func save(key: String, data: Data) -> OSStatus {
         let query = [
             kSecClass as String       : kSecClassGenericPassword as String,
             kSecAttrAccount as String : key,
@@ -36,7 +39,7 @@ class KeyChain {
         return SecItemAdd(query as CFDictionary, nil)
     }
     
-    static func load(key: String) -> Data? {
+    class func load(key: String) -> Data? {
         let query = [
             kSecClass as String       : kSecClassGenericPassword,
             kSecAttrAccount as String : key,

@@ -14,11 +14,6 @@ extension Profile {
     class ViewController: UITableViewController, Viewable {
         
         var presenter: Presenter!
-        var profile: DataModel? {
-            didSet {
-                tableView.reloadData()
-            }
-        }
         
         // MARK: - Run Loop
         
@@ -34,20 +29,26 @@ extension Profile {
         
         override func viewDidLoad() {
             super.viewDidLoad()
-            title = "Profile"
+            title = Localized.Profile.Label.title
             setup()
             presenter.viewDidLoad()
+        }
+        
+        override func viewWillAppear(_ animated: Bool) {
+            super.viewWillAppear(animated)
+            presenter.viewWillAppear()
         }
         
         private func setup() {
             assert(self.navigationController != nil)
         }
         
-        func showAlert(_ error: ApiError) {
-            presenter.showAlert(error, from: self)
+        func reload() {
+            tableView.reloadData()
         }
         
         // MARK: - UITableViewControllerDatasource
+        
         override func numberOfSections(in tableView: UITableView) -> Int {
             return 1
         }
@@ -58,18 +59,37 @@ extension Profile {
         
         override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "ProfileCell")
+            let NA = Localized.Profile.Label.loading
             switch indexPath.row {
             case 0:
                 cell.detailTextLabel?.text = Localized.Profile.Label.username
-                cell.textLabel?.text = profile?.username ?? "N/A"
+                cell.textLabel?.text = presenter.profile?.username ?? NA
+                cell.selectionStyle = .none
             case 1:
                 cell.detailTextLabel?.text = Localized.Profile.Label.email
-                cell.textLabel?.text = profile?.email ?? "N/A"
-            default:
+                cell.textLabel?.text = presenter.profile?.email ?? NA
+                cell.selectionStyle = .none
+            case 2:
                 cell.detailTextLabel?.text = Localized.Profile.Label.slug
-                cell.textLabel?.text = profile?.slug ?? "N/A"
+                cell.textLabel?.text = presenter.profile?.slug ?? NA
+                cell.selectionStyle = .none
+            default:
+                cell.textLabel?.text = Localized.Profile.Label.logout
+                cell.selectionStyle = .default
             }
             return cell
+        }
+        
+        // MARK: - UITableViewControllerDelegate
+        
+        override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            switch indexPath.row {
+            case 3:
+                KeyChain.deleteToken()
+            default:
+                debugPrint("Nothing to do here")
+            }
+            tableView.deselectRow(at: indexPath, animated: true)
         }
         
     }

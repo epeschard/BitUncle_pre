@@ -15,12 +15,13 @@ extension String {
     enum Localized {
         enum Splash {
             enum Label {
-                static let unofficialClient = "UNOFFICIAL_CLIENT".localized
+                static let footer = "SPLASH_LABEL_FOOTER".localized
             }
         }
         enum Error {
-            static let tryAgain = "ERROR_TRY_AGAIN_LATER".localized
-            static let unknownDescription = "ERROR_UNKNOWN_DESCRIPTION".localized
+            static let tryAgain = "ERROR_TRYAGAIN".localized
+            static let unknownDescription = "ERROR_UNKNOWNDESCRIPTION".localized
+            static let ok = "ERROR_OK".localized
         }
         enum Token {
             enum Alert {
@@ -33,10 +34,14 @@ extension String {
         }
         enum Profile {
             enum Label {
+                static let title = "PROFILE_LABEL_TITLE".localized
                 static let email = "PROFILE_LABEL_EMAIL".localized
                 static let username = "PROFILE_LABEL_USERNAME".localized
                 static let slug = "PROFILE_LABEL_SLUG".localized
+                static let logout = "PROFILE_LABEL_LOGOUT".localized
+                static let loading = "PROFILE_LABEL_LOADING".localized
             }
         }
     }
 }
+//                let token2save = "LqoGw8n2M1Ak7tGW_f2z2vFypmwH2SBVDuYh1all3cBk7HaM-i-mcIc6SooxCrVbQNQGmxX1hgbrEaxcrk4Spg".data(using: .utf8)

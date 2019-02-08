@@ -33,8 +33,8 @@ extension Actions: Loadable {
 
 extension Actions: ErrorActionable {
     
-    func showAlert(_ error: ApiError?, from view: UIViewController) {
+    func showAlert(_ error: ApiError?) {
         guard let error = error else { return }
-        coordinator.showAlert(error, from: view)
+        coordinator.showAlert(error)
     }
 }
