@@ -9,5 +9,7 @@
 import Foundation
 
 class AppData {
-    
+    var nextPage = ""
+    var appSlug = ""
+    var appName = ""
 }

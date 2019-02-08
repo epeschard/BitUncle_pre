@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BitUncle/Architecture/Coordinator.swift"
-            timestampString = "571317085.5988359"
+            timestampString = "571317644.99389"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "showAlert(_:)"
             landmarkType = "7">
             <Locations>
@@ -26,11 +26,11 @@
                   moduleName = "BitUncle"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/euge/Library/Developer/Peschard/BitUncle/BitUncle/Architecture/Coordinator.swift"
-                  timestampString = "571317085.765456"
+                  timestampString = "571317645.19355"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
                   offsetFromSymbolStart = "117">
                </Location>
                <Location
@@ -41,11 +41,11 @@
                   moduleName = "BitUncle"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/euge/Library/Developer/Peschard/BitUncle/BitUncle/Architecture/Coordinator.swift"
-                  timestampString = "571317085.768456"
+                  timestampString = "571317645.200832"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "59"
-                  endingLineNumber = "59"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
                   offsetFromSymbolStart = "11">
                </Location>
             </Locations>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BitUncle/Architecture/Coordinator.swift"
-            timestampString = "571317085.598958"
+            timestampString = "571317644.994437"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "askForToken(completion:)"
             landmarkType = "7">
          </BreakpointContent>
