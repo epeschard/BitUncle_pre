@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.8.1)
   - Firebase (5.15.0):
     - Firebase/Core (= 5.15.0)
   - Firebase/Core (5.15.0):
@@ -59,12 +60,19 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (5.3.7):
     - GoogleUtilities/Logger
+  - Moya (12.0.1):
+    - Moya/Core (= 12.0.1)
+  - Moya/Core (12.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.0)
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
   - Protobuf (3.6.1)
+  - ReachabilitySwift (4.3.0)
+  - Result (4.1.0)
   - Stanwood/Core (1.0.0):
     - StanwoodCore
   - StanwoodCore (1.4.1)
@@ -72,10 +80,13 @@ PODS:
 DEPENDENCIES:
   - Firebase
   - Firebase/RemoteConfig
+  - Moya
+  - ReachabilitySwift
   - Stanwood/Core
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - Firebase
     - FirebaseABTesting
     - FirebaseAnalytics
@@ -84,12 +95,16 @@ SPEC REPOS:
     - FirebaseRemoteConfig
     - GoogleAppMeasurement
     - GoogleUtilities
+    - Moya
     - nanopb
     - Protobuf
+    - ReachabilitySwift
+    - Result
     - Stanwood
     - StanwoodCore
 
 SPEC CHECKSUMS:
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   Firebase: 8bb9268bff82374f2cbaaabb143e725743c316ae
   FirebaseABTesting: 1f50b8d50f5e3469eea54e7463a7b7fe221d1f5e
   FirebaseAnalytics: c06f9d70577d79074214700a71fd5d39de5550fb
@@ -98,11 +113,14 @@ SPEC CHECKSUMS:
   FirebaseRemoteConfig: 7e11c65f0769c09bff6947997c209515058c5318
   GoogleAppMeasurement: 98b71f5e04142793729a5ef23e5b96651ff4b70f
   GoogleUtilities: 111a012f4c3a29c9e7c954c082fafd6ee3c999c0
+  Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
+  ReachabilitySwift: 408477d1b6ed9779dba301953171e017c31241f3
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   Stanwood: 34abe2f15413a9bdce7a984fb38c46cd359febf6
   StanwoodCore: 9f58032a58b16e9b5ebbb2906b7888d87c098642
 
-PODFILE CHECKSUM: ae8361bc4db6e3dc53d1a4f191b8cf83c81b3a02
+PODFILE CHECKSUM: afe849dd989a211b664193cc4dd149ed20df8125
 
 COCOAPODS: 1.5.3

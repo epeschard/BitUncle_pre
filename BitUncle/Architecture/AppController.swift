@@ -43,8 +43,27 @@ class AppController: NSObject {
         
         window.rootViewController?.removeFromParent()
         window.rootViewController = nil
-        let splashScreen = Splash.makeViewController(with: actions, and: parameters)
+        let splashScreen = Splash.makeViewController(with: parameters)
         window.rootViewController = splashScreen
+        
+        // Delay of 500 milliseconds to wait for reachability to check for connections
+        StanwoodCore.main(deadline: .milliseconds(500)) {
+            self.networkService.request {
+                self.loadInitialData()
+            }
+        }
+    }
+    
+    private func loadInitialData() {
+        loadInitialData { [weak self] (success) in
+            if let _ = KeyChain.getToken() {
+                self?.coordinator.presentProfile()
+            } else {
+                self?.coordinator.askForToken() {
+                    self?.loadInitialData()
+                }
+            }
+        }
     }
 }
 
@@ -91,7 +110,8 @@ extension AppController {
     }
     
     func didBecomeActive(_ application: UIApplication) {
-        // TODO:
+        print("Came back from background")
+        loadInitialData()
     }
     
     func willEnterForeground(_ application: UIApplication) {

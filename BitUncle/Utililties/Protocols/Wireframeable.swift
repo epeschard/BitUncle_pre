@@ -12,4 +12,13 @@ protocol Wireframeable {
     associatedtype Viewable
     associatedtype Actions
     associatedtype Parameters
+    
+//    static func makeViewController(with actions: Actions, and parameters: Parameters) -> ViewController
 }
+
+//extension Wireframeable {
+//    static func makeViewController(with actions: Actions, and parameters: Parameters) -> ViewController {
+//        let controller = ViewController(with: actions, and: parameters)
+//        return controller
+//    }
+//}
