@@ -12,8 +12,8 @@ enum Splash: Wireframeable {
     typealias Actions = SplashActions
     typealias Parameters = SplashParameters
 
-    static func makeViewController(with actions: Actions, and parameters: Parameters) -> ViewController {
-        let controller = ViewController(with: actions, and: parameters)
+    static func makeViewController(with parameters: Parameters) -> ViewController {
+        let controller = ViewController(with: parameters)
         return controller
     }
 

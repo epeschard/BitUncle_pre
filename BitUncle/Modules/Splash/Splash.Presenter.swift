@@ -13,11 +13,9 @@ extension Splash {
     class Presenter {
         weak var viewable: Viewable?
         var parameters: Parameters
-        var actions: Actions
         
-        required init(_ view: Viewable? = nil, with actions: Actions, and parameters: Parameters) {
+        required init(_ view: Viewable? = nil, with parameters: Parameters) {
             self.viewable = view
-            self.actions = actions
             self.parameters = parameters
         }
         

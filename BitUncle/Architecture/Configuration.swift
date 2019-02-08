@@ -15,6 +15,7 @@ struct Configuration {
         case
         baseUrl = "base_url",
         apiKey = "api_key",
+        tokenGuideUrl = "token_guide",
         tokenUrl = "token_url"
     }
     
@@ -58,5 +59,6 @@ struct Configuration {
         }
     }
     
-    static var baseURL: URL = URL(string: "https://api.bitrise.io")!
+    static var baseURL: URL = URL(string: Configuration.value(for: Configuration.RemoteConfigKeys.baseUrl)!)!
+    static var tokenGuide: URL = URL(string: Configuration.value(for: Configuration.RemoteConfigKeys.tokenGuideUrl)!)!
 }

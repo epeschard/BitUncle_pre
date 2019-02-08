@@ -20,10 +20,10 @@ extension Splash {
             return image
         }()
         
-        private let bottomLabel: UILabel = {
+        private let footer: UILabel = {
             let label = UILabel(frame: .zero)
-            label.text = Constants.Translations.UNOFFICIAL_CLIENT.localized
-            label.font = .preferredFont(forTextStyle: .body)
+            label.text = Localized.Splash.Label.footer
+            label.font = UIFont.systemFont(ofSize: 24)
             label.adjustsFontForContentSizeCategory = true
             label.textAlignment = .center
             label.textColor = .white
@@ -38,9 +38,9 @@ extension Splash {
             fatalError("init(coder:) has not been implemented")
         }
         
-        init(with actions: Actions, and parameters: Parameters) {
+        init(with parameters: Parameters) {
             super.init(nibName: nil, bundle: nil)
-            presenter = Presenter(self, with: actions, and: parameters)
+            presenter = Presenter(self, with: parameters)
             presenter.viewable = self
         }
         
@@ -53,16 +53,16 @@ extension Splash {
         private func addSubviewsAndConstraints() {
             view.backgroundColor = UIColor.Bitrise.purple
             view.addAutolayoutView(logoImage)
-            view.addAutolayoutView(bottomLabel)
+            view.addAutolayoutView(footer)
             
             NSLayoutConstraint.activate([
                 logoImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
                 logoImage.centerYAnchor.constraint(equalTo: view.centerYAnchor),
                 logoImage.widthAnchor.constraint(equalToConstant: 240.0),
                 logoImage.heightAnchor.constraint(equalToConstant: 240.0),
-                bottomLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 8),
-                bottomLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 8),
-                bottomLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 8)
+                footer.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -8),
+                footer.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 8),
+                footer.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 8)
                 ])
         }
         
