@@ -73,6 +73,9 @@ PODS:
   - Protobuf (3.6.1)
   - ReachabilitySwift (4.3.0)
   - Result (4.1.0)
+  - SDWebImage (4.4.3):
+    - SDWebImage/Core (= 4.4.3)
+  - SDWebImage/Core (4.4.3)
   - Stanwood/Core (1.0.0):
     - StanwoodCore
   - StanwoodCore (1.4.1)
@@ -82,6 +85,7 @@ DEPENDENCIES:
   - Firebase/RemoteConfig
   - Moya
   - ReachabilitySwift
+  - SDWebImage
   - Stanwood/Core
 
 SPEC REPOS:
@@ -100,6 +104,7 @@ SPEC REPOS:
     - Protobuf
     - ReachabilitySwift
     - Result
+    - SDWebImage
     - Stanwood
     - StanwoodCore
 
@@ -118,9 +123,10 @@ SPEC CHECKSUMS:
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
   ReachabilitySwift: 408477d1b6ed9779dba301953171e017c31241f3
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
   Stanwood: 34abe2f15413a9bdce7a984fb38c46cd359febf6
   StanwoodCore: 9f58032a58b16e9b5ebbb2906b7888d87c098642
 
-PODFILE CHECKSUM: afe849dd989a211b664193cc4dd149ed20df8125
+PODFILE CHECKSUM: 59e8282489160d23fbe1fd81732761df5d50c20f
 
 COCOAPODS: 1.5.3

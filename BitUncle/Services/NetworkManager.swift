@@ -35,6 +35,13 @@ class NetworkManager {
                     (response: Profile.Response) in response.profile },
                 completion: completion)
     }
+    
+    func getApps(nextPage: String?, append: Bool, completion: @escaping App.Completion) {
+        request(endpoint: .getApps(nextPage),
+                transformResponseToModel: {
+                    (response: App.Response) in response.apps },
+                completion: completion)
+    }
 }
 
 extension NetworkManager {

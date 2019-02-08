@@ -42,6 +42,12 @@ extension String {
                 static let loading = "PROFILE_LABEL_LOADING".localized
             }
         }
+        
+        enum App {
+            enum Label {
+                static let title = "APP_LABEL_TITLE".localized
+            }
+        }
     }
 }
 //                let token2save = "LqoGw8n2M1Ak7tGW_f2z2vFypmwH2SBVDuYh1all3cBk7HaM-i-mcIc6SooxCrVbQNQGmxX1hgbrEaxcrk4Spg".data(using: .utf8)

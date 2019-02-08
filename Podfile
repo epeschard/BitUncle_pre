@@ -7,6 +7,7 @@ target 'BitUncle' do
     pod 'Firebase/RemoteConfig'
     pod 'Moya'
     pod 'ReachabilitySwift'
+    pod 'SDWebImage'
 
     target 'BitUncleTests' do
         inherit! :search_paths

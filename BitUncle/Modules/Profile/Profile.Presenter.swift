@@ -33,10 +33,6 @@ extension Profile {
             getProfile()
         }
         
-        func viewWillAppear() {
-            
-        }
-        
         func getProfile() {
             actions.getProfile {
                 [weak self] result in
@@ -48,10 +44,6 @@ extension Profile {
                 }
                 self?.actions.setLoading(visible: false)
             }
-        }
-        
-        func didSelect(_ buildSlug: String) {
-//            actionable.unfoldLogChunk(for: buildSlug)
         }
         
         func showAlert(_ error: ApiError, from viewController: UIViewController) {

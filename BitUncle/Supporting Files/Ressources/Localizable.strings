@@ -24,3 +24,5 @@
 "PROFILE_LABEL_SLUG" = "Slug";
 "PROFILE_LABEL_LOGOUT" = "Log out";
 "PROFILE_LABEL_LOADING" = "Loading...";
+
+"APP_LABEL_TITLE" = "All apps";

@@ -34,11 +34,6 @@ extension Profile {
             presenter.viewDidLoad()
         }
         
-        override func viewWillAppear(_ animated: Bool) {
-            super.viewWillAppear(animated)
-            presenter.viewWillAppear()
-        }
-        
         private func setup() {
             assert(self.navigationController != nil)
         }

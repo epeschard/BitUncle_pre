@@ -57,7 +57,7 @@ class AppController: NSObject {
     private func loadInitialData() {
         loadInitialData { [weak self] (success) in
             if let _ = KeyChain.getToken() {
-                self?.coordinator.presentProfile()
+                self?.coordinator.presentApps()
             } else {
                 self?.coordinator.askForToken() {
                     self?.loadInitialData()
