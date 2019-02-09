@@ -3,7 +3,7 @@
 //  BitUncle
 //
 //  Created by Eugène Peschard on 06/02/2019.
-//  Copyright © 2019 Eugène Peschard. All rights reserved.
+//  Copyright © 2019 pesch.app All rights reserved.
 //
 
 import UIKit
@@ -57,7 +57,7 @@ class AppController: NSObject {
     private func loadInitialData() {
         loadInitialData { [weak self] (success) in
             if let _ = KeyChain.getToken() {
-                self?.coordinator.presentProfile()
+                self?.coordinator.presentApps()
             } else {
                 self?.coordinator.askForToken() {
                     self?.loadInitialData()

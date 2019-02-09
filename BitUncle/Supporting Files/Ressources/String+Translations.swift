@@ -3,7 +3,7 @@
 //  BitUncle
 //
 //  Created by Eugène Peschard on 07/02/2019.
-//  Copyright © 2019 Eugène Peschard. All rights reserved.
+//  Copyright © 2019 pesch.app All rights reserved.
 //
 
 import Foundation
@@ -40,6 +40,12 @@ extension String {
                 static let slug = "PROFILE_LABEL_SLUG".localized
                 static let logout = "PROFILE_LABEL_LOGOUT".localized
                 static let loading = "PROFILE_LABEL_LOADING".localized
+            }
+        }
+        
+        enum App {
+            enum Label {
+                static let title = "APP_LABEL_TITLE".localized
             }
         }
     }

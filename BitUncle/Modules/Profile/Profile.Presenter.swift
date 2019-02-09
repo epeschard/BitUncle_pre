@@ -3,7 +3,7 @@
 //  BitUncle
 //
 //  Created by Eugène Peschard on 07/02/2019.
-//  Copyright © 2019 Eugène Peschard. All rights reserved.
+//  Copyright © 2019 pesch.app All rights reserved.
 //
 
 import UIKit
@@ -33,10 +33,6 @@ extension Profile {
             getProfile()
         }
         
-        func viewWillAppear() {
-            
-        }
-        
         func getProfile() {
             actions.getProfile {
                 [weak self] result in
@@ -48,10 +44,6 @@ extension Profile {
                 }
                 self?.actions.setLoading(visible: false)
             }
-        }
-        
-        func didSelect(_ buildSlug: String) {
-//            actionable.unfoldLogChunk(for: buildSlug)
         }
         
         func showAlert(_ error: ApiError, from viewController: UIViewController) {

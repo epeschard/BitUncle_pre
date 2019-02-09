@@ -3,7 +3,7 @@
 //  BitUncle
 //
 //  Created by Eugène Peschard on 07/02/2019.
-//  Copyright © 2019 Eugène Peschard. All rights reserved.
+//  Copyright © 2019 pesch.app All rights reserved.
 //
 
 import UIKit
@@ -32,11 +32,6 @@ extension Profile {
             title = Localized.Profile.Label.title
             setup()
             presenter.viewDidLoad()
-        }
-        
-        override func viewWillAppear(_ animated: Bool) {
-            super.viewWillAppear(animated)
-            presenter.viewWillAppear()
         }
         
         private func setup() {

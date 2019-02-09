@@ -3,7 +3,7 @@
 //  BitUncle
 //
 //  Created by Eugène Peschard on 06/02/2019.
-//  Copyright © 2019 Eugène Peschard. All rights reserved.
+//  Copyright © 2019 pesch.app All rights reserved.
 //
 
 import Moya
@@ -33,6 +33,13 @@ class NetworkManager {
         request(endpoint: .getProfile,
                 transformResponseToModel: {
                     (response: Profile.Response) in response.profile },
+                completion: completion)
+    }
+    
+    func getApps(nextPage: String?, append: Bool, completion: @escaping App.Completion) {
+        request(endpoint: .getApps(nextPage),
+                transformResponseToModel: {
+                    (response: App.Response) in response.apps },
                 completion: completion)
     }
 }

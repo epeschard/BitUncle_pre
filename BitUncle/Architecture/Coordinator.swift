@@ -3,7 +3,7 @@
 //  BitUncle
 //
 //  Created by Eugène Peschard on 06/02/2019.
-//  Copyright © 2019 Eugène Peschard. All rights reserved.
+//  Copyright © 2019 pesch.app All rights reserved.
 //
 
 import StanwoodCore
@@ -42,7 +42,6 @@ class Coordinator {
                 }
                 let loadingView = LoadingView()
                 rootViewController.view.endEditing(true)
-                //            rootViewController.view.addAnimatedSubview(loadingView)
                 rootViewController.view.addSubview(loadingView)
                 loadingView.pinToSuperview()
                 self.loadingView = loadingView
@@ -106,5 +105,10 @@ class Coordinator {
     private func isValidToken(_ token: String?) -> Bool {
         guard let token = token else { return false }
         return token.count > 0
+    }
+    
+    func presentApps() {
+        let appScreen = App.makeViewController(with: actions, and: parameters)
+        window.rootViewController = appScreen
     }
 }
