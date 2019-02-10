@@ -15,19 +15,19 @@ extension App {
         
         weak var viewable: Viewable?
         var parameters: Parameters
-        var actionable: Actions
+        var actions: Actions
         
         let dataSource = DataSource(dataType: Stanwood.Elements<DataModel>(items: []))
         let delegate = Delegate(dataType: Stanwood.Elements<DataModel>(items: []))
         
         required init(_ view: Viewable? = nil, with actions: Actions, and parameters: Parameters) {
             self.viewable = view
-            self.actionable = actions
+            self.actions = actions
             self.parameters = parameters
         }
         
         func viewDidLoad() {
-            actionable.getApps {
+            actions.getApps {
                 result in
                 switch result {
                 case .success(let data):
@@ -36,9 +36,9 @@ extension App {
                     self.delegate.update(with: elements)
                     self.viewable?.reload()
                 case .failure(let error):
-                    self.actionable.showAlert(error)
+                    self.actions.showAlert(error)
                 }
-                self.actionable.setLoading(visible: false)
+                self.actions.setLoading(visible: false)
             }
             delegate.presenter = self
 //            dataSource.presenter = self
@@ -47,10 +47,11 @@ extension App {
         func didSelect(_ app: DataModel) {
             parameters.appSlug = app.slug
             parameters.appName = app.title
+            actions.showBuilds()
         }
         
         func showProfile() {
-            actionable.showProfile()
+            actions.showProfile()
         }
         
     }

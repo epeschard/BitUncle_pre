@@ -12,4 +12,6 @@ class AppData {
     var nextPage = ""
     var appSlug = ""
     var appName = ""
+    var buildSlug = ""
+    var buildName = ""
 }

@@ -32,6 +32,10 @@ class Coordinator {
         return window.rootViewController as? UINavigationController
     }
     
+    private var rootSplitViewController: UISplitViewController? {
+        return window.rootViewController as? UISplitViewController
+    }
+    
     func setLoading(_ visible: Bool) {
         main {
             //TODO: Pending
@@ -63,11 +67,6 @@ class Coordinator {
         rootViewController?.present(alert, animated: true) {
             alert.view.tintColor = UIColor.Bitrise.brightPurple
         }
-    }
-    
-    func presentProfile() {
-        let profileScreen = Profile.makeViewController(with: actions, and: parameters)
-        window.rootViewController = profileScreen
     }
     
     func askForToken(completion: @escaping () -> Void) {
@@ -107,8 +106,32 @@ class Coordinator {
         return token.count > 0
     }
     
+    func insertSplitViewController() {
+        window.rootViewController?.removeFromParent()
+        window.rootViewController = nil
+        
+        let split = UISplitViewController()
+        let master = App.makeViewController(with: actions, and: parameters)
+        let detail = Build.makeViewController(with: actions, and: parameters)
+        split.viewControllers = [master, detail]
+        if let delegate = master.topViewController as? App.ViewController {
+            split.delegate = delegate
+        }
+        window.rootViewController = split
+    }
+    
+    func presentProfile() {
+        let profileScreen = Profile.makeViewController(with: actions, and: parameters)
+        window.rootViewController = profileScreen
+    }
+    
     func presentApps() {
         let appScreen = App.makeViewController(with: actions, and: parameters)
-        window.rootViewController = appScreen
+        rootSplitViewController?.show(appScreen, sender: self)
+    }
+    
+    func presentBuilds() {
+        let buildScreen = Build.makeViewController(with: actions, and: parameters)
+        rootSplitViewController?.showDetailViewController(buildScreen, sender: self)
     }
 }
