@@ -11,7 +11,7 @@ import UIKit
 extension Profile {
     
     @objc (ProfileViewController)
-    class ViewController: UITableViewController, Viewable {
+    class ViewController: UITableViewController, Viewable, UIPopoverPresentationControllerDelegate {
         
         var presenter: Presenter!
         
@@ -87,6 +87,12 @@ extension Profile {
             tableView.deselectRow(at: indexPath, animated: true)
         }
         
+    }
+    
+    // MARK: - UIPopoverPresentationControllerDelegate
+    
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .popover
     }
 }
 

@@ -6,11 +6,12 @@
 //  Copyright © 2019 pesch.app All rights reserved.
 //
 
+import UIKit
 
 protocol AppActions: Loadable, ErrorActionable {
     func getApps(completion: @escaping App.Completion)
-    func showProfile()
-    func showBuilds()
+    func presentProfile(from viewController: UIViewController)
+    func presentBuilds()
 }
 
 extension Actions: AppActions {
@@ -23,11 +24,11 @@ extension Actions: AppActions {
         dataProvider.networkManager.getApps(nextPage: nextPage, append: false, completion: completion)
     }
     
-    func showProfile() {
-        coordinator.presentProfile()
+    func presentProfile(from viewController: UIViewController) {
+        coordinator.presentProfile(from: viewController)
     }
     
-    func showBuilds() {
+    func presentBuilds() {
         coordinator.presentBuilds()
     }
     

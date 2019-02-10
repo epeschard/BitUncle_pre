@@ -66,8 +66,8 @@ extension App {
             navigationItem.rightBarButtonItem = profileButton
         }
         
-        @objc private func presentProfile() {
-            presenter.showProfile()
+        @objc func presentProfile() {
+            presenter.showPopover(from: self)
         }
         
         //MARK: - UISplitViewControllerDelegate
@@ -80,6 +80,5 @@ extension App {
             }
             return false
         }
-        
     }
 }

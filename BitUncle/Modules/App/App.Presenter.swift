@@ -47,11 +47,11 @@ extension App {
         func didSelect(_ app: DataModel) {
             parameters.appSlug = app.slug
             parameters.appName = app.title
-            actions.showBuilds()
+            actions.presentBuilds()
         }
-        
-        func showProfile() {
-            actions.showProfile()
+                
+        func showPopover(from viewController: UIViewController) {
+            actions.presentProfile(from: viewController)
         }
         
     }

@@ -69,6 +69,19 @@ class Coordinator {
         }
     }
     
+    func presentProfile(from viewController: UIViewController) {
+        let barButtonItem = viewController.navigationItem.rightBarButtonItem
+        let profileScreen = Profile.makeViewController(with: actions, and: parameters)
+        profileScreen.modalPresentationStyle = .popover
+        if let detailNav = rootSplitViewController?.viewControllers.last as? UINavigationController, let popover = profileScreen.popoverPresentationController, let delegate = profileScreen as? UIPopoverPresentationControllerDelegate {
+            popover.barButtonItem = barButtonItem
+            popover.delegate = delegate
+            popover.permittedArrowDirections = .up
+            popover.presentedViewController.preferredContentSize = CGSize(width: 300, height: 176)
+            detailNav.topViewController?.present(profileScreen, animated: true, completion: nil)
+        }
+    }
+    
     func askForToken(completion: @escaping () -> Void) {
         let alert = UIAlertController(title: Localized.Token.Alert.title, message: Localized.Token.Alert.message, preferredStyle: .alert)
         let ok = UIAlertAction(title: Localized.Token.Alert.ok, style: .default, handler: { action in

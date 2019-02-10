@@ -10,4 +10,5 @@ import Foundation
 
 protocol AppViewable: AnyObject {
     func reload()
+    func presentProfile()
 }

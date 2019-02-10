@@ -10,45 +10,29 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BitUncle/Architecture/Coordinator.swift"
-            timestampString = "571523032.692095"
+            timestampString = "571320620.153564"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "unknown"
-            landmarkType = "0">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "function signature specialization &lt;Arg[0] = Exploded&gt; of BitUncle.Coordinator.showAlert(BitUncle.ApiError) -&gt; ()"
-                  moduleName = "BitUncle"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/euge/Library/Developer/Peschard/BitUncle/BitUncle/Architecture/Coordinator.swift"
-                  timestampString = "571523450.5518889"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "61"
-                  endingLineNumber = "61"
-                  offsetFromSymbolStart = "414">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "partial apply forwarder for closure #1 (__C.UIAlertAction) -&gt; () in BitUncle.Coordinator.showAlert(BitUncle.ApiError) -&gt; ()"
-                  moduleName = "BitUncle"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/euge/Library/Developer/Peschard/BitUncle/BitUncle/Architecture/Coordinator.swift"
-                  timestampString = "571523450.553856"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "61"
-                  endingLineNumber = "61"
-                  offsetFromSymbolStart = "4">
-               </Location>
-            </Locations>
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "Coordinator"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BitUncle/Architecture/Coordinator.swift"
+            timestampString = "571320620.154586"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "askForToken(completion:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
