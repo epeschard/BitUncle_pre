@@ -79,6 +79,7 @@ PODS:
   - Stanwood/Core (1.0.0):
     - StanwoodCore
   - StanwoodCore (1.4.1)
+  - SwiftRichString (2.0.5)
 
 DEPENDENCIES:
   - Firebase
@@ -87,6 +88,7 @@ DEPENDENCIES:
   - ReachabilitySwift
   - SDWebImage
   - Stanwood/Core
+  - SwiftRichString
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -107,6 +109,7 @@ SPEC REPOS:
     - SDWebImage
     - Stanwood
     - StanwoodCore
+    - SwiftRichString
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
@@ -126,7 +129,8 @@ SPEC CHECKSUMS:
   SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
   Stanwood: 34abe2f15413a9bdce7a984fb38c46cd359febf6
   StanwoodCore: 9f58032a58b16e9b5ebbb2906b7888d87c098642
+  SwiftRichString: a3ebe72b13db2e1b917cdbb6b44d817254a7ff73
 
-PODFILE CHECKSUM: 59e8282489160d23fbe1fd81732761df5d50c20f
+PODFILE CHECKSUM: 0636bf12631ac207a3f7c5819e858bc8ddeac8b0
 
 COCOAPODS: 1.5.3

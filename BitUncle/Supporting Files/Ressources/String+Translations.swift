@@ -49,6 +49,12 @@ extension String {
                 static let emptyMessage = "APP_LABEL_EMPTYMESSAGE".localized
             }
         }
+        
+        enum Log {
+            enum BarButton {
+                static let artifacts = "LOG_BARBUTTON_ARTIFACTS".localized
+            }
+        }
     }
 }
 //                let token2save = "LqoGw8n2M1Ak7tGW_f2z2vFypmwH2SBVDuYh1all3cBk7HaM-i-mcIc6SooxCrVbQNQGmxX1hgbrEaxcrk4Spg".data(using: .utf8)

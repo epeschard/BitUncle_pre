@@ -15,6 +15,8 @@ enum EndPoint {
     case getApps(String?)
     case getBuilds(String, String?)
     case getBuild(String)
+    case getLog(String, String)
+    case getArtifacts(String, String)
 }
 
 extension EndPoint: TargetType {
@@ -27,14 +29,14 @@ extension EndPoint: TargetType {
         dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         switch self {
-        case .getProfile, .getApps, .getBuilds, .getBuild: dateFormatter.dateFormat = Date.Format.matches.rawValue
+        case .getProfile, .getApps, .getBuilds, .getBuild, .getLog, .getArtifacts: dateFormatter.dateFormat = Date.Format.matches.rawValue
         }
         return JSONDecoder.DateDecodingStrategy.formatted(dateFormatter)
     }
     
     var keyDecodingStrategy: JSONDecoder.KeyDecodingStrategy {
         switch self {
-        case .getProfile, .getApps, .getBuilds, .getBuild: return .convertFromSnakeCase
+        case .getProfile, .getApps, .getBuilds, .getBuild, .getLog, .getArtifacts: return .convertFromSnakeCase
         }
     }
     
@@ -44,13 +46,17 @@ extension EndPoint: TargetType {
         case .getApps: return "v0.1/me/apps"
         case .getBuilds(let appSlug, _): return "v0.1/apps/\(appSlug)/builds"
         case .getBuild(let appSlug):return "v0.1/apps/\(appSlug)/builds"
+        case .getLog(let appSlug, let buildSlug):
+            return "v0.1/apps/\(appSlug)/builds/\(buildSlug)/log"
+        case .getArtifacts(let appSlug, let buildSlug):
+            return "v0.1/apps/\(appSlug)/builds/\(buildSlug)/artifacts"
         }
     }
     
     
     var method: Moya.Method {
         switch self {
-        case .getProfile, .getApps, .getBuilds, .getBuild: return .get
+        case .getProfile, .getApps, .getBuilds, .getBuild, .getLog, .getArtifacts: return .get
         }
     }
     
@@ -76,6 +82,10 @@ extension EndPoint: TargetType {
             } else {
                 return .requestParameters(parameters: ["limit": DEFAULT_PAGE], encoding: URLEncoding.default)
             }
+        case .getLog(_, _):
+            return .requestParameters(parameters: ["limit": DEFAULT_PAGE], encoding: URLEncoding.default)
+        case .getArtifacts(_, _):
+            return .requestParameters(parameters: ["limit": DEFAULT_PAGE], encoding: URLEncoding.default)
         }
     }
     

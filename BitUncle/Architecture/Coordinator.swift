@@ -147,4 +147,24 @@ class Coordinator {
         let buildScreen = Build.makeViewController(with: actions, and: parameters)
         rootSplitViewController?.showDetailViewController(buildScreen, sender: self)
     }
+    
+    func presentLog() {
+        let logScreen = Log.makeViewController(with: actions, and: parameters)
+        rootSplitViewController?.showDetailViewController(logScreen, sender: self)
+    }
+    
+    func presentArtifacts(from viewController: UIViewController) {
+        let barButtonItem = viewController.navigationItem.rightBarButtonItem
+        let artifactsScreen = Artifact.makeViewController(with: actions, and: parameters)
+        artifactsScreen.modalPresentationStyle = .popover
+        if let detailNav = rootSplitViewController?.viewControllers.last as? UINavigationController {
+            if let popover = artifactsScreen.popoverPresentationController {
+                popover.barButtonItem = barButtonItem
+                popover.delegate = artifactsScreen
+                popover.permittedArrowDirections = .up
+                popover.presentedViewController.preferredContentSize = CGSize(width: 300, height: 176)
+                detailNav.topViewController?.present(artifactsScreen, animated: true, completion: nil)
+            }
+        }
+    }
 }

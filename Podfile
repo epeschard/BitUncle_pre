@@ -8,6 +8,7 @@ target 'BitUncle' do
     pod 'Moya'
     pod 'ReachabilitySwift'
     pod 'SDWebImage'
+    pod 'SwiftRichString'
 
     target 'BitUncleTests' do
         inherit! :search_paths
