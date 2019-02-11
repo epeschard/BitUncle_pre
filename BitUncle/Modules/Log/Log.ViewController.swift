@@ -11,7 +11,7 @@ import UIKit
 extension Log {
     
     @objc (LogViewController)
-    class ViewController: UIViewController, Viewable, Navigable {
+    class ViewController: UIViewController, Viewable, Navigable, PopoverPresenter {
         
         var presenter: Presenter!
         var tableView: UITableView!
@@ -92,6 +92,21 @@ extension Log {
             } else {
                 spinner.stopAnimating()
             }
+        }
+        
+        // MARK: - PopoverPresenter
+        
+        func present(_ navigable: Navigable, sender: Any?) {
+            guard let window = navigable as? UIViewController, let host = sender as? UIViewController, let rBarButtton = host.navigationItem.rightBarButtonItem else { return }
+            window.modalPresentationStyle = .popover
+            
+            if let popover = window.popoverPresentationController, let delegate = window as? UIPopoverPresentationControllerDelegate {
+                popover.barButtonItem = rBarButtton
+                popover.delegate = delegate
+                popover.permittedArrowDirections = .up
+                popover.presentedViewController.preferredContentSize = CGSize(width: 300, height: 132)
+            }
+            host.present(window, animated: true, completion: nil)
         }
         
     }

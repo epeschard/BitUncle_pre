@@ -123,7 +123,7 @@ extension App {
                 popover.barButtonItem = rBarButtton
                 popover.delegate = delegate
                 popover.permittedArrowDirections = .up
-                popover.presentedViewController.preferredContentSize = CGSize(width: 300, height: 172.5)
+                popover.presentedViewController.preferredContentSize = CGSize(width: 300, height: 170)
             }
             host.present(window, animated: true, completion: nil)
         }

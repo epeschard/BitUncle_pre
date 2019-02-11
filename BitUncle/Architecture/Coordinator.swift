@@ -56,7 +56,10 @@ class Coordinator {
     }
     
     func presentArtifacts(from parent: Navigable) {
-        // TODO: Pending implementation
+        let artifactScreen = Artifact.makeViewController(with: actions, and: parameters)
+        if let host = parent as? PopoverPresenter {
+            host.present(artifactScreen, sender: parent)
+        }
     }
     
     func fetchBuilds() {
