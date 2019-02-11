@@ -6,10 +6,11 @@
 //  Copyright © 2019 pesch.app All rights reserved.
 //
 
+import UIKit
 
 protocol LogActions: Loadable, ErrorActionable {
     func getLog(for appSlug: String, with buildSlug: String, completion: @escaping Log.Completion)
-    func presentArtifacts()
+    func presentArtifacts(from viewController: UIViewController)
 }
 
 extension Actions: LogActions {
@@ -18,8 +19,8 @@ extension Actions: LogActions {
         dataProvider.networkManager.getLog(for: appSlug, with: buildSlug, completion: completion)
     }
     
-    func presentArtifacts() {
-        coordinator.presentArtifacts()
+    func presentArtifacts(from viewController: UIViewController) {
+        coordinator.presentArtifacts(from: viewController)
     }
     
 }

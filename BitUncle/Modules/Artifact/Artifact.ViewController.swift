@@ -1,5 +1,5 @@
 //
-//  Log.ViewController.swift
+//  Artifact.ViewController.swift
 //  BitUncle
 //
 //  Created by Eugène Peschard on 11/02/2019.
@@ -8,18 +8,14 @@
 
 import UIKit
 
-extension Log {
+extension Artifact {
     
-    @objc (LogViewController)
-    class ViewController: UIViewController, Viewable {
+    @objc (ArtifactViewController)
+    class ViewController: UIViewController, Viewable, UIPopoverPresentationControllerDelegate {
         
         var presenter: Presenter!
         var tableView: UITableView!
         var spinner: UIActivityIndicatorView!
-        
-        var artifactsBarButtonItem: UIBarButtonItem {
-            return UIBarButtonItem(title: Localized.Log.BarButton.artifacts, style: .plain, target: self, action: #selector(showArtifacts))
-        }
         
         // MARK: - Run Loop
         
@@ -35,26 +31,20 @@ extension Log {
         
         override func viewDidLoad() {
             super.viewDidLoad()
-            title = presenter.parameters.buildName
+            title = "Artifacts"
             setup()
             presenter.viewDidLoad()
-            navigationItem.rightBarButtonItem = artifactsBarButtonItem
         }
         
-        private func setup() {
-            assert(self.navigationController != nil)
-            
+        private func setup() {            
             setupTableView()
             setupSpinner()
         }
         
         private func setupTableView() {
-            view.backgroundColor = UIColor.Bitrise.logBackground
             tableView = UITableView(frame: .zero, style: .plain)
             view.addSubview(tableView)
             tableView.pinToSuperview()
-            tableView.backgroundColor = UIColor.Bitrise.logBackground
-            tableView.separatorStyle = .none
             tableView.registerReusableCell(Cell.self)
             tableView.dataSource = presenter.dataSource
             tableView.delegate = presenter.delegate
@@ -62,7 +52,7 @@ extension Log {
         
         private func setupSpinner() {
             self.spinner = UIActivityIndicatorView(style: .whiteLarge)
-            self.spinner.color = UIColor.Bitrise.green
+            self.spinner.color = UIColor.Bitrise.purple
             self.spinner.hidesWhenStopped = true
             self.spinner.translatesAutoresizingMaskIntoConstraints = false
             tableView.addSubview(spinner)
@@ -70,12 +60,12 @@ extension Log {
             self.spinner?.centerYAnchor.constraint(equalTo: self.tableView.centerYAnchor).isActive = true
         }
         
-        @objc private func showArtifacts() {
-            presenter.showArtifacts(from: self)
+        func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+            return .none
         }
         
         //MARK: - AppViewable
-
+        
         func reload() {
             self.tableView.reloadData()
         }

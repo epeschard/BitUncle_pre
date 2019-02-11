@@ -1,5 +1,5 @@
 //
-//  Log.Presenter.swift
+//  Artifact.Presenter.swift
 //  BitUncle
 //
 //  Created by Eugène Peschard on 11/02/2019.
@@ -9,7 +9,7 @@
 import UIKit
 import StanwoodCore
 
-extension Log {
+extension Artifact {
     
     class Presenter {
         
@@ -30,7 +30,7 @@ extension Log {
             viewable?.setLoading(visible: true)
             let appSlug = parameters.appSlug
             let buildSlug = parameters.buildSlug
-            actions.getLog(for: appSlug, with: buildSlug) {
+            actions.getArtifacts(for: appSlug, with: buildSlug) {
                 [weak self] result in
                 switch result {
                 case .success(let data):
@@ -46,9 +46,9 @@ extension Log {
             delegate.presenter = self
             dataSource.presenter = self
         }
-                
-        func showArtifacts(from viewController: UIViewController) {
-            actions.presentArtifacts(from: viewController)
+        
+        func didSelect(_ buildSlug: String) {
+//            actionable.unfoldLogChunk(for: buildSlug)
         }
     }
 }

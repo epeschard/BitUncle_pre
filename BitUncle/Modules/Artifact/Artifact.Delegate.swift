@@ -1,5 +1,5 @@
 //
-//  Log.Delegate.swift
+//  Artifact.Delegate.swift
 //  BitUncle
 //
 //  Created by Eugène Peschard on 11/02/2019.
@@ -8,15 +8,15 @@
 
 import StanwoodCore
 
-extension Log {
+extension Artifact {
     
     class Delegate: Stanwood.AbstractTableDelegate {
         
         weak var presenter: Presenter!
         
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            guard let log = dataType?[indexPath] as? DataModel else { return }
-//            presenter.didSelect(log.chunk)
+            guard let artifact = dataType?[indexPath] as? DataModel else { return }
+            presenter.didSelect(artifact.slug)
         }
         
     }

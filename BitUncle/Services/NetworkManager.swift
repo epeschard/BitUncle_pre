@@ -56,6 +56,13 @@ class NetworkManager {
                     (response: Log.Response) in response.logChunks },
                 completion: completion)
     }
+    
+    func getArtifacts(for appSlug: String, with buildSlug: String, completion: @escaping Artifact.Completion) {
+        request(endpoint: .getArtifacts(appSlug, buildSlug),
+                transformResponseToModel: {
+                    (response: Artifact.Response) in response.artifacts },
+                completion: completion)
+    }
 }
 
 extension NetworkManager {
