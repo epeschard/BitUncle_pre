@@ -42,6 +42,13 @@ class NetworkManager {
                     (response: App.Response) in response.apps },
                 completion: completion)
     }
+    
+    func getBuilds(for slug: String, nextPage: String?, append: Bool, completion: @escaping Build.Completion) {
+        request(endpoint: .getBuilds(slug, nextPage),
+                transformResponseToModel: {
+                    (response: Build.Response) in response.builds },
+                completion: completion)
+    }
 }
 
 extension NetworkManager {

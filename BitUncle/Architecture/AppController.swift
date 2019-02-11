@@ -57,7 +57,7 @@ class AppController: NSObject {
     private func loadInitialData() {
         loadInitialData { [weak self] (success) in
             if let _ = KeyChain.getToken() {
-                self?.coordinator.presentApps()
+                self?.coordinator.insertSplitViewController()
             } else {
                 self?.coordinator.askForToken() {
                     self?.loadInitialData()

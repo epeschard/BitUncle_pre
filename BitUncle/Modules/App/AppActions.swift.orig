@@ -10,8 +10,12 @@ import UIKit
 
 protocol AppActions: Loadable, ErrorActionable {
     func getApps(completion: @escaping App.Completion)
-    func presentProfile(from viewController: UIViewController)
-    func presentBuilds()
+<<<<<<< Updated upstream
+    func showProfile()
+    func showBuilds()
+=======
+    func showProfile(from viewController: UIViewController)
+>>>>>>> Stashed changes
 }
 
 extension Actions: AppActions {
@@ -24,11 +28,11 @@ extension Actions: AppActions {
         dataProvider.networkManager.getApps(nextPage: nextPage, append: false, completion: completion)
     }
     
-    func presentProfile(from viewController: UIViewController) {
+    func showProfile(from viewController: UIViewController) {
         coordinator.presentProfile(from: viewController)
     }
     
-    func presentBuilds() {
+    func showBuilds() {
         coordinator.presentBuilds()
     }
     

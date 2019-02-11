@@ -19,5 +19,24 @@ extension UIColor {
         static let backgroundGrey = UIColor(red:0.97, green:0.97, blue:0.97, alpha:1.00)
         static let success = UIColor(red:0.14, green:0.76, blue:0.54, alpha:1.00)
         static let failed = UIColor(red:1.00, green:0.00, blue:0.34, alpha:1.00)
+        static let aborted = UIColor(red:1.00, green:0.77, blue:0.18, alpha:1.00)
+        
+        static func color(for status: Int, with alphaComponent: CGFloat = CGFloat(1.0)) -> UIColor {
+            var color = success
+            switch status {
+            case 0:
+                color = purple
+            case 1:
+                color = success
+            case 2:
+                color = failed
+            case 3:
+                color = aborted
+            default:
+                color = success
+            }
+            return color.withAlphaComponent(alphaComponent)
+        }
+        
     }
 }

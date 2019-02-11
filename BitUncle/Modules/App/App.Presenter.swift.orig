@@ -47,11 +47,17 @@ extension App {
         func didSelect(_ app: DataModel) {
             parameters.appSlug = app.slug
             parameters.appName = app.title
-            actions.presentBuilds()
+            actions.showBuilds()
         }
+<<<<<<< Updated upstream
+        
+        func showProfile() {
+            actions.showProfile()
+=======
                 
         func showPopover(from viewController: UIViewController) {
-            actions.presentProfile(from: viewController)
+            actionable.showProfile(from: viewController)
+>>>>>>> Stashed changes
         }
         
     }

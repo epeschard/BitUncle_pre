@@ -11,7 +11,7 @@ import UIKit
 extension Profile {
     
     @objc (ProfileViewController)
-    class ViewController: UITableViewController, Viewable {
+    class ViewController: UITableViewController, Viewable, UIPopoverPresentationControllerDelegate {
         
         var presenter: Presenter!
         
@@ -54,6 +54,7 @@ extension Profile {
         
         override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "ProfileCell")
+            cell.detailTextLabel?.textColor = UIColor.Bitrise.purple
             let NA = Localized.Profile.Label.loading
             switch indexPath.row {
             case 0:
@@ -87,6 +88,12 @@ extension Profile {
             tableView.deselectRow(at: indexPath, animated: true)
         }
         
+    }
+    
+    // MARK: - UIPopoverPresentationControllerDelegate
+    
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .popover
     }
 }
 
