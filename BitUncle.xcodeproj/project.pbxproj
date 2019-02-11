@@ -62,6 +62,7 @@
 		9C4E5B8B220AE1F1004B15C1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E5B8A220AE1F1004B15C1 /* NetworkManager.swift */; };
 		9C4E5B8D220AE24F004B15C1 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E5B8C220AE24F004B15C1 /* NetworkService.swift */; };
 		9C4E5B8F220AE279004B15C1 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E5B8E220AE279004B15C1 /* Typealias.swift */; };
+		9C5005032210C8770021A5A7 /* CollectionViewControllerModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5005022210C8770021A5A7 /* CollectionViewControllerModule.swift */; };
 		9C85D0F7220C42DB004BEC8A /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C85D0F6220C42DB004BEC8A /* EndPoint.swift */; };
 		9C85D0F9220C4797004BEC8A /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C85D0F8220C4797004BEC8A /* KeyChain.swift */; };
 		9C85D101220C4B2E004BEC8A /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C85D0FF220C4B2E004BEC8A /* Result.swift */; };
@@ -82,6 +83,8 @@
 		9CC53D9F220B350F00267849 /* Wireframeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC53D9E220B350F00267849 /* Wireframeable.swift */; };
 		9CC53DA1220B3DE600267849 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC53DA0220B3DE600267849 /* UIView+Extension.swift */; };
 		9CC53DA3220B46A100267849 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC53DA2220B46A100267849 /* UIColor+Extension.swift */; };
+		9CD3DEF3221164430029423C /* octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CD3DEF2221164430029423C /* octicons.ttf */; };
+		9CD3DEF5221187CE0029423C /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD3DEF4221187CE0029423C /* UIImage+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +161,7 @@
 		9C4E5B91220AEB21004B15C1 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		9C4E5B92220AEB31004B15C1 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		9C4E5B93220AEB3E004B15C1 /* Stage.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Stage.xcconfig; sourceTree = "<group>"; };
+		9C5005022210C8770021A5A7 /* CollectionViewControllerModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewControllerModule.swift; sourceTree = "<group>"; };
 		9C85D0F6220C42DB004BEC8A /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		9C85D0F8220C4797004BEC8A /* KeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
 		9C85D0FF220C4B2E004BEC8A /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
@@ -178,6 +182,8 @@
 		9CC53D9E220B350F00267849 /* Wireframeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wireframeable.swift; sourceTree = "<group>"; };
 		9CC53DA0220B3DE600267849 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		9CC53DA2220B46A100267849 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		9CD3DEF2221164430029423C /* octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = octicons.ttf; sourceTree = "<group>"; };
+		9CD3DEF4221187CE0029423C /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		A334922A936BD5D8A58D12F1 /* Pods-BitUncleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitUncleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitUncleTests/Pods-BitUncleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BD71B5F977EB659A7D4B7A72 /* Pods_BitUncleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitUncleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C45E168ADF85D538921B9E40 /* Pods-BitUncleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitUncleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitUncleTests/Pods-BitUncleTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -383,6 +389,7 @@
 				9C85D104220C4C42004BEC8A /* Date+Extension.swift */,
 				9C028917220C5C7700AD82A7 /* UINavigationController+Extension.swift */,
 				9C181262220D9781003D30AF /* UICollectionView+Extension.swift */,
+				9CD3DEF4221187CE0029423C /* UIImage+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -413,6 +420,7 @@
 		9C4E5B90220AE50A004B15C1 /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				9CD3DEF2221164430029423C /* octicons.ttf */,
 				9C0288F9220C544800AD82A7 /* Assets.xcassets */,
 				9C0288F8220C544800AD82A7 /* Base.lproj */,
 				9C0288F7220C544800AD82A7 /* Localizable.strings */,
@@ -456,6 +464,7 @@
 				9C028919220C609400AD82A7 /* Loadable.swift */,
 				9C02891B220C60BA00AD82A7 /* ErrorActionable.swift */,
 				9C181260220D970A003D30AF /* ReusableCell.swift */,
+				9C5005022210C8770021A5A7 /* CollectionViewControllerModule.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -564,6 +573,7 @@
 			files = (
 				9CC53D8D220B04CE00267849 /* GoogleService-Info-Stage.plist in Resources */,
 				9C0288FD220C544800AD82A7 /* Base.lproj in Resources */,
+				9CD3DEF3221164430029423C /* octicons.ttf in Resources */,
 				9C0288FE220C544800AD82A7 /* Assets.xcassets in Resources */,
 				9C0288FF220C544800AD82A7 /* RemoteConfig.plist in Resources */,
 				9CC53D8E220B04CE00267849 /* GoogleService-Info.plist in Resources */,
@@ -664,6 +674,7 @@
 				9C028900220C544800AD82A7 /* String+Translations.swift in Sources */,
 				9CC53DA3220B46A100267849 /* UIColor+Extension.swift in Sources */,
 				9C181250220D9095003D30AF /* App.DataSource.swift in Sources */,
+				9CD3DEF5221187CE0029423C /* UIImage+Extension.swift in Sources */,
 				9C4E5B85220ADF98004B15C1 /* Actions.swift in Sources */,
 				9CC53D9C220B31CD00267849 /* SplashView.swift in Sources */,
 				9C267F6C220EE1690096688B /* Build.DataSource.swift in Sources */,
@@ -691,6 +702,7 @@
 				9C4E5B8D220AE24F004B15C1 /* NetworkService.swift in Sources */,
 				9C181259220D923A003D30AF /* App.Cell.swift in Sources */,
 				9C02890C220C59BF00AD82A7 /* ProfileActions.swift in Sources */,
+				9C5005032210C8770021A5A7 /* CollectionViewControllerModule.swift in Sources */,
 				9C267F6D220EE1690096688B /* BuildActions.swift in Sources */,
 				9C181257220D90F3003D30AF /* AppViewable.swift in Sources */,
 				9CC53D95220B314F00267849 /* SplashActionable.swift in Sources */,

@@ -54,6 +54,7 @@ extension Profile {
         
         override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "ProfileCell")
+            cell.detailTextLabel?.textColor = UIColor.Bitrise.purple
             let NA = Localized.Profile.Label.loading
             switch indexPath.row {
             case 0:

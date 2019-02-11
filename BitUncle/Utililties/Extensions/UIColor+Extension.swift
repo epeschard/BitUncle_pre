@@ -21,19 +21,22 @@ extension UIColor {
         static let failed = UIColor(red:1.00, green:0.00, blue:0.34, alpha:1.00)
         static let aborted = UIColor(red:1.00, green:0.77, blue:0.18, alpha:1.00)
         
-        static func statusColor(status: Int) -> UIColor {
+        static func color(for status: Int, with alphaComponent: CGFloat = CGFloat(1.0)) -> UIColor {
+            var color = success
             switch status {
             case 0:
-                return purple
+                color = purple
             case 1:
-                return success
+                color = success
             case 2:
-                return failed
+                color = failed
             case 3:
-                return aborted
+                color = aborted
             default:
-                return success
+                color = success
             }
+            return color.withAlphaComponent(alphaComponent)
         }
+        
     }
 }

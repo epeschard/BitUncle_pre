@@ -32,10 +32,8 @@ extension App {
             let label = UILabel()
             label.numberOfLines = 0
             label.textAlignment = .center
-            label.font = UIFont.systemFont(ofSize: 30)
+            label.font = UIFont.systemFont(ofSize: 30, weight: .heavy)
             label.textColor = .white
-//            label.layer.cornerRadius = 9
-//            label.clipsToBounds = true
             return label
         }()
         
@@ -71,7 +69,6 @@ extension App {
             let label = UILabel()
             label.numberOfLines = 0
             label.textAlignment = .left
-            //            label.font.
             label.setContentCompressionResistancePriority(.required, for: .vertical)
             return label
         }()

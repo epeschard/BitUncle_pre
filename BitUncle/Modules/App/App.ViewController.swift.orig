@@ -7,26 +7,18 @@
 //
 
 import UIKit
-import SDWebImage
 
 extension App {
     
     @objc (AppViewController)
-    class ViewController: UIViewController, Viewable, UISplitViewControllerDelegate {
+    class ViewController: UIViewController, Viewable {
         
         var presenter: Presenter!
         var collectionView: UICollectionView!
         var collectionViewLayout: UICollectionViewFlowLayout!
         
-        var profile: Profile.DataModel? {
-            didSet {
-                guard let urlString = profile?.avatarUrl, let imageURL = URL(string: urlString) else { return }
-                profileImageView.sd_setImage(with: imageURL, placeholderImage: #imageLiteral(resourceName: "profile.pdf"))
-                navigationItem.title = profile?.username ?? Localized.App.Label.title
-            }
-        }
-        var profileImageView = UIImageView(image: #imageLiteral(resourceName: "profile.pdf"))
-//        var profileBarButton: UIBarButtonItem?
+        var profile: UIImage?
+        var profileIcon = #imageLiteral(resourceName: "profile.pdf")
         
         // MARK: - Run Loop
         
@@ -70,13 +62,14 @@ extension App {
         }
         
         private func addProfileBarButton() {
-            let profileBarButton = UIBarButtonItem(image: #imageLiteral(resourceName: "profile.pdf"), style: .plain, target: self, action: #selector(presentProfile))
-            navigationItem.rightBarButtonItem = profileBarButton
+            let profileButton = UIBarButtonItem(image: #imageLiteral(resourceName: "profile.pdf"), style: .plain, target: self, action: #selector(presentProfile))
+            navigationItem.rightBarButtonItem = profileButton
         }
         
         @objc func presentProfile() {
             presenter.showPopover(from: self)
         }
+<<<<<<< Updated upstream
         
         //MARK: - UISplitViewControllerDelegate
         
@@ -88,5 +81,8 @@ extension App {
             }
             return false
         }
+        
+=======
+>>>>>>> Stashed changes
     }
 }
