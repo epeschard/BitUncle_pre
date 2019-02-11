@@ -75,6 +75,17 @@
 		9C7F1EEC2211B6380050DEAB /* Log.DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F1EEB2211B6380050DEAB /* Log.DataModel.swift */; };
 		9C7F1EEE2211B6580050DEAB /* Log.Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F1EED2211B6580050DEAB /* Log.Response.swift */; };
 		9C7F1EF02211B9310050DEAB /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F1EEF2211B9310050DEAB /* UITableView+Extension.swift */; };
+		9C7F1EFA2211D7A40050DEAB /* ArtifactActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F1EF22211D7A40050DEAB /* ArtifactActions.swift */; };
+		9C7F1EFB2211D7A40050DEAB /* Artifact.Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F1EF32211D7A40050DEAB /* Artifact.Presenter.swift */; };
+		9C7F1EFC2211D7A40050DEAB /* Artifact.DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F1EF42211D7A40050DEAB /* Artifact.DataSource.swift */; };
+		9C7F1EFE2211D7A40050DEAB /* Artifact.ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F1EF62211D7A40050DEAB /* Artifact.ViewController.swift */; };
+		9C7F1EFF2211D7A40050DEAB /* ArtifactParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F1EF72211D7A40050DEAB /* ArtifactParameters.swift */; };
+		9C7F1F002211D7A40050DEAB /* Artifact.Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F1EF82211D7A40050DEAB /* Artifact.Delegate.swift */; };
+		9C7F1F012211D7A40050DEAB /* Artifact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F1EF92211D7A40050DEAB /* Artifact.swift */; };
+		9C7F1F032211D8240050DEAB /* ArtifactViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F1F022211D8240050DEAB /* ArtifactViewable.swift */; };
+		9C7F1F052211D8F40050DEAB /* Artifact.Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F1F042211D8F40050DEAB /* Artifact.Cell.swift */; };
+		9C7F1F072211D91B0050DEAB /* Artifact.DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F1F062211D91B0050DEAB /* Artifact.DataModel.swift */; };
+		9C7F1F092211D9390050DEAB /* Artifact.Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F1F082211D9390050DEAB /* Artifact.Response.swift */; };
 		9C85D0F7220C42DB004BEC8A /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C85D0F6220C42DB004BEC8A /* EndPoint.swift */; };
 		9C85D0F9220C4797004BEC8A /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C85D0F8220C4797004BEC8A /* KeyChain.swift */; };
 		9C85D101220C4B2E004BEC8A /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C85D0FF220C4B2E004BEC8A /* Result.swift */; };
@@ -186,6 +197,17 @@
 		9C7F1EEB2211B6380050DEAB /* Log.DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.DataModel.swift; sourceTree = "<group>"; };
 		9C7F1EED2211B6580050DEAB /* Log.Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.Response.swift; sourceTree = "<group>"; };
 		9C7F1EEF2211B9310050DEAB /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		9C7F1EF22211D7A40050DEAB /* ArtifactActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtifactActions.swift; sourceTree = "<group>"; };
+		9C7F1EF32211D7A40050DEAB /* Artifact.Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artifact.Presenter.swift; sourceTree = "<group>"; };
+		9C7F1EF42211D7A40050DEAB /* Artifact.DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artifact.DataSource.swift; sourceTree = "<group>"; };
+		9C7F1EF62211D7A40050DEAB /* Artifact.ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artifact.ViewController.swift; sourceTree = "<group>"; };
+		9C7F1EF72211D7A40050DEAB /* ArtifactParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtifactParameters.swift; sourceTree = "<group>"; };
+		9C7F1EF82211D7A40050DEAB /* Artifact.Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artifact.Delegate.swift; sourceTree = "<group>"; };
+		9C7F1EF92211D7A40050DEAB /* Artifact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artifact.swift; sourceTree = "<group>"; };
+		9C7F1F022211D8240050DEAB /* ArtifactViewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtifactViewable.swift; sourceTree = "<group>"; };
+		9C7F1F042211D8F40050DEAB /* Artifact.Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artifact.Cell.swift; sourceTree = "<group>"; };
+		9C7F1F062211D91B0050DEAB /* Artifact.DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artifact.DataModel.swift; sourceTree = "<group>"; };
+		9C7F1F082211D9390050DEAB /* Artifact.Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artifact.Response.swift; sourceTree = "<group>"; };
 		9C85D0F6220C42DB004BEC8A /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		9C85D0F8220C4797004BEC8A /* KeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
 		9C85D0FF220C4B2E004BEC8A /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
@@ -270,6 +292,7 @@
 				9C18125C220D9302003D30AF /* App.DataModel.swift */,
 				9C066E082210290B009AE5FC /* Build.DataModel.swift */,
 				9C7F1EEB2211B6380050DEAB /* Log.DataModel.swift */,
+				9C7F1F062211D91B0050DEAB /* Artifact.DataModel.swift */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -295,6 +318,7 @@
 				9C18125E220D939C003D30AF /* Paging.swift */,
 				9C066E06221028FE009AE5FC /* Build.Response.swift */,
 				9C7F1EED2211B6580050DEAB /* Log.Response.swift */,
+				9C7F1F082211D9390050DEAB /* Artifact.Response.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -441,6 +465,7 @@
 				9C181245220D906F003D30AF /* App */,
 				9CBC5B7E220EE03A00A5D9F3 /* Build */,
 				9C7F1EC62211B4460050DEAB /* Log */,
+				9C7F1EF12211D7840050DEAB /* Artifact */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -473,6 +498,22 @@
 			);
 			name = Log;
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		9C7F1EF12211D7840050DEAB /* Artifact */ = {
+			isa = PBXGroup;
+			children = (
+				9C7F1EF92211D7A40050DEAB /* Artifact.swift */,
+				9C7F1F022211D8240050DEAB /* ArtifactViewable.swift */,
+				9C7F1EF22211D7A40050DEAB /* ArtifactActions.swift */,
+				9C7F1EF72211D7A40050DEAB /* ArtifactParameters.swift */,
+				9C7F1EF62211D7A40050DEAB /* Artifact.ViewController.swift */,
+				9C7F1EF32211D7A40050DEAB /* Artifact.Presenter.swift */,
+				9C7F1EF42211D7A40050DEAB /* Artifact.DataSource.swift */,
+				9C7F1EF82211D7A40050DEAB /* Artifact.Delegate.swift */,
+				9C7F1F042211D8F40050DEAB /* Artifact.Cell.swift */,
+			);
+			path = Artifact;
 			sourceTree = "<group>";
 		};
 		9C85D0FE220C4AFC004BEC8A /* Model */ = {
@@ -718,11 +759,14 @@
 			files = (
 				9C267F6A220EE1690096688B /* Build.Delegate.swift in Sources */,
 				9C7F1ED02211B4630050DEAB /* Log.Presenter.swift in Sources */,
+				9C7F1F012211D7A40050DEAB /* Artifact.swift in Sources */,
 				9C267F6B220EE1690096688B /* Build.swift in Sources */,
 				9C028900220C544800AD82A7 /* String+Translations.swift in Sources */,
 				9CC53DA3220B46A100267849 /* UIColor+Extension.swift in Sources */,
+				9C7F1F032211D8240050DEAB /* ArtifactViewable.swift in Sources */,
 				9C181250220D9095003D30AF /* App.DataSource.swift in Sources */,
 				9CD3DEF5221187CE0029423C /* UIImage+Extension.swift in Sources */,
+				9C7F1EFB2211D7A40050DEAB /* Artifact.Presenter.swift in Sources */,
 				9C7F1ECF2211B4630050DEAB /* LogActions.swift in Sources */,
 				9C4E5B85220ADF98004B15C1 /* Actions.swift in Sources */,
 				9CC53D9C220B31CD00267849 /* SplashView.swift in Sources */,
@@ -735,6 +779,8 @@
 				9CC53D96220B314F00267849 /* Splash.Presenter.swift in Sources */,
 				9C85D0F7220C42DB004BEC8A /* EndPoint.swift in Sources */,
 				9C18124F220D9095003D30AF /* App.Presenter.swift in Sources */,
+				9C7F1EFA2211D7A40050DEAB /* ArtifactActions.swift in Sources */,
+				9C7F1EFF2211D7A40050DEAB /* ArtifactParameters.swift in Sources */,
 				9C18124E220D9095003D30AF /* AppActions.swift in Sources */,
 				9C181261220D970A003D30AF /* ReusableCell.swift in Sources */,
 				9C4E5B57220ADCF7004B15C1 /* AppDelegate.swift in Sources */,
@@ -745,6 +791,7 @@
 				9C181255220D9095003D30AF /* App.swift in Sources */,
 				9C4E5B87220ADFCE004B15C1 /* Coordinator.swift in Sources */,
 				9CC53D99220B314F00267849 /* SplashParameters.swift in Sources */,
+				9C7F1F052211D8F40050DEAB /* Artifact.Cell.swift in Sources */,
 				9C02890F220C59BF00AD82A7 /* Profile.ViewController.swift in Sources */,
 				9C7F1EEC2211B6380050DEAB /* Log.DataModel.swift in Sources */,
 				9CC53D9A220B314F00267849 /* Splash.swift in Sources */,
@@ -753,10 +800,12 @@
 				9C4E5B8D220AE24F004B15C1 /* NetworkService.swift in Sources */,
 				9C181259220D923A003D30AF /* App.Cell.swift in Sources */,
 				9C02890C220C59BF00AD82A7 /* ProfileActions.swift in Sources */,
+				9C7F1F092211D9390050DEAB /* Artifact.Response.swift in Sources */,
 				9C7F1ED52211B4630050DEAB /* Log.Delegate.swift in Sources */,
 				9C7F1EEA2211B5D60050DEAB /* Log.Cell.swift in Sources */,
 				9C5005032210C8770021A5A7 /* CollectionViewControllerModule.swift in Sources */,
 				9C267F6D220EE1690096688B /* BuildActions.swift in Sources */,
+				9C7F1EFE2211D7A40050DEAB /* Artifact.ViewController.swift in Sources */,
 				9C181257220D90F3003D30AF /* AppViewable.swift in Sources */,
 				9CC53D95220B314F00267849 /* SplashActionable.swift in Sources */,
 				9C4E5B8B220AE1F1004B15C1 /* NetworkManager.swift in Sources */,
@@ -773,9 +822,11 @@
 				9C181252220D9095003D30AF /* App.ViewController.swift in Sources */,
 				9C181254220D9095003D30AF /* App.Delegate.swift in Sources */,
 				9C7F1ED32211B4630050DEAB /* Log.ViewController.swift in Sources */,
+				9C7F1F002211D7A40050DEAB /* Artifact.Delegate.swift in Sources */,
 				9C028911220C59BF00AD82A7 /* Profile.swift in Sources */,
 				9C4E5B83220ADF67004B15C1 /* AppData.swift in Sources */,
 				9C4E5B81220ADF55004B15C1 /* Parameters.swift in Sources */,
+				9C7F1F072211D91B0050DEAB /* Artifact.DataModel.swift in Sources */,
 				9C7F1EEE2211B6580050DEAB /* Log.Response.swift in Sources */,
 				9C181263220D9781003D30AF /* UICollectionView+Extension.swift in Sources */,
 				9CC53D9F220B350F00267849 /* Wireframeable.swift in Sources */,
@@ -792,6 +843,7 @@
 				9CC53DA1220B3DE600267849 /* UIView+Extension.swift in Sources */,
 				9C066E0B22102C11009AE5FC /* Build.Cell.swift in Sources */,
 				9C85D102220C4B2E004BEC8A /* ApiError.swift in Sources */,
+				9C7F1EFC2211D7A40050DEAB /* Artifact.DataSource.swift in Sources */,
 				9CC53D88220B01D400267849 /* Constants.swift in Sources */,
 				9C028918220C5C7700AD82A7 /* UINavigationController+Extension.swift in Sources */,
 				9C181253220D9095003D30AF /* AppParameters.swift in Sources */,
