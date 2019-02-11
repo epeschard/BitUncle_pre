@@ -26,3 +26,4 @@
 "PROFILE_LABEL_LOADING" = "Loading...";
 
 "APP_LABEL_TITLE" = "All apps";
+"APP_LABEL_EMPTYMESSAGE" = "No app selected to show builds from";

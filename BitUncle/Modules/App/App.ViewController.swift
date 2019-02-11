@@ -17,6 +17,7 @@ extension App {
         var presenter: Presenter!
         var collectionView: UICollectionView!
         var collectionViewLayout: UICollectionViewFlowLayout!
+        var spinner: UIActivityIndicatorView!
         
         var profile: Profile.DataModel? {
             didSet {
@@ -26,7 +27,6 @@ extension App {
             }
         }
         var profileImageView = UIImageView(image: #imageLiteral(resourceName: "profile.pdf"))
-//        var profileBarButton: UIBarButtonItem?
         
         // MARK: - Run Loop
         
@@ -45,21 +45,18 @@ extension App {
             title = Localized.App.Label.title
             setup()
             presenter.viewDidLoad()
-            addProfileBarButton()
-        }
-        
-        func reload() {
-            self.collectionView.reloadData()
         }
         
         private func setup() {
             assert(self.navigationController != nil)
             
             setupCollectionView()
+            setupSpinner()
+            addProfileBarButton()
         }
         
         private func setupCollectionView() {
-            let collectionViewLayout = ColumnFlowLayout()
+            collectionViewLayout = ColumnFlowLayout()
             collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
             view.addSubview(collectionView)
             collectionView.pinToSuperview()
@@ -69,13 +66,37 @@ extension App {
             collectionView.delegate = presenter.delegate
         }
         
+        private func setupSpinner() {
+            self.spinner = UIActivityIndicatorView(style: .whiteLarge)
+            self.spinner.color = UIColor.Bitrise.purple
+            self.spinner.hidesWhenStopped = true
+            self.spinner.translatesAutoresizingMaskIntoConstraints = false
+            collectionView.addSubview(spinner)
+            self.spinner?.centerXAnchor.constraint(equalTo: self.collectionView.centerXAnchor).isActive = true
+            self.spinner?.centerYAnchor.constraint(equalTo: self.collectionView.centerYAnchor).isActive = true
+        }
+        
         private func addProfileBarButton() {
             let profileBarButton = UIBarButtonItem(image: #imageLiteral(resourceName: "profile.pdf"), style: .plain, target: self, action: #selector(presentProfile))
             navigationItem.rightBarButtonItem = profileBarButton
         }
         
+        //MARK: - AppViewable
+        
+        func reload() {
+            self.collectionView.reloadData()
+        }
+        
         @objc func presentProfile() {
             presenter.showPopover(from: self)
+        }
+        
+        func setLoading(visible: Bool) {
+            if visible {
+                spinner.startAnimating()
+            } else {
+                spinner.stopAnimating()
+            }
         }
         
         //MARK: - UISplitViewControllerDelegate

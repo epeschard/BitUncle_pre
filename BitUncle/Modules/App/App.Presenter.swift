@@ -27,18 +27,19 @@ extension App {
         }
         
         func viewDidLoad() {
+            viewable?.setLoading(visible: true)
             actions.getApps {
-                result in
+                [weak self] result in
                 switch result {
                 case .success(let data):
                     let elements = Stanwood.Elements(items: data)
-                    self.dataSource.update(with: elements)
-                    self.delegate.update(with: elements)
-                    self.viewable?.reload()
+                    self?.dataSource.update(with: elements)
+                    self?.delegate.update(with: elements)
+                    self?.viewable?.reload()
                 case .failure(let error):
-                    self.actions.showAlert(error)
+                    self?.actions.showAlert(error)
                 }
-                self.actions.setLoading(visible: false)
+                self?.viewable?.setLoading(visible: false)
             }
             delegate.presenter = self
 //            dataSource.presenter = self

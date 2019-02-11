@@ -46,6 +46,7 @@ extension String {
         enum App {
             enum Label {
                 static let title = "APP_LABEL_TITLE".localized
+                static let emptyMessage = "APP_LABEL_EMPTYMESSAGE".localized
             }
         }
     }
