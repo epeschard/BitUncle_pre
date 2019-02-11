@@ -147,4 +147,13 @@ class Coordinator {
         let buildScreen = Build.makeViewController(with: actions, and: parameters)
         rootSplitViewController?.showDetailViewController(buildScreen, sender: self)
     }
+    
+    func presentLog() {
+        let logScreen = Log.makeViewController(with: actions, and: parameters)
+        rootSplitViewController?.showDetailViewController(logScreen, sender: self)
+    }
+    
+    func presentArtifacts() {
+        //TODO: Pending implementation
+    }
 }
