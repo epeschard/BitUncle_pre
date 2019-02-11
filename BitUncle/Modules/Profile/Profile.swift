@@ -3,7 +3,7 @@
 //  BitUncle
 //
 //  Created by Eugène Peschard on 07/02/2019.
-//  Copyright © 2019 Eugène Peschard. All rights reserved.
+//  Copyright © 2019 pesch.app All rights reserved.
 //
 
 import UIKit
@@ -14,11 +14,9 @@ enum Profile: Wireframeable {
     typealias Actions = ProfileActions
     typealias Parameters = ProfileParameters
     
-    static func makeViewController(with actions: Actions, and parameters: Parameters) -> UINavigationController {
+    static func makeViewController(with actions: Actions, and parameters: Parameters) -> UIViewController {
         let controller = ViewController(with: actions, and: parameters)
-        let navController = UINavigationController(rootViewController: controller)
-        navController.setBitriseAppearance()
-        return navController
+        return controller
     }
 
 }

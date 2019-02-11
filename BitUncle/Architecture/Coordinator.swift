@@ -3,7 +3,7 @@
 //  BitUncle
 //
 //  Created by Eugène Peschard on 06/02/2019.
-//  Copyright © 2019 Eugène Peschard. All rights reserved.
+//  Copyright © 2019 pesch.app All rights reserved.
 //
 
 import StanwoodCore
@@ -32,6 +32,10 @@ class Coordinator {
         return window.rootViewController as? UINavigationController
     }
     
+    private var rootSplitViewController: UISplitViewController? {
+        return window.rootViewController as? UISplitViewController
+    }
+    
     func setLoading(_ visible: Bool) {
         main {
             //TODO: Pending
@@ -42,7 +46,6 @@ class Coordinator {
                 }
                 let loadingView = LoadingView()
                 rootViewController.view.endEditing(true)
-                //            rootViewController.view.addAnimatedSubview(loadingView)
                 rootViewController.view.addSubview(loadingView)
                 loadingView.pinToSuperview()
                 self.loadingView = loadingView
@@ -66,9 +69,17 @@ class Coordinator {
         }
     }
     
-    func presentProfile() {
+    func presentProfile(from viewController: UIViewController) {
+        let barButtonItem = viewController.navigationItem.rightBarButtonItem
         let profileScreen = Profile.makeViewController(with: actions, and: parameters)
-        window.rootViewController = profileScreen
+        profileScreen.modalPresentationStyle = .popover
+        if let detailNav = rootSplitViewController?.viewControllers.last as? UINavigationController, let popover = profileScreen.popoverPresentationController, let delegate = profileScreen as? UIPopoverPresentationControllerDelegate {
+            popover.barButtonItem = barButtonItem
+            popover.delegate = delegate
+            popover.permittedArrowDirections = .up
+            popover.presentedViewController.preferredContentSize = CGSize(width: 300, height: 172.5)
+            detailNav.topViewController?.present(profileScreen, animated: true, completion: nil)
+        }
     }
     
     func askForToken(completion: @escaping () -> Void) {
@@ -106,5 +117,34 @@ class Coordinator {
     private func isValidToken(_ token: String?) -> Bool {
         guard let token = token else { return false }
         return token.count > 0
+    }
+    
+    func insertSplitViewController() {
+        window.rootViewController?.removeFromParent()
+        window.rootViewController = nil
+        
+        let split = UISplitViewController()
+        let master = App.makeViewController(with: actions, and: parameters)
+        let detail = Build.makeViewController(with: actions, and: parameters)
+        split.viewControllers = [master, detail]
+        if let delegate = master.topViewController as? App.ViewController {
+            split.delegate = delegate
+        }
+        window.rootViewController = split
+    }
+    
+    func presentProfile() {
+        let profileScreen = Profile.makeViewController(with: actions, and: parameters)
+        window.rootViewController = profileScreen
+    }
+    
+    func presentApps() {
+        let appScreen = App.makeViewController(with: actions, and: parameters)
+        rootSplitViewController?.show(appScreen, sender: self)
+    }
+    
+    func presentBuilds() {
+        let buildScreen = Build.makeViewController(with: actions, and: parameters)
+        rootSplitViewController?.showDetailViewController(buildScreen, sender: self)
     }
 }

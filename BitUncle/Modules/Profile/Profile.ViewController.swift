@@ -3,7 +3,7 @@
 //  BitUncle
 //
 //  Created by Eugène Peschard on 07/02/2019.
-//  Copyright © 2019 Eugène Peschard. All rights reserved.
+//  Copyright © 2019 pesch.app All rights reserved.
 //
 
 import UIKit
@@ -11,7 +11,7 @@ import UIKit
 extension Profile {
     
     @objc (ProfileViewController)
-    class ViewController: UITableViewController, Viewable {
+    class ViewController: UITableViewController, Viewable, UIPopoverPresentationControllerDelegate {
         
         var presenter: Presenter!
         
@@ -34,11 +34,6 @@ extension Profile {
             presenter.viewDidLoad()
         }
         
-        override func viewWillAppear(_ animated: Bool) {
-            super.viewWillAppear(animated)
-            presenter.viewWillAppear()
-        }
-        
         private func setup() {
             assert(self.navigationController != nil)
         }
@@ -59,6 +54,7 @@ extension Profile {
         
         override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "ProfileCell")
+            cell.detailTextLabel?.textColor = UIColor.Bitrise.purple
             let NA = Localized.Profile.Label.loading
             switch indexPath.row {
             case 0:
@@ -92,6 +88,12 @@ extension Profile {
             tableView.deselectRow(at: indexPath, animated: true)
         }
         
+    }
+    
+    // MARK: - UIPopoverPresentationControllerDelegate
+    
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .popover
     }
 }
 
