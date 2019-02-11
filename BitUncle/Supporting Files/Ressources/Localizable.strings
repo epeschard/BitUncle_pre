@@ -33,3 +33,5 @@
 "BUILD_LABEL_NOTRIGGEREDDATE" = "No triggered date";
 "BUILD_LABEL_NODURATION" = "No duration";
 "BUILD_LABEL_NA" = "N/A";
+
+"LOG_BARBUTTON_ARTIFACTS" = "Artifacts";

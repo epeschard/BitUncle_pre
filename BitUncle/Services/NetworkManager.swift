@@ -49,7 +49,13 @@ class NetworkManager {
                     (response: Build.Response) in response.builds },
                 completion: completion)
     }
-
+    
+    func getLog(for appSlug: String, with buildSlug: String, completion: @escaping Log.Completion) {
+        request(endpoint: .getLog(appSlug, buildSlug),
+                transformResponseToModel: {
+                    (response: Log.Response) in response.logChunks },
+                completion: completion)
+    }
 }
 
 extension NetworkManager {

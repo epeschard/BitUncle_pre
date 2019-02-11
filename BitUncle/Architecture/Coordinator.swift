@@ -18,6 +18,7 @@ class Coordinator {
     
     private var appListView: App.ViewController!
     private var buildListView: Build.ViewController!
+    private var logListView: Log.ViewController!
     
     func start() {
         showAppListView()
@@ -45,6 +46,17 @@ class Coordinator {
         let buildListViewInNav = UIKitNavigator(rootViewController: buildListView)
         navigator.masterNavController?.showDetailViewController(buildListViewInNav, sender: nil)
         fetchBuilds()
+    }
+    
+    func showLogListView() {
+        logListView = Log.makeViewController(with: actions, and: parameters)
+        let logListViewInNav = UIKitNavigator(rootViewController: logListView)
+        navigator.masterNavController?.showDetailViewController(logListViewInNav, sender: nil)
+        fetchBuilds()
+    }
+    
+    func presentArtifacts(from parent: Navigable) {
+        // TODO: Pending implementation
     }
     
     func fetchBuilds() {

@@ -60,5 +60,11 @@ extension String {
 
             }
         }
+
+        enum Log {
+            enum BarButton {
+                static let artifacts = "LOG_BARBUTTON_ARTIFACTS".localized
+            }
+        }
     }
 }
