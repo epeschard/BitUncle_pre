@@ -31,9 +31,12 @@ extension Artifact {
         
         override func viewDidLoad() {
             super.viewDidLoad()
-            title = "Artifacts"
             setup()
             presenter.viewDidLoad()
+        }
+        
+        override var preferredStatusBarStyle: UIStatusBarStyle {
+            return .lightContent
         }
         
         private func setup() {            
