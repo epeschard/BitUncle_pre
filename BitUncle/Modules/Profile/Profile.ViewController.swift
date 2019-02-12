@@ -34,6 +34,10 @@ extension Profile {
             presenter.viewDidLoad()
         }
         
+        override var preferredStatusBarStyle: UIStatusBarStyle {
+            return .lightContent
+        }
+        
         private func setup() {
             assert(self.navigationController != nil)
         }

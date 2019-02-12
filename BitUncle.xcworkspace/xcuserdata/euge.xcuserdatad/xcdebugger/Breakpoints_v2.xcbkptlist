@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BitUncle/Architecture/Coordinator.swift"
-            timestampString = "571594413.213766"
+            filePath = "BitUncle/Modules/Log/LogPresenter.swift"
+            timestampString = "571585907.914085"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "Coordinator"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "Presenter"
             landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,14 +25,46 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BitUncle/Modules/Log/LogPresenter.swift"
-            timestampString = "571585907.914085"
+            filePath = "BitUncle/Utililties/Extensions/UINavigationController+Extension.swift"
+            timestampString = "571662568.544901"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "Presenter"
-            landmarkType = "3">
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "preferredStatusBarStyle"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "@objc (extension in BitUncle):__C.UINavigationController.preferredStatusBarStyle.getter : __C.UIStatusBarStyle"
+                  moduleName = "BitUncle"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/euge/Library/Developer/Peschard/BitUncle/BitUncle/Utililties/Extensions/UINavigationController+Extension.swift"
+                  timestampString = "571662568.7425261"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in BitUncle):__C.UINavigationController.preferredStatusBarStyle.getter : __C.UIStatusBarStyle"
+                  moduleName = "BitUncle"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/euge/Library/Developer/Peschard/BitUncle/BitUncle/Utililties/Extensions/UINavigationController+Extension.swift"
+                  timestampString = "571662568.744572"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

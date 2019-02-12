@@ -13,16 +13,22 @@ typealias Localized = String.Localized
 extension String {
     
     enum Localized {
+        
+        //MARK: - Splash
         enum Splash {
             enum Label {
                 static let footer = "SPLASH_LABEL_FOOTER".localized
             }
         }
+        
+        //MARK: - Error
         enum Error {
             static let tryAgain = "ERROR_TRYAGAIN".localized
             static let unknownDescription = "ERROR_UNKNOWNDESCRIPTION".localized
             static let ok = "ERROR_OK".localized
         }
+        
+        //MARK: - Token Alert
         enum Token {
             enum Alert {
                 static let title = "TOKEN_ALERT_TITLE".localized
@@ -32,6 +38,8 @@ extension String {
                 static let guide = "TOKEN_ALERT_GUIDE".localized
             }
         }
+        
+        //MARK: - Profile Module
         enum Profile {
             enum Label {
                 static let title = "PROFILE_LABEL_TITLE".localized
@@ -43,6 +51,7 @@ extension String {
             }
         }
         
+        //MARK: - App Module
         enum App {
             enum Label {
                 static let title = "APP_LABEL_TITLE".localized
@@ -50,6 +59,17 @@ extension String {
             }
         }
         
+        //MARK: - Build Module
+        enum Build {
+            enum Label {
+                static let noDuration = "BUILD_LABEL_NODURATION".localized
+                static let triggeredAt = "BUILD_LABEL_TRIGGEREDAT".localized
+                static let noTriggeredDate = "BUILD_LABEL_NOTRIGGEREDDATE".localized
+                static let na = "BUILD_LABEL_NA".localized
+            }
+        }
+        
+        //MARK: - Log Module
         enum Log {
             enum BarButton {
                 static let artifacts = "LOG_BARBUTTON_ARTIFACTS".localized
@@ -57,4 +77,3 @@ extension String {
         }
     }
 }
-//                let token2save = "LqoGw8n2M1Ak7tGW_f2z2vFypmwH2SBVDuYh1all3cBk7HaM-i-mcIc6SooxCrVbQNQGmxX1hgbrEaxcrk4Spg".data(using: .utf8)

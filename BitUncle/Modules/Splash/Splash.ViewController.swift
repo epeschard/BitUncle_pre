@@ -50,6 +50,10 @@ extension Splash {
             addSubviewsAndConstraints()
         }
         
+        override var preferredStatusBarStyle: UIStatusBarStyle {
+            return .lightContent
+        }
+        
         private func addSubviewsAndConstraints() {
             view.backgroundColor = UIColor.Bitrise.purple
             view.addAutolayoutView(logoImage)
