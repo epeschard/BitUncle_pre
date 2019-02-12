@@ -58,11 +58,7 @@ class Coordinator {
     
     func showAlert(_ error: ApiError) {
         let alert = UIAlertController(title: error.message, message: error.localizedDescription, preferredStyle: .alert)
-        let ok = UIAlertAction(title: Localized.Error.ok, style: .default, handler: { [weak self] action in
-            self?.askForToken {
-                print("Tapped OK")
-            }
-        })
+        let ok = UIAlertAction(title: Localized.Error.ok, style: .default, handler: nil)
         alert.addAction(ok)
         rootViewController?.present(alert, animated: true) {
             alert.view.tintColor = UIColor.Bitrise.brightPurple
