@@ -106,7 +106,6 @@
 		9CC53D9F220B350F00267849 /* Wireframeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC53D9E220B350F00267849 /* Wireframeable.swift */; };
 		9CC53DA1220B3DE600267849 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC53DA0220B3DE600267849 /* UIView+Extension.swift */; };
 		9CC53DA3220B46A100267849 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC53DA2220B46A100267849 /* UIColor+Extension.swift */; };
-		9CD3DEF3221164430029423C /* octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CD3DEF2221164430029423C /* octicons.ttf */; };
 		9CD3DEF5221187CE0029423C /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD3DEF4221187CE0029423C /* UIImage+Extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -228,7 +227,6 @@
 		9CC53D9E220B350F00267849 /* Wireframeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wireframeable.swift; sourceTree = "<group>"; };
 		9CC53DA0220B3DE600267849 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		9CC53DA2220B46A100267849 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-		9CD3DEF2221164430029423C /* octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = octicons.ttf; sourceTree = "<group>"; };
 		9CD3DEF4221187CE0029423C /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		A334922A936BD5D8A58D12F1 /* Pods-BitUncleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitUncleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitUncleTests/Pods-BitUncleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BD71B5F977EB659A7D4B7A72 /* Pods_BitUncleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitUncleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -473,7 +471,6 @@
 		9C4E5B90220AE50A004B15C1 /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
-				9CD3DEF2221164430029423C /* octicons.ttf */,
 				9C0288F9220C544800AD82A7 /* Assets.xcassets */,
 				9C0288F8220C544800AD82A7 /* Base.lproj */,
 				9C0288F7220C544800AD82A7 /* Localizable.strings */,
@@ -659,7 +656,6 @@
 			files = (
 				9CC53D8D220B04CE00267849 /* GoogleService-Info-Stage.plist in Resources */,
 				9C0288FD220C544800AD82A7 /* Base.lproj in Resources */,
-				9CD3DEF3221164430029423C /* octicons.ttf in Resources */,
 				9C0288FE220C544800AD82A7 /* Assets.xcassets in Resources */,
 				9C0288FF220C544800AD82A7 /* RemoteConfig.plist in Resources */,
 				9CC53D8E220B04CE00267849 /* GoogleService-Info.plist in Resources */,
