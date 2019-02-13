@@ -51,6 +51,8 @@ extension App {
             return .lightContent
         }
         
+        // MARK: - Internal
+        
         private func setup() {
             assert(self.navigationController != nil)
             
@@ -85,14 +87,14 @@ extension App {
             navigationItem.rightBarButtonItem = profileBarButton
         }
         
-        //MARK: - AppViewable
+        // MARK: - AppViewable
         
         func reload() {
             self.collectionView.reloadData()
         }
         
         @objc func presentProfile() {
-            presenter.showPopover(from: self)
+            presenter.showProfile(from: self)
         }
         
         func setLoading(visible: Bool) {
@@ -103,7 +105,7 @@ extension App {
             }
         }
         
-        //MARK: - UISplitViewControllerDelegate
+        // MARK: - UISplitViewControllerDelegate
         
         func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController:UIViewController, onto primaryViewController:UIViewController) -> Bool {
             guard let detailAsNavController = secondaryViewController as? UINavigationController else { return false }

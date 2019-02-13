@@ -11,9 +11,11 @@ import UIKit
 extension Profile {
     
     @objc (ProfileViewController)
-    class ViewController: UITableViewController, Viewable, UIPopoverPresentationControllerDelegate {
+    class ViewController: UIViewController, Viewable, UIPopoverPresentationControllerDelegate {
         
         var presenter: Presenter!
+        var tableView: UITableView!
+        var spinner: UIActivityIndicatorView!
         
         // MARK: - Run Loop
         
@@ -29,7 +31,6 @@ extension Profile {
         
         override func viewDidLoad() {
             super.viewDidLoad()
-            title = Localized.Profile.Label.title
             setup()
             presenter.viewDidLoad()
         }
@@ -38,66 +39,54 @@ extension Profile {
             return .lightContent
         }
         
+        // MARK: - Internal
+        
         private func setup() {
             assert(self.navigationController != nil)
+            title = Localized.Profile.Label.title
+            setupTableView()
+            setupSpinner()
         }
+        
+        private func setupTableView() {
+            tableView = UITableView(frame: .zero, style: .plain)
+            view.addSubview(tableView)
+            tableView.pinToSuperview()
+            self.tableView.dataSource = presenter.dataSource
+            self.tableView.delegate = presenter.delegate
+        }
+        
+        private func setupSpinner() {
+            self.spinner = UIActivityIndicatorView(style: .whiteLarge)
+            self.spinner.color = UIColor.Bitrise.purple
+            self.spinner.hidesWhenStopped = true
+            self.spinner.translatesAutoresizingMaskIntoConstraints = false
+            tableView.addSubview(spinner)
+            self.spinner?.centerXAnchor.constraint(equalTo: self.tableView.centerXAnchor).isActive = true
+            self.spinner?.centerYAnchor.constraint(equalTo: self.tableView.centerYAnchor).isActive = true
+        }
+        
+        // MARK: - UIPopoverPresentationControllerDelegate
+        
+        func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+            return .none
+        }
+        
+        // MARK: - Viewable
         
         func reload() {
             tableView.reloadData()
         }
         
-        // MARK: - UITableViewControllerDatasource
-        
-        override func numberOfSections(in tableView: UITableView) -> Int {
-            return 1
-        }
-        
-        override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return 3
-        }
-        
-        override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "ProfileCell")
-            cell.detailTextLabel?.textColor = UIColor.Bitrise.purple
-            let NA = Localized.Profile.Label.loading
-            switch indexPath.row {
-            case 0:
-                cell.detailTextLabel?.text = Localized.Profile.Label.username
-                cell.textLabel?.text = presenter.profile?.username ?? NA
-                cell.selectionStyle = .none
-            case 1:
-                cell.detailTextLabel?.text = Localized.Profile.Label.email
-                cell.textLabel?.text = presenter.profile?.email ?? NA
-                cell.selectionStyle = .none
-            case 2:
-                cell.detailTextLabel?.text = Localized.Profile.Label.slug
-                cell.textLabel?.text = presenter.profile?.slug ?? NA
-                cell.selectionStyle = .none
-            default:
-                cell.textLabel?.text = Localized.Profile.Label.logout
-                cell.selectionStyle = .default
+        func setLoading(visible: Bool) {
+            if visible {
+                spinner.startAnimating()
+            } else {
+                spinner.stopAnimating()
             }
-            return cell
-        }
-        
-        // MARK: - UITableViewControllerDelegate
-        
-        override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            switch indexPath.row {
-            case 3:
-                KeyChain.deleteToken()
-            default:
-                debugPrint("Nothing to do here")
-            }
-            tableView.deselectRow(at: indexPath, animated: true)
         }
         
     }
     
-    // MARK: - UIPopoverPresentationControllerDelegate
-    
-    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
-        return .popover
-    }
 }
 

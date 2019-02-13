@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol LogActions: Loadable, ErrorActionable {
+protocol LogActions: ErrorActionable {
     func getLog(for appSlug: String, with buildSlug: String, completion: @escaping Log.Completion)
     func presentArtifacts(from viewController: UIViewController)
 }

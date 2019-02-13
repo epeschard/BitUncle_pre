@@ -7,7 +7,7 @@
 //
 
 
-protocol ProfileActions: Loadable, ErrorActionable {
+protocol ProfileActions: ErrorActionable {
     func getProfile(completion: @escaping Profile.Completion)
 }
 

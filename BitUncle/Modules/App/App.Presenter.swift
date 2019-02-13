@@ -51,7 +51,7 @@ extension App {
             actions.presentBuilds()
         }
                 
-        func showPopover(from viewController: UIViewController) {
+        func showProfile(from viewController: UIViewController) {
             actions.presentProfile(from: viewController)
         }
         

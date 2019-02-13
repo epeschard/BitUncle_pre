@@ -150,6 +150,7 @@ extension App {
                 initials.widthAnchor.constraint(equalTo: initials.heightAnchor),
                 initials.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
                 initials.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+                stackView1.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 73),
                 platformLogo.heightAnchor.constraint(equalToConstant: 25),
                 platformLogo.widthAnchor.constraint(equalTo: platformLogo.heightAnchor),
                 statusLabel.widthAnchor.constraint(equalTo: statusLabel.heightAnchor),
