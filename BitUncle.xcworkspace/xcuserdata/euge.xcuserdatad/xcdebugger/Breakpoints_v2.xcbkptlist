@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BitUncle/Utililties/Extensions/UINavigationController+Extension.swift"
-            timestampString = "571662568.544901"
+            timestampString = "571665828.123096"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "14"
@@ -42,7 +42,7 @@
                   moduleName = "BitUncle"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/euge/Library/Developer/Peschard/BitUncle/BitUncle/Utililties/Extensions/UINavigationController+Extension.swift"
-                  timestampString = "571662568.7425261"
+                  timestampString = "571842223.017946"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "14"
@@ -57,7 +57,7 @@
                   moduleName = "BitUncle"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/euge/Library/Developer/Peschard/BitUncle/BitUncle/Utililties/Extensions/UINavigationController+Extension.swift"
-                  timestampString = "571662568.744572"
+                  timestampString = "571842223.020461"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "14"
@@ -65,6 +65,54 @@
                   offsetFromSymbolStart = "4">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BitUncle/Modules/Artifact/Artifact.ViewController.swift"
+            timestampString = "571767588.9065681"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "adaptivePresentationStyle(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BitUncle/Modules/Build/Build.ViewController.swift"
+            timestampString = "571767588.906667"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "adaptivePresentationStyle(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BitUncle/Modules/App/App.ViewController.swift"
+            timestampString = "571842222.813606"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "setLoading(visible:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
