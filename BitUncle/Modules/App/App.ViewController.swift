@@ -18,15 +18,8 @@ extension App {
         var collectionView: UICollectionView!
         var collectionViewLayout: UICollectionViewFlowLayout!
         var spinner: UIActivityIndicatorView!
-        
-        var profile: Profile.DataModel? {
-            didSet {
-                guard let urlString = profile?.avatarUrl, let imageURL = URL(string: urlString) else { return }
-                profileImageView.sd_setImage(with: imageURL, placeholderImage: #imageLiteral(resourceName: "profile.pdf"))
-                navigationItem.title = profile?.username ?? Localized.App.Label.title
-            }
-        }
-        var profileImageView = UIImageView(image: #imageLiteral(resourceName: "profile.pdf"))
+        var profileBarButton: UIBarButtonItem!
+        var profileView = UIImageView(image: #imageLiteral(resourceName: "profile.pdf"))
         
         // MARK: - Run Loop
         
@@ -45,6 +38,11 @@ extension App {
             title = Localized.App.Label.title
             setup()
             presenter.viewDidLoad()
+        }
+        
+        override func viewWillAppear(_ animated: Bool) {
+            super.viewWillAppear(animated)
+            
         }
         
         override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -83,7 +81,7 @@ extension App {
         }
         
         private func addProfileBarButton() {
-            let profileBarButton = UIBarButtonItem(image: #imageLiteral(resourceName: "profile.pdf"), style: .plain, target: self, action: #selector(presentProfile))
+            profileBarButton = UIBarButtonItem(image: #imageLiteral(resourceName: "profile.pdf"), style: .plain, target: self, action: #selector(presentProfile))
             navigationItem.rightBarButtonItem = profileBarButton
         }
         
@@ -95,6 +93,11 @@ extension App {
         
         @objc func presentProfile() {
             presenter.showProfile(from: self)
+        }
+        
+        func updateProfile() {
+            //TODO: Update barButton with profile avatar
+            navigationItem.title = presenter.profile?.username ?? Localized.App.Label.title
         }
         
         func setLoading(visible: Bool) {
