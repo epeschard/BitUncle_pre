@@ -8,7 +8,6 @@
 
 import UIKit
 import Firebase
-import StanwoodCore
 
 class AppController: NSObject {
     
@@ -46,11 +45,8 @@ class AppController: NSObject {
         let splashScreen = Splash.makeViewController(with: parameters)
         window.rootViewController = splashScreen
         
-        // Delay of 500 milliseconds to wait for reachability to check for connections
-        StanwoodCore.main(deadline: .milliseconds(500)) {
-            self.networkService.request {
-                self.loadInitialData()
-            }
+        self.networkService.request {
+            self.loadInitialData()
         }
     }
     

@@ -20,6 +20,12 @@ extension App {
         let dataSource = DataSource(dataType: Stanwood.Elements<DataModel>(items: []))
         let delegate = Delegate(dataType: Stanwood.Elements<DataModel>(items: []))
         
+        var profile: Profile.DataModel? {
+            didSet {
+                viewable?.updateProfile()
+            }
+        }
+        
         required init(_ view: Viewable? = nil, with actions: Actions, and parameters: Parameters) {
             self.viewable = view
             self.actions = actions
@@ -43,6 +49,7 @@ extension App {
             }
             delegate.presenter = self
 //            dataSource.presenter = self
+            getProfile()
         }
         
         func didSelect(_ app: DataModel) {
@@ -51,8 +58,20 @@ extension App {
             actions.presentBuilds()
         }
                 
-        func showPopover(from viewController: UIViewController) {
+        func showProfile(from viewController: UIViewController) {
             actions.presentProfile(from: viewController)
+        }
+        
+        func getProfile() {
+            actions.getProfile {
+                [weak self] result in
+                switch result {
+                case .success(let profile):
+                    self?.profile = profile
+                case .failure(let error):
+                    self?.actions.showAlert(error)
+                }
+            }
         }
         
     }

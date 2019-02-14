@@ -7,7 +7,7 @@
 //
 
 
-protocol ArtifactActions: Loadable, ErrorActionable {
+protocol ArtifactActions: ErrorActionable {
     func getArtifacts(for appSlug: String, with buildSlug: String, completion: @escaping Artifact.Completion)
 }
 

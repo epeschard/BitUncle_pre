@@ -6,14 +6,12 @@
 //  Copyright © 2019 pesch.app All rights reserved.
 //
 
-import StanwoodCore
+import UIKit
 
 class Coordinator {
     let window: UIWindow
     var parameters: Parameters!
     var actions: Actions!
-    
-    private var loadingView: LoadingView?
     
     init(window: UIWindow) {
         self.window = window
@@ -36,45 +34,12 @@ class Coordinator {
         return window.rootViewController as? UISplitViewController
     }
     
-    func setLoading(_ visible: Bool) {
-        main {
-            //TODO: Pending
-            if visible {
-                guard let rootViewController = self.window.rootViewController, self.loadingView?.superview == nil else {
-                    self.loadingView?.set(visible: visible)
-                    return
-                }
-                let loadingView = LoadingView()
-                rootViewController.view.endEditing(true)
-                rootViewController.view.addSubview(loadingView)
-                loadingView.pinToSuperview()
-                self.loadingView = loadingView
-            } else {
-                self.loadingView?.removeFromSuperview()
-            }
-            self.loadingView?.set(visible: visible)
-        }
-    }
-    
     func showAlert(_ error: ApiError) {
         let alert = UIAlertController(title: error.message, message: error.localizedDescription, preferredStyle: .alert)
         let ok = UIAlertAction(title: Localized.Error.ok, style: .default, handler: nil)
         alert.addAction(ok)
         rootViewController?.present(alert, animated: true) {
             alert.view.tintColor = UIColor.Bitrise.brightPurple
-        }
-    }
-    
-    func presentProfile(from viewController: UIViewController) {
-        let barButtonItem = viewController.navigationItem.rightBarButtonItem
-        let profileScreen = Profile.makeViewController(with: actions, and: parameters)
-        profileScreen.modalPresentationStyle = .popover
-        if let detailNav = rootSplitViewController?.viewControllers.last as? UINavigationController, let popover = profileScreen.popoverPresentationController, let delegate = profileScreen as? UIPopoverPresentationControllerDelegate {
-            popover.barButtonItem = barButtonItem
-            popover.delegate = delegate
-            popover.permittedArrowDirections = .up
-            popover.presentedViewController.preferredContentSize = CGSize(width: 300, height: 172.5)
-            detailNav.topViewController?.present(profileScreen, animated: true, completion: nil)
         }
     }
     
@@ -129,9 +94,17 @@ class Coordinator {
         window.rootViewController = split
     }
     
-    func presentProfile() {
-        let profileScreen = Profile.makeViewController(with: actions, and: parameters)
-        window.rootViewController = profileScreen
+    func presentProfile(from viewController: UIViewController) {
+        let barButtonItem = viewController.navigationItem.rightBarButtonItem
+        let popoverScreen = Profile.makeViewController(with: actions, and: parameters)
+        popoverScreen.modalPresentationStyle = .popover
+        if let popover = popoverScreen.popoverPresentationController {
+            popover.barButtonItem = barButtonItem
+            popover.delegate = popoverScreen
+            popover.permittedArrowDirections = .up
+            popover.presentedViewController.preferredContentSize = CGSize(width: 300, height: 172.5)
+            viewController.present(popoverScreen, animated: true, completion: nil)
+        }
     }
     
     func presentApps() {
@@ -151,16 +124,15 @@ class Coordinator {
     
     func presentArtifacts(from viewController: UIViewController) {
         let barButtonItem = viewController.navigationItem.rightBarButtonItem
-        let artifactsScreen = Artifact.makeViewController(with: actions, and: parameters)
-        artifactsScreen.modalPresentationStyle = .popover
-        if let detailNav = rootSplitViewController?.viewControllers.last as? UINavigationController {
-            if let popover = artifactsScreen.popoverPresentationController {
-                popover.barButtonItem = barButtonItem
-                popover.delegate = artifactsScreen
-                popover.permittedArrowDirections = .up
-                popover.presentedViewController.preferredContentSize = CGSize(width: 300, height: 176)
-                detailNav.topViewController?.present(artifactsScreen, animated: true, completion: nil)
-            }
+        let popoverScreen = Artifact.makeViewController(with: actions, and: parameters)
+        popoverScreen.modalPresentationStyle = .popover
+        if let popover = popoverScreen.popoverPresentationController {
+            popover.barButtonItem = barButtonItem
+            popover.delegate = popoverScreen
+            popover.permittedArrowDirections = .up
+            popover.presentedViewController.preferredContentSize = CGSize(width: 300, height: 176)
+            viewController.present(popoverScreen, animated: true, completion: nil)
         }
     }
 }
+

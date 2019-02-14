@@ -8,4 +8,5 @@
 
 protocol ProfileViewable: class {
     func reload()
+    func setLoading(visible: Bool)
 }

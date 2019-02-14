@@ -39,6 +39,8 @@ extension Artifact {
             return .lightContent
         }
         
+        // MARK: - Internal
+        
         private func setup() {            
             setupTableView()
             setupSpinner()
@@ -63,11 +65,13 @@ extension Artifact {
             self.spinner?.centerYAnchor.constraint(equalTo: self.tableView.centerYAnchor).isActive = true
         }
         
+        // MARK: - UIPopoverPresentationControllerDelegate
+        
         func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
             return .none
         }
         
-        //MARK: - AppViewable
+        // MARK: - AppViewable
         
         func reload() {
             self.tableView.reloadData()

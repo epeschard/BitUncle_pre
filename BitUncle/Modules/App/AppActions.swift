@@ -8,8 +8,9 @@
 
 import UIKit
 
-protocol AppActions: Loadable, ErrorActionable {
+protocol AppActions: ErrorActionable {
     func getApps(completion: @escaping App.Completion)
+    func getProfile(completion: @escaping Profile.Completion)
     func presentProfile(from viewController: UIViewController)
     func presentBuilds()
 }

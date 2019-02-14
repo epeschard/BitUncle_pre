@@ -14,7 +14,7 @@ enum Profile: Wireframeable {
     typealias Actions = ProfileActions
     typealias Parameters = ProfileParameters
     
-    static func makeViewController(with actions: Actions, and parameters: Parameters) -> UIViewController {
+    static func makeViewController(with actions: Actions, and parameters: Parameters) -> ViewController {
         let controller = ViewController(with: actions, and: parameters)
         return controller
     }
