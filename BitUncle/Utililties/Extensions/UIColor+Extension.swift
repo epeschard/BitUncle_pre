@@ -35,6 +35,23 @@ extension UIColor {
                 return success
             }
         }
+        
+        static func color(for status: Int, with alphaComponent: CGFloat = CGFloat(1.0)) -> UIColor {
+            var color = success
+            switch status {
+            case 0:
+                color = purple
+            case 1:
+                color = success
+            case 2:
+                color = failed
+            case 3:
+                color = aborted
+            default:
+                color = success
+            }
+            return color.withAlphaComponent(alphaComponent)
+        }
 
     }
 }
