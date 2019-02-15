@@ -17,6 +17,7 @@ class Coordinator {
     }
     
     private var appListView: App.ViewController!
+    private var buildListView: Build.ViewController!
     
     func start() {
         
@@ -38,6 +39,15 @@ class Coordinator {
         if let host = parent as? PopoverPresenter {
             host.present(profileScreen, sender: parent)
         }
+    }
+    
+    func showBuildListView() {
+        buildListView = Build.makeViewController(with: actions, and: parameters)
+        navigator.detailNavController?.show(buildListView, sender: nil)
+    }
+    
+    func fetchBuilds() {
+        buildListView.presenter.fetchBuilds()
     }
     
     func askForToken(completion: @escaping VoidBlock) {

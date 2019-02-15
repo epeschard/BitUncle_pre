@@ -19,5 +19,22 @@ extension UIColor {
         static let backgroundGrey = UIColor(red:0.97, green:0.97, blue:0.97, alpha:1.00)
         static let success = UIColor(red:0.14, green:0.76, blue:0.54, alpha:1.00)
         static let failed = UIColor(red:1.00, green:0.00, blue:0.34, alpha:1.00)
+        static let aborted = UIColor(red:1.00, green:0.77, blue:0.18, alpha:1.00)
+        
+        static func statusColor(status: Int) -> UIColor {
+            switch status {
+            case 0:
+                return purple
+            case 1:
+                return success
+            case 2:
+                return failed
+            case 3:
+                return aborted
+            default:
+                return success
+            }
+        }
+
     }
 }

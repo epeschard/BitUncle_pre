@@ -48,6 +48,17 @@ extension String {
                 static let title = "APP_LABEL_TITLE".localized
             }
         }
+        
+        enum Build {
+            enum Label {
+                static let emptyMessage = "BUILD_LABEL_EMPTYMESSAGE".localized
+                static let triggeredAt = "BUILD_LABEL_TRIGGEREDAT".localized
+                static let noTriggeredDate = "BUILD_LABEL_NOTRIGGEREDDATE".localized
+                static let noDuration = "BUILD_LABEL_NODURATION".localized
+                static let na = "BUILD_LABEL_NA".localized
+
+            }
+        }
     }
 }
 //                let token2save = "LqoGw8n2M1Ak7tGW_f2z2vFypmwH2SBVDuYh1all3cBk7HaM-i-mcIc6SooxCrVbQNQGmxX1hgbrEaxcrk4Spg".data(using: .utf8)

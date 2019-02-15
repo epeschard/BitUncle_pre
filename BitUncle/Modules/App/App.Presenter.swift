@@ -48,6 +48,7 @@ extension App {
         func didSelect(_ app: DataModel) {
             parameters.appSlug = app.slug
             parameters.appName = app.title
+            actions.showBuilds()
         }
         
         func showProfile(from navigable: Navigable) {

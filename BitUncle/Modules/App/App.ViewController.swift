@@ -69,6 +69,17 @@ extension App {
             presenter.showProfile(from: self)
         }
         
+        //MARK: - UISplitViewControllerDelegate
+        
+        func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController:UIViewController, onto primaryViewController:UIViewController) -> Bool {
+            guard let detailAsNavController = secondaryViewController as? UINavigationController else { return false }
+            guard let buildsViewController = detailAsNavController.topViewController as? Build.ViewController else { return false }
+            if buildsViewController.presenter.parameters.appSlug == "" {
+                return true
+            }
+            return false
+        }
+        
         // MARK: - PopoverPresenter
         
         func present(_ navigable: Navigable, sender: Any?) {

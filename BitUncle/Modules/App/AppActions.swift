@@ -10,6 +10,7 @@
 protocol AppActions: ErrorActionable {
     func getApps(completion: @escaping App.Completion)
     func presentProfile(from navigable: Navigable)
+    func showBuilds()
 }
 
 extension Actions: AppActions {
@@ -24,6 +25,10 @@ extension Actions: AppActions {
     
     func presentProfile(from navigable: Navigable) {
         coordinator.presentProfile(from: navigable)
+    }
+    
+    func showBuilds() {
+        coordinator.showBuildListView()
     }
     
 }

@@ -44,6 +44,17 @@
 		9C3FA3A12216B46300F24AC3 /* UIKitSplitNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FA3A02216B46300F24AC3 /* UIKitSplitNavigator.swift */; };
 		9C3FA3BB2217032800F24AC3 /* PopoverPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FA3BA2217032800F24AC3 /* PopoverPresenter.swift */; };
 		9C3FA3BD2217034100F24AC3 /* Navigable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FA3BC2217034100F24AC3 /* Navigable.swift */; };
+		9C3FA3E2221719FE00F24AC3 /* Build.DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FA3D9221719FE00F24AC3 /* Build.DataSource.swift */; };
+		9C3FA3E3221719FE00F24AC3 /* Build.Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FA3DA221719FE00F24AC3 /* Build.Presenter.swift */; };
+		9C3FA3E4221719FE00F24AC3 /* Build.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FA3DB221719FE00F24AC3 /* Build.swift */; };
+		9C3FA3E5221719FE00F24AC3 /* Build.ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FA3DC221719FE00F24AC3 /* Build.ViewController.swift */; };
+		9C3FA3E6221719FE00F24AC3 /* Build.Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FA3DD221719FE00F24AC3 /* Build.Cell.swift */; };
+		9C3FA3E7221719FE00F24AC3 /* BuildViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FA3DE221719FE00F24AC3 /* BuildViewable.swift */; };
+		9C3FA3E8221719FE00F24AC3 /* BuildActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FA3DF221719FE00F24AC3 /* BuildActions.swift */; };
+		9C3FA3E9221719FE00F24AC3 /* BuildParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FA3E0221719FE00F24AC3 /* BuildParameters.swift */; };
+		9C3FA3EA221719FE00F24AC3 /* Build.Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FA3E1221719FE00F24AC3 /* Build.Delegate.swift */; };
+		9C3FA3EC22171A3100F24AC3 /* Build.Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FA3EB22171A3100F24AC3 /* Build.Response.swift */; };
+		9C3FA3EE22171A5200F24AC3 /* Build.DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FA3ED22171A5200F24AC3 /* Build.DataModel.swift */; };
 		9C4E5B57220ADCF7004B15C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E5B56220ADCF7004B15C1 /* AppDelegate.swift */; };
 		9C4E5B6C220ADCF8004B15C1 /* BitUncleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E5B6B220ADCF8004B15C1 /* BitUncleTests.swift */; };
 		9C4E5B7F220ADEF3004B15C1 /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E5B7E220ADEF3004B15C1 /* AppController.swift */; };
@@ -134,6 +145,17 @@
 		9C3FA3B52216FDE800F24AC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C3FA3BA2217032800F24AC3 /* PopoverPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverPresenter.swift; sourceTree = "<group>"; };
 		9C3FA3BC2217034100F24AC3 /* Navigable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigable.swift; sourceTree = "<group>"; };
+		9C3FA3D9221719FE00F24AC3 /* Build.DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Build.DataSource.swift; sourceTree = "<group>"; };
+		9C3FA3DA221719FE00F24AC3 /* Build.Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Build.Presenter.swift; sourceTree = "<group>"; };
+		9C3FA3DB221719FE00F24AC3 /* Build.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Build.swift; sourceTree = "<group>"; };
+		9C3FA3DC221719FE00F24AC3 /* Build.ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Build.ViewController.swift; sourceTree = "<group>"; };
+		9C3FA3DD221719FE00F24AC3 /* Build.Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Build.Cell.swift; sourceTree = "<group>"; };
+		9C3FA3DE221719FE00F24AC3 /* BuildViewable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildViewable.swift; sourceTree = "<group>"; };
+		9C3FA3DF221719FE00F24AC3 /* BuildActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildActions.swift; sourceTree = "<group>"; };
+		9C3FA3E0221719FE00F24AC3 /* BuildParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildParameters.swift; sourceTree = "<group>"; };
+		9C3FA3E1221719FE00F24AC3 /* Build.Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Build.Delegate.swift; sourceTree = "<group>"; };
+		9C3FA3EB22171A3100F24AC3 /* Build.Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Build.Response.swift; sourceTree = "<group>"; };
+		9C3FA3ED22171A5200F24AC3 /* Build.DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Build.DataModel.swift; sourceTree = "<group>"; };
 		9C4E5B53220ADCF7004B15C1 /* BitUncle debug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BitUncle debug.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C4E5B56220ADCF7004B15C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C4E5B62220ADCF8004B15C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -234,6 +256,7 @@
 			children = (
 				9C028903220C58CC00AD82A7 /* Profile.DataModel.swift */,
 				9C18125C220D9302003D30AF /* App.DataModel.swift */,
+				9C3FA3ED22171A5200F24AC3 /* Build.DataModel.swift */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -257,6 +280,7 @@
 				9C028915220C5B9C00AD82A7 /* Profile.Response.swift */,
 				9C18125A220D92DC003D30AF /* App.Response.swift */,
 				9C18125E220D939C003D30AF /* Paging.swift */,
+				9C3FA3EB22171A3100F24AC3 /* Build.Response.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -314,6 +338,22 @@
 				9C3FA3AF2216FDE800F24AC3 /* FixtureExample.swift */,
 			);
 			name = Fixtures;
+			sourceTree = "<group>";
+		};
+		9C3FA3D8221719CF00F24AC3 /* Build */ = {
+			isa = PBXGroup;
+			children = (
+				9C3FA3DD221719FE00F24AC3 /* Build.Cell.swift */,
+				9C3FA3D9221719FE00F24AC3 /* Build.DataSource.swift */,
+				9C3FA3E1221719FE00F24AC3 /* Build.Delegate.swift */,
+				9C3FA3DA221719FE00F24AC3 /* Build.Presenter.swift */,
+				9C3FA3DB221719FE00F24AC3 /* Build.swift */,
+				9C3FA3DC221719FE00F24AC3 /* Build.ViewController.swift */,
+				9C3FA3DF221719FE00F24AC3 /* BuildActions.swift */,
+				9C3FA3E0221719FE00F24AC3 /* BuildParameters.swift */,
+				9C3FA3DE221719FE00F24AC3 /* BuildViewable.swift */,
+			);
+			path = Build;
 			sourceTree = "<group>";
 		};
 		9C4E5B4A220ADCF7004B15C1 = {
@@ -432,6 +472,7 @@
 				9CC53DA4220B896B00267849 /* Splash */,
 				9C028905220C590700AD82A7 /* Profile */,
 				9C181245220D906F003D30AF /* App */,
+				9C3FA3D8221719CF00F24AC3 /* Build */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -685,19 +726,23 @@
 				9C181250220D9095003D30AF /* App.DataSource.swift in Sources */,
 				9C4E5B85220ADF98004B15C1 /* Actions.swift in Sources */,
 				9CC53D9C220B31CD00267849 /* SplashView.swift in Sources */,
+				9C3FA3E4221719FE00F24AC3 /* Build.swift in Sources */,
 				9C028913220C5A3800AD82A7 /* ProfileViewable.swift in Sources */,
 				9C028904220C58CC00AD82A7 /* Profile.DataModel.swift in Sources */,
 				9C02891C220C60BA00AD82A7 /* ErrorActionable.swift in Sources */,
 				9CC53D96220B314F00267849 /* Splash.Presenter.swift in Sources */,
 				9C85D0F7220C42DB004BEC8A /* EndPoint.swift in Sources */,
 				9C18124F220D9095003D30AF /* App.Presenter.swift in Sources */,
+				9C3FA3EA221719FE00F24AC3 /* Build.Delegate.swift in Sources */,
 				9C3FA3BB2217032800F24AC3 /* PopoverPresenter.swift in Sources */,
 				9C18124E220D9095003D30AF /* AppActions.swift in Sources */,
 				9C3FA3A12216B46300F24AC3 /* UIKitSplitNavigator.swift in Sources */,
 				9C181261220D970A003D30AF /* ReusableCell.swift in Sources */,
 				9C553EB52215CA1600E2FD29 /* UIKitNavigator.swift in Sources */,
 				9C4E5B57220ADCF7004B15C1 /* AppDelegate.swift in Sources */,
+				9C3FA3E5221719FE00F24AC3 /* Build.ViewController.swift in Sources */,
 				9C02890D220C59BF00AD82A7 /* Profile.Presenter.swift in Sources */,
+				9C3FA3E8221719FE00F24AC3 /* BuildActions.swift in Sources */,
 				9C02891E220C62A700AD82A7 /* LoadingView.swift in Sources */,
 				9C18125B220D92DC003D30AF /* App.Response.swift in Sources */,
 				9C85D101220C4B2E004BEC8A /* Result.swift in Sources */,
@@ -708,15 +753,18 @@
 				9C02890F220C59BF00AD82A7 /* Profile.ViewController.swift in Sources */,
 				9CC53D9A220B314F00267849 /* Splash.swift in Sources */,
 				9C4E5B89220AE1A1004B15C1 /* DataProvider.swift in Sources */,
+				9C3FA3E2221719FE00F24AC3 /* Build.DataSource.swift in Sources */,
 				9C4E5B8F220AE279004B15C1 /* Typealias.swift in Sources */,
 				9C4E5B8D220AE24F004B15C1 /* NetworkService.swift in Sources */,
 				9C181259220D923A003D30AF /* App.Cell.swift in Sources */,
+				9C3FA3EC22171A3100F24AC3 /* Build.Response.swift in Sources */,
 				9C553EBA2215CB6B00E2FD29 /* AlertFactory.swift in Sources */,
 				9C02890C220C59BF00AD82A7 /* ProfileActions.swift in Sources */,
 				9C181257220D90F3003D30AF /* AppViewable.swift in Sources */,
 				9CC53D95220B314F00267849 /* SplashActionable.swift in Sources */,
 				9C4E5B8B220AE1F1004B15C1 /* NetworkManager.swift in Sources */,
 				9C85D105220C4C42004BEC8A /* Date+Extension.swift in Sources */,
+				9C3FA3E3221719FE00F24AC3 /* Build.Presenter.swift in Sources */,
 				9C02891A220C609400AD82A7 /* Loadable.swift in Sources */,
 				9C85D0F9220C4797004BEC8A /* KeyChain.swift in Sources */,
 				9CC53D98220B314F00267849 /* Splash.ViewController.swift in Sources */,
@@ -735,9 +783,13 @@
 				9C028910220C59BF00AD82A7 /* ProfileParameters.swift in Sources */,
 				9CC53D86220B01B700267849 /* Configuration.swift in Sources */,
 				9C18125F220D939C003D30AF /* Paging.swift in Sources */,
+				9C3FA3E9221719FE00F24AC3 /* BuildParameters.swift in Sources */,
 				9CC53DA1220B3DE600267849 /* UIView+Extension.swift in Sources */,
+				9C3FA3E6221719FE00F24AC3 /* Build.Cell.swift in Sources */,
 				9C85D102220C4B2E004BEC8A /* ApiError.swift in Sources */,
 				9CC53D88220B01D400267849 /* Constants.swift in Sources */,
+				9C3FA3EE22171A5200F24AC3 /* Build.DataModel.swift in Sources */,
+				9C3FA3E7221719FE00F24AC3 /* BuildViewable.swift in Sources */,
 				9C028918220C5C7700AD82A7 /* UINavigationController+Extension.swift in Sources */,
 				9C181253220D9095003D30AF /* AppParameters.swift in Sources */,
 			);
