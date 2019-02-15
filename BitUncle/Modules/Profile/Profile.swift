@@ -6,7 +6,6 @@
 //  Copyright © 2019 pesch.app All rights reserved.
 //
 
-import UIKit
 
 enum Profile: Wireframeable {
 
@@ -14,11 +13,10 @@ enum Profile: Wireframeable {
     typealias Actions = ProfileActions
     typealias Parameters = ProfileParameters
     
-    static func makeViewController(with actions: Actions, and parameters: Parameters) -> UINavigationController {
+    static func makeViewController(with actions: Actions, and parameters: Parameters) -> ViewController {
         let controller = ViewController(with: actions, and: parameters)
-        let navController = UINavigationController(rootViewController: controller)
-        navController.setBitriseAppearance()
-        return navController
+        
+        return controller
     }
 
 }

@@ -11,7 +11,7 @@ import UIKit
 extension App {
     
     @objc (AppViewController)
-    class ViewController: UIViewController, Viewable, UISplitViewControllerDelegate {
+    class ViewController: UIViewController, Viewable, Navigable, UISplitViewControllerDelegate, PopoverPresenter {
         
         var presenter: Presenter!
         var collectionView: UICollectionView!
@@ -34,10 +34,8 @@ extension App {
         
         override func viewDidLoad() {
             super.viewDidLoad()
-            title = Localized.App.Label.title
             setup()
             presenter.viewDidLoad()
-            addProfileBarButton()
         }
         
         func reload() {
@@ -46,8 +44,9 @@ extension App {
         
         private func setup() {
             assert(self.navigationController != nil)
-            
+            title = Localized.App.Label.title
             setupCollectionView()
+            addProfileBarButton()
         }
         
         private func setupCollectionView() {
@@ -67,8 +66,22 @@ extension App {
         }
         
         @objc private func presentProfile() {
-            presenter.showProfile()
+            presenter.showProfile(from: self)
         }
         
+        // MARK: - PopoverPresenter
+        
+        func present(_ navigable: Navigable, sender: Any?) {
+            guard let window = navigable as? UIViewController, let host = sender as? UIViewController, let rBarButtton = host.navigationItem.rightBarButtonItem else { return }
+            window.modalPresentationStyle = .popover
+            
+            if let popover = window.popoverPresentationController, let delegate = window as? UIPopoverPresentationControllerDelegate {
+                popover.barButtonItem = rBarButtton
+                popover.delegate = delegate
+                popover.permittedArrowDirections = .up
+                popover.presentedViewController.preferredContentSize = CGSize(width: 300, height: 172.5)
+            }
+            host.present(window, animated: true, completion: nil)
+        }
     }
 }

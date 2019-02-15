@@ -6,7 +6,6 @@
 //  Copyright © 2019 pesch.app All rights reserved.
 //
 
-import UIKit
 
 extension Splash {
     

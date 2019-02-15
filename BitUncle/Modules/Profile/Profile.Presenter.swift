@@ -42,7 +42,6 @@ extension Profile {
                 case .failure(let error):
                     self?.actions.showAlert(error)
                 }
-                self?.actions.setLoading(visible: false)
             }
         }
         

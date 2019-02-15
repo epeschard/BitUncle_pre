@@ -6,7 +6,6 @@
 //  Copyright © 2019 pesch.app All rights reserved.
 //
 
-import UIKit
 
 struct Constants {
     
@@ -35,5 +34,9 @@ struct Constants {
         #else
         return .release
         #endif
+    }
+    
+    enum RemoteConfig {
+        static let plist = "RemoteConfig"
     }
 }

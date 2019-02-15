@@ -6,14 +6,12 @@
 //  Copyright © 2019 pesch.app All rights reserved.
 //
 
-import UIKit
 import Firebase
-import StanwoodCore
 
 class AppController: NSObject {
     
     let appData = AppData()
-    var window: UIWindow
+    let navigator: Navigator
     let dataProvider: DataProvider
     
     let coordinator: Coordinator
@@ -22,15 +20,15 @@ class AppController: NSObject {
     
     let networkService = NetworkService()
         
-    init(with window: UIWindow) {
-        self.window = window
+    init(with navigator: Navigator) {
+        self.navigator = navigator
 
         let networkManager = NetworkManager(internetRequest: networkService)
         dataProvider = DataProvider(appData: appData, networkManager: networkManager)
         
         parameters = Parameters(appData: appData)
         
-        coordinator = Coordinator(window: window)
+        coordinator = Coordinator(with: navigator)
         
         actions = Actions(appData: appData, dataProvider: dataProvider, coordinator: coordinator)
         super.init()
@@ -38,31 +36,29 @@ class AppController: NSObject {
         coordinator.parameters = parameters
     }
     
-    func start(with application: UIApplication) {
-        RemoteConfig.remoteConfig().setDefaults(fromPlist: "RemoteConfig")
+    func start() {
+        let remoteConfig = RemoteConfig.remoteConfig()
+        remoteConfig.setDefaults(fromPlist: RemoteConf.plist)
+        Configuration.downloadRemoteConfigValues { (success) in
+            debugPrint("downloadRemoteConfigValues: \(success)")
+        }
         
-        window.rootViewController?.removeFromParent()
-        window.rootViewController = nil
-        let splashScreen = Splash.makeViewController(with: parameters)
-        window.rootViewController = splashScreen
-        
-        // Delay of 500 milliseconds to wait for reachability to check for connections
-        StanwoodCore.main(deadline: .milliseconds(500)) {
-            self.networkService.request {
-                self.loadInitialData()
+        checkForToken()
+    }
+    
+    private func checkForToken() {
+        if let _ = KeyChain.getToken() {
+            coordinator.start()
+        } else {
+            coordinator.askForToken() {
+                self.coordinator.start()
             }
         }
     }
     
     private func loadInitialData() {
         loadInitialData { [weak self] (success) in
-            if let _ = KeyChain.getToken() {
-                self?.coordinator.presentApps()
-            } else {
-                self?.coordinator.askForToken() {
-                    self?.loadInitialData()
-                }
-            }
+            self?.checkForToken()
         }
     }
 }
@@ -111,7 +107,7 @@ extension AppController {
     
     func didBecomeActive(_ application: UIApplication) {
         print("Came back from background")
-        loadInitialData()
+//        loadInitialData()
     }
     
     func willEnterForeground(_ application: UIApplication) {

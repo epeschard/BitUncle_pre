@@ -13,7 +13,7 @@
 "ERROR_OK" = "OK";
 
 "TOKEN_ALERT_TITLE" = "Enter Bitrise Token";
-"TOKEN_ALERT_MESSAGE" = "Please enter your token for bitrise.io. Tap on 'Guide Me' for instructions.";
+"TOKEN_ALERT_MESSAGE" = "Please enter your token for bitrise.io Tap on 'Guide Me' for instructions";
 "TOKEN_ALERT_PLACEHOLDER" = "your Token goes here";
 "TOKEN_ALERT_OK" = "OK";
 "TOKEN_ALERT_GUIDE" = "Guide me";

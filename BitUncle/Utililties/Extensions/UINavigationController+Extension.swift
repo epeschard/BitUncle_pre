@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UINavigationController {
+extension UINavigationController: Navigable {
     
     open override var preferredStatusBarStyle: UIStatusBarStyle {
         return topViewController?.preferredStatusBarStyle ?? .default

@@ -6,7 +6,6 @@
 //  Copyright © 2019 pesch.app All rights reserved.
 //
 
-import UIKit
 import StanwoodCore
 
 class Actions {
@@ -19,14 +18,6 @@ class Actions {
         self.appData = appData
         self.dataProvider = dataProvider
         self.coordinator = coordinator
-    }
-    
-}
-
-extension Actions: Loadable {
-    
-    func setLoading(visible: Bool) {
-        coordinator.setLoading(visible)
     }
     
 }

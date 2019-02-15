@@ -7,9 +7,9 @@
 //
 
 
-protocol AppActions: Loadable, ErrorActionable {
+protocol AppActions: ErrorActionable {
     func getApps(completion: @escaping App.Completion)
-    func showProfile()
+    func presentProfile(from navigable: Navigable)
 }
 
 extension Actions: AppActions {
@@ -22,8 +22,8 @@ extension Actions: AppActions {
         dataProvider.networkManager.getApps(nextPage: nextPage, append: false, completion: completion)
     }
     
-    func showProfile() {
-        coordinator.presentProfile()
+    func presentProfile(from navigable: Navigable) {
+        coordinator.presentProfile(from: navigable)
     }
     
 }
