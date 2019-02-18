@@ -46,6 +46,7 @@ extension Log {
             
             setupTableView()
             setupSpinner()
+            addProfileBarButton()
         }
         
         private func setupTableView() {
@@ -70,7 +71,12 @@ extension Log {
             self.spinner?.centerYAnchor.constraint(equalTo: self.tableView.centerYAnchor).isActive = true
         }
         
-        @objc private func showArtifacts() {
+        private func addProfileBarButton() {
+            let profileButton = UIBarButtonItem(image: #imageLiteral(resourceName: "profile.pdf"), style: .plain, target: self, action: #selector(presentArtifacts))
+            navigationItem.rightBarButtonItem = profileButton
+        }
+        
+        @objc private func presentArtifacts() {
             presenter.showArtifacts(from: self)
         }
         

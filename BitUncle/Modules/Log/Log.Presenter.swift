@@ -47,11 +47,11 @@ extension Log {
             dataSource.presenter = self
         }
         
-        func didSelect(_ build: DataModel) {
+        func didSelect(_ log: DataModel) {
 //            actionable.unfoldLogChunk(for: buildSlug)
         }
         
-        func showArtifacts(from navigable: Navigable) {
+        func presentArtifacts(from navigable: Navigable) {
             actions.presentArtifacts(from: navigable)
         }
     }
