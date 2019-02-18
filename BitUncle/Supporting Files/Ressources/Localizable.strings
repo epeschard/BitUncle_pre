@@ -26,3 +26,10 @@
 "PROFILE_LABEL_LOADING" = "Loading...";
 
 "APP_LABEL_TITLE" = "All apps";
+"APP_LABEL_EMPTYMESSAGE" = "No apps on current repo";
+
+"BUILD_LABEL_EMPTYMESSAGE" = "No app selected to show builds from";
+"BUILD_LABEL_TRIGGEREDAT" = "Triggered @";
+"BUILD_LABEL_NOTRIGGEREDDATE" = "No triggered date";
+"BUILD_LABEL_NODURATION" = "No duration";
+"BUILD_LABEL_NA" = "N/A";

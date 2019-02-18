@@ -42,7 +42,8 @@ class Coordinator {
     
     func showBuildListView() {
         buildListView = Build.makeViewController(with: actions, and: parameters)
-        navigator.masterNavController?.showDetailViewController(buildListView, sender: nil)
+        let buildListViewInNav = UIKitNavigator(rootViewController: buildListView)
+        navigator.masterNavController?.showDetailViewController(buildListViewInNav, sender: nil)
         fetchBuilds()
     }
     
