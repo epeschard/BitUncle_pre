@@ -35,7 +35,7 @@ extension Profile {
         }
         
         private func setup() {
-            assert(self.navigationController != nil)
+            
         }
         
         func reload() {

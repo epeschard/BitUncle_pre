@@ -31,24 +31,26 @@ extension App {
         }
         
         func fetchApps() {
+            viewable?.setLoading(visible: true)
             actions.getApps {
-                result in
+                [weak self] result in
                 switch result {
                 case .success(let data):
                     let elements = Stanwood.Elements(items: data)
-                    self.dataSource.update(with: elements)
-                    self.delegate.update(with: elements)
-                    self.viewable?.reload()
+                    self?.dataSource.update(with: elements)
+                    self?.delegate.update(with: elements)
+                    self?.viewable?.reload()
                 case .failure(let error):
-                    self.actions.showAlert(error)
+                    self?.actions.showAlert(error)
                 }
+                self?.viewable?.setLoading(visible: false)
             }
         }
         
         func didSelect(_ app: DataModel) {
             parameters.appSlug = app.slug
             parameters.appName = app.title
-            actions.showBuilds()
+            actions.showDetailBuilds()
         }
         
         func showProfile(from navigable: Navigable) {

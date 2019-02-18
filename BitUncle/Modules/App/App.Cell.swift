@@ -71,7 +71,7 @@ extension App {
             let label = UILabel()
             label.numberOfLines = 0
             label.textAlignment = .left
-            //            label.font.
+            label.textColor = .darkGray
             label.setContentCompressionResistancePriority(.required, for: .vertical)
             return label
         }()
@@ -146,8 +146,12 @@ extension App {
                 avatar.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
                 avatar.heightAnchor.constraint(equalTo: stackView1.heightAnchor),
                 avatar.widthAnchor.constraint(equalTo: avatar.heightAnchor),
-                avatar.widthAnchor.constraint(equalToConstant: 65),                initials.heightAnchor.constraint(equalTo: avatar.heightAnchor),
+                avatar.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+                avatar.widthAnchor.constraint(equalToConstant: 65),
+                initials.heightAnchor.constraint(equalTo: avatar.heightAnchor),
                 initials.widthAnchor.constraint(equalTo: initials.heightAnchor),
+                initials.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+                initials.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
                 platformLogo.heightAnchor.constraint(equalToConstant: 25),
                 platformLogo.widthAnchor.constraint(equalTo: platformLogo.heightAnchor),
                 statusLabel.widthAnchor.constraint(equalTo: statusLabel.heightAnchor),
@@ -170,6 +174,11 @@ extension App {
             self.platformLogo.image = (type as? DataModel)?.projectType == "ios" ? #imageLiteral(resourceName: "apple.pdf") : #imageLiteral(resourceName: "android.pdf")
             self.ownerLabel.text = (type as? DataModel)?.repoOwner.uppercased()
             accessibilityValue = title
+            self.setStatus(with: type)
+            self.projectLabel.text = (type as? DataModel)?.title
+        }
+        
+        private func setStatus(with type: Type?) {
             let status = (type as? DataModel)?.status
             if status == 1 {
                 self.statusLabel.text = "✓"
@@ -180,7 +189,27 @@ extension App {
                 self.statusLabel.textColor = UIColor.Bitrise.failed
                 self.statusLabel.layer.borderColor = UIColor.Bitrise.success.cgColor
             }
-            self.projectLabel.text = (type as? DataModel)?.title
         }
+        
+        override var isSelected: Bool {
+            didSet {
+                if self.isSelected {
+                    self.transform = CGAffineTransform(scaleX: 1.05, y: 1.05)
+                    self.contentView.clipsToBounds = false
+                    self.contentView.backgroundColor = UIColor.Bitrise.backgroundGrey
+                    self.statusLabel.isHidden = true
+                    self.ownerLabel.textColor = .black
+                    self.projectLabel.textColor = .black
+                } else {
+                    self.transform = CGAffineTransform.identity
+                    self.contentView.clipsToBounds = true
+                    self.contentView.backgroundColor = .white
+                    self.statusLabel.isHidden = false
+                    self.ownerLabel.textColor = .darkGray
+                    self.projectLabel.textColor = .darkGray
+                }
+            }
+        }
+
     }
 }

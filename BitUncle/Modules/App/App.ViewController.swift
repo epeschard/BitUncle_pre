@@ -16,6 +16,7 @@ extension App {
         var presenter: Presenter!
         var collectionView: UICollectionView!
         var collectionViewLayout: UICollectionViewFlowLayout!
+        var spinner: UIActivityIndicatorView!
         
         var profile: UIImage?
         var profileIcon = #imageLiteral(resourceName: "profile.pdf")
@@ -38,19 +39,16 @@ extension App {
             presenter.viewDidLoad()
         }
         
-        func reload() {
-            self.collectionView.reloadData()
-        }
-        
         private func setup() {
             assert(self.navigationController != nil)
             title = Localized.App.Label.title
             setupCollectionView()
             addProfileBarButton()
+            setupSpinner()
         }
         
         private func setupCollectionView() {
-            let collectionViewLayout = ColumnFlowLayout()
+            collectionViewLayout = ColumnFlowLayout()
             collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
             view.addSubview(collectionView)
             collectionView.pinToSuperview()
@@ -65,11 +63,46 @@ extension App {
             navigationItem.rightBarButtonItem = profileButton
         }
         
+        private func setupSpinner() {
+            spinner = UIActivityIndicatorView(style: .whiteLarge)
+            spinner.color = UIColor.Bitrise.purple
+            spinner.hidesWhenStopped = true
+            spinner.translatesAutoresizingMaskIntoConstraints = false
+            collectionView.addSubview(spinner)
+            spinner?.centerXAnchor.constraint(equalTo: collectionView.centerXAnchor).isActive = true
+            spinner?.centerYAnchor.constraint(equalTo: collectionView.centerYAnchor).isActive = true
+        }
+        
         @objc private func presentProfile() {
             presenter.showProfile(from: self)
         }
         
-        //MARK: - UISplitViewControllerDelegate
+        private func isSetup() -> Bool {
+            return (collectionView != nil) && (spinner != nil)
+        }
+        
+        // MARK: - Viewable
+        
+        func reload() {
+            self.collectionView.reloadData()
+        }
+        
+        func setLoading(visible: Bool) {
+            if !isSetup() {
+                setup()
+            }
+            if visible {
+                spinner.startAnimating()
+            } else {
+                spinner.stopAnimating()
+            }
+        }
+        
+        func showEmptyView(with message: String) {
+            collectionView.showEmptyView(with: message)
+        }
+        
+        // MARK: - UISplitViewControllerDelegate
         
         func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController:UIViewController, onto primaryViewController:UIViewController) -> Bool {
             guard let detailAsNavController = secondaryViewController as? UINavigationController else { return false }

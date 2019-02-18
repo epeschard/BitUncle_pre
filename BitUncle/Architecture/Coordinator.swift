@@ -20,7 +20,6 @@ class Coordinator {
     private var buildListView: Build.ViewController!
     
     func start() {
-        
         showAppListView()
         fetchApps()
     }
@@ -43,7 +42,8 @@ class Coordinator {
     
     func showBuildListView() {
         buildListView = Build.makeViewController(with: actions, and: parameters)
-        navigator.detailNavController?.show(buildListView, sender: nil)
+        navigator.masterNavController?.showDetailViewController(buildListView, sender: nil)
+        fetchBuilds()
     }
     
     func fetchBuilds() {
