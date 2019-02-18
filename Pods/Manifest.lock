@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.8.1)
+  - cslim (1.1.5)
   - Firebase (5.15.0):
     - Firebase/Core (= 5.15.0)
   - Firebase/Core (5.15.0):
@@ -70,6 +71,8 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
+  - OCSlimProject (1.4):
+    - cslim
   - Protobuf (3.6.1)
   - ReachabilitySwift (4.3.0)
   - Result (4.1.0)
@@ -85,6 +88,7 @@ DEPENDENCIES:
   - Firebase
   - Firebase/RemoteConfig
   - Moya
+  - OCSlimProject
   - ReachabilitySwift
   - SDWebImage
   - Stanwood/Core
@@ -93,6 +97,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - cslim
     - Firebase
     - FirebaseABTesting
     - FirebaseAnalytics
@@ -103,6 +108,7 @@ SPEC REPOS:
     - GoogleUtilities
     - Moya
     - nanopb
+    - OCSlimProject
     - Protobuf
     - ReachabilitySwift
     - Result
@@ -113,6 +119,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  cslim: 75bc8dc738cdc5b7d51303f94544dad486bd9d3c
   Firebase: 8bb9268bff82374f2cbaaabb143e725743c316ae
   FirebaseABTesting: 1f50b8d50f5e3469eea54e7463a7b7fe221d1f5e
   FirebaseAnalytics: c06f9d70577d79074214700a71fd5d39de5550fb
@@ -123,6 +130,7 @@ SPEC CHECKSUMS:
   GoogleUtilities: 111a012f4c3a29c9e7c954c082fafd6ee3c999c0
   Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  OCSlimProject: 1c1e3b9e4324a58b172708b8d9649ff3ce547d18
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
   ReachabilitySwift: 408477d1b6ed9779dba301953171e017c31241f3
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
@@ -131,6 +139,6 @@ SPEC CHECKSUMS:
   StanwoodCore: 9f58032a58b16e9b5ebbb2906b7888d87c098642
   SwiftRichString: 810a93f438ee273619d0023c389584d6aeef015d
 
-PODFILE CHECKSUM: 0636bf12631ac207a3f7c5819e858bc8ddeac8b0
+PODFILE CHECKSUM: 007ca6773850b055d500af8615e3759e43911ddb
 
 COCOAPODS: 1.5.3

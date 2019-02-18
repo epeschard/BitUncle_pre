@@ -18,7 +18,7 @@ extension Log {
         var spinner: UIActivityIndicatorView!
         
         var artifactsBarButtonItem: UIBarButtonItem {
-            return UIBarButtonItem(title: Localized.Log.BarButton.artifacts, style: .plain, target: self, action: #selector(showArtifacts))
+            return UIBarButtonItem(title: Localized.Log.BarButton.artifacts, style: .plain, target: self, action: #selector(presentArtifacts))
         }
         
         // MARK: - Run Loop
@@ -63,7 +63,7 @@ extension Log {
         
         private func setupSpinner() {
             self.spinner = UIActivityIndicatorView(style: .whiteLarge)
-            self.spinner.color = UIColor.Bitrise.purple
+            self.spinner.color = UIColor.Bitrise.green
             self.spinner.hidesWhenStopped = true
             self.spinner.translatesAutoresizingMaskIntoConstraints = false
             tableView.addSubview(spinner)

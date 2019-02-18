@@ -51,7 +51,7 @@ extension Log {
 //            actionable.unfoldLogChunk(for: buildSlug)
         }
         
-        func presentArtifacts(from navigable: Navigable) {
+        func showArtifacts(from navigable: Navigable) {
             actions.presentArtifacts(from: navigable)
         }
     }

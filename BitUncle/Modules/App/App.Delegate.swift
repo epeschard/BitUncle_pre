@@ -16,6 +16,9 @@ extension App {
         
         func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
             guard let app = dataType?[indexPath] as? DataModel else { return }
+            if UIDevice.current.userInterfaceIdiom == .phone {
+                collectionView.deselectItem(at: indexPath, animated: true)
+            }
             presenter.didSelect(app)
         }
         
