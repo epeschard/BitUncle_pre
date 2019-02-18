@@ -66,5 +66,11 @@ extension String {
                 static let artifacts = "LOG_BARBUTTON_ARTIFACTS".localized
             }
         }
+        
+        enum Artifact {
+            enum Label {
+                static let emptyMessage = "ARTIFACT_LABEL_EMPTYMESSAGE".localized
+            }
+        }
     }
 }

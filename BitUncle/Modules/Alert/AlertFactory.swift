@@ -17,7 +17,7 @@ class AlertFactory {
         return alert
     }
     
-    static func makeTokenInput(with completion: @escaping VoidBlock) -> UIAlertController {
+    static func makeTokenInput(with completion: @escaping Completion) -> UIAlertController {
         let alert = UIAlertController(title: Localized.Token.Alert.title, message: Localized.Token.Alert.message, preferredStyle: .alert)
         let ok = UIAlertAction(title: Localized.Token.Alert.ok, style: .default, handler: { action in
             if let tokenTextField = alert.textFields?[0],

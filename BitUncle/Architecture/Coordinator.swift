@@ -66,7 +66,7 @@ class Coordinator {
         buildListView.presenter.fetchBuilds()
     }
     
-    func askForToken(completion: @escaping VoidBlock) {
+    func askForToken(completion: @escaping Completion) {
         let alert = AlertFactory.makeTokenInput {
             completion()
         }

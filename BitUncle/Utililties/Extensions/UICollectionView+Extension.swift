@@ -38,7 +38,7 @@ extension UICollectionView {
         self.backgroundView = messageLabel;
     }
     
-    func restore() {
+    func removeEmptyView() {
         self.backgroundView = nil
     }
 }

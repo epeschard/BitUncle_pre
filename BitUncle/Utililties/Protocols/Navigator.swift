@@ -9,6 +9,6 @@
 protocol Navigator: Navigable {
     func show(_ Navigable: Navigable, sender: Any?)
     func showDetail(_ Navigable: Navigable, sender: Any?)
-    func present(_ Navigable: Navigable, completion: VoidBlock?)
-    func dismiss(completion: VoidBlock?)    
+    func present(_ Navigable: Navigable, completion: Completion?)
+    func dismiss(completion: Completion?)    
 }

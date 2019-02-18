@@ -74,6 +74,10 @@ extension Artifact {
             }
         }
         
+        func showEmptyView(with message: String) {
+            tableView.showEmptyView(with: message)
+        }
+        
         // MARK: - UIPopoverPresentationControllerDelegate
         
         func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {

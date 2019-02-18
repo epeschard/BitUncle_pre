@@ -37,14 +37,14 @@ class UIKitNavigator: UINavigationController, Navigator {
         }
     }
     
-    func present(_ Navigable: Navigable, completion: VoidBlock?) {
+    func present(_ Navigable: Navigable, completion: Completion?) {
         guard let viewController = Navigable.viewController else { return }
         onMainQueue {
             self.present(viewController, animated: true, completion: completion)
         }
     }
     
-    func dismiss(completion: VoidBlock?) {
+    func dismiss(completion: Completion?) {
         onMainQueue {
             self.dismiss(animated: true, completion: completion)
         }
@@ -58,7 +58,7 @@ class UIKitNavigator: UINavigationController, Navigator {
         fatalError("No detail on UINavigationController")
     }
     
-    func onMainQueue(block: @escaping VoidBlock) {
+    func onMainQueue(block: @escaping Completion) {
         DispatchQueue.main.async(execute: block)
     }
 }

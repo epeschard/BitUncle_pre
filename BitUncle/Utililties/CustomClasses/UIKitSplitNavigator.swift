@@ -24,20 +24,20 @@ class UIKitSplitNavigator: UISplitViewController, Navigator {
         }
     }
     
-    func present(_ navigable: Navigable, completion: VoidBlock?) {
+    func present(_ navigable: Navigable, completion: Completion?) {
         guard let viewController = navigable.viewController else { return }
         onMainQueue {
             self.present(viewController, animated: true, completion: completion)
         }
     }
     
-    func dismiss(completion: VoidBlock?) {
+    func dismiss(completion: Completion?) {
         onMainQueue {
             self.dismiss(animated: true, completion: completion)
         }
     }
     
-    func onMainQueue(block: @escaping VoidBlock) {
+    func onMainQueue(block: @escaping Completion) {
         DispatchQueue.main.async(execute: block)
     }
 }

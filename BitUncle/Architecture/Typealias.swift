@@ -9,4 +9,4 @@
 typealias RemoteConf = Constants.RemoteConfig
 typealias ReachabilityBlock = () -> Void
 typealias SuccessCompletion = (_ success: Bool) -> Void
-typealias VoidBlock = () -> Void
+typealias Completion = () -> Void
