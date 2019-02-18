@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		67AC350B9145F46F1651CB84 /* Pods_BitUncleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD71B5F977EB659A7D4B7A72 /* Pods_BitUncleTests.framework */; };
-		822A9E00A8AAD1C5CEA47D25 /* Pods_BitUncle_AcceptanceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76828568CBCCA9ADA23CFD25 /* Pods_BitUncle_AcceptanceTests.framework */; };
 		9BE2CDDD520A94CD807EDD1F /* Pods_BitUncle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 923D21718396DEB669B9F0AA /* Pods_BitUncle.framework */; };
 		9C0288FC220C544800AD82A7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C0288F7220C544800AD82A7 /* Localizable.strings */; };
 		9C0288FD220C544800AD82A7 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 9C0288F8220C544800AD82A7 /* Base.lproj */; };
@@ -47,9 +46,6 @@
 		9C3FA3EE22171A5200F24AC3 /* Build.DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FA3ED22171A5200F24AC3 /* Build.DataModel.swift */; };
 		9C3FA3F2221ACA7800F24AC3 /* Log.Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FA3F1221ACA7400F24AC3 /* Log.Response.swift */; };
 		9C3FA409221ACEA100F24AC3 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FA408221ACE9F00F24AC3 /* UITableView+Extension.swift */; };
-		9C3FA429221AD71300F24AC3 /* AcceptanceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FA428221AD71300F24AC3 /* AcceptanceTests.m */; };
-		9C3FA42C221AD71300F24AC3 /* FixtureExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FA42B221AD71300F24AC3 /* FixtureExample.swift */; };
-		9C3FA430221AD71300F24AC3 /* Empty.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C3FA42F221AD71300F24AC3 /* Empty.xib */; };
 		9C4E5B57220ADCF7004B15C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E5B56220ADCF7004B15C1 /* AppDelegate.swift */; };
 		9C4E5B6C220ADCF8004B15C1 /* BitUncleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E5B6B220ADCF8004B15C1 /* BitUncleTests.swift */; };
 		9C4E5B7F220ADEF3004B15C1 /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E5B7E220ADEF3004B15C1 /* AppController.swift */; };
@@ -100,6 +96,9 @@
 		9CB3A42C221AEEAF0099ADE4 /* LogActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB3A42B221AEEAE0099ADE4 /* LogActions.swift */; };
 		9CB3A42D221AEF250099ADE4 /* Log.DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F1EEB2211B6380050DEAB /* Log.DataModel.swift */; };
 		9CB3A42E221AEF8A0099ADE4 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FA3EF221731BE00F24AC3 /* UIImage+Extension.swift */; };
+		9CB3A454221B06A30099ADE4 /* AcceptanceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB3A453221B06A30099ADE4 /* AcceptanceTests.m */; };
+		9CB3A457221B06A30099ADE4 /* FixtureExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB3A456221B06A30099ADE4 /* FixtureExample.swift */; };
+		9CB3A45B221B06A30099ADE4 /* Empty.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CB3A45A221B06A30099ADE4 /* Empty.xib */; };
 		9CC53D86220B01B700267849 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC53D85220B01B700267849 /* Configuration.swift */; };
 		9CC53D88220B01D400267849 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC53D87220B01D400267849 /* Constants.swift */; };
 		9CC53D8C220B04CE00267849 /* GoogleService-Info-Debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CC53D89220B04CE00267849 /* GoogleService-Info-Debug.plist */; };
@@ -165,12 +164,6 @@
 		9C181262220D9781003D30AF /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		9C181265220D97EB003D30AF /* ColmnFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColmnFlowLayout.swift; sourceTree = "<group>"; };
 		9C3FA3A02216B46300F24AC3 /* UIKitSplitNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitSplitNavigator.swift; sourceTree = "<group>"; };
-		9C3FA3AC2216FDE800F24AC3 /* AcceptanceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AcceptanceTests.m; sourceTree = "<group>"; };
-		9C3FA3AF2216FDE800F24AC3 /* FixtureExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureExample.swift; sourceTree = "<group>"; };
-		9C3FA3B12216FDE800F24AC3 /* SlimTables.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlimTables.h; sourceTree = "<group>"; };
-		9C3FA3B22216FDE800F24AC3 /* AcceptanceTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AcceptanceTests-Bridging-Header.h"; sourceTree = "<group>"; };
-		9C3FA3B32216FDE800F24AC3 /* Empty.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Empty.xib; sourceTree = "<group>"; };
-		9C3FA3B52216FDE800F24AC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C3FA3BA2217032800F24AC3 /* PopoverPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverPresenter.swift; sourceTree = "<group>"; };
 		9C3FA3BC2217034100F24AC3 /* Navigable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigable.swift; sourceTree = "<group>"; };
 		9C3FA3EB22171A3100F24AC3 /* Build.Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Build.Response.swift; sourceTree = "<group>"; };
@@ -178,19 +171,6 @@
 		9C3FA3EF221731BE00F24AC3 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		9C3FA3F1221ACA7400F24AC3 /* Log.Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.Response.swift; sourceTree = "<group>"; };
 		9C3FA408221ACE9F00F24AC3 /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
-		9C3FA412221AD64F00F24AC3 /* AcceptanceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AcceptanceTests.m; sourceTree = "<group>"; };
-		9C3FA415221AD64F00F24AC3 /* FixtureExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureExample.swift; sourceTree = "<group>"; };
-		9C3FA417221AD64F00F24AC3 /* SlimTables.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlimTables.h; sourceTree = "<group>"; };
-		9C3FA418221AD64F00F24AC3 /* AcceptanceTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AcceptanceTests-Bridging-Header.h"; sourceTree = "<group>"; };
-		9C3FA419221AD64F00F24AC3 /* Empty.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Empty.xib; sourceTree = "<group>"; };
-		9C3FA41B221AD64F00F24AC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9C3FA425221AD71300F24AC3 /* AcceptanceTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AcceptanceTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9C3FA428221AD71300F24AC3 /* AcceptanceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AcceptanceTests.m; sourceTree = "<group>"; };
-		9C3FA42B221AD71300F24AC3 /* FixtureExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureExample.swift; sourceTree = "<group>"; };
-		9C3FA42D221AD71300F24AC3 /* SlimTables.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlimTables.h; sourceTree = "<group>"; };
-		9C3FA42E221AD71300F24AC3 /* AcceptanceTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AcceptanceTests-Bridging-Header.h"; sourceTree = "<group>"; };
-		9C3FA42F221AD71300F24AC3 /* Empty.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Empty.xib; sourceTree = "<group>"; };
-		9C3FA431221AD71300F24AC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C4E5B53220ADCF7004B15C1 /* BitUncle debug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BitUncle debug.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C4E5B56220ADCF7004B15C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C4E5B62220ADCF8004B15C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -247,6 +227,13 @@
 		9CB3A427221AEE910099ADE4 /* Log.ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.ViewController.swift; sourceTree = "<group>"; };
 		9CB3A429221AEEA10099ADE4 /* Log.Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.Delegate.swift; sourceTree = "<group>"; };
 		9CB3A42B221AEEAE0099ADE4 /* LogActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogActions.swift; sourceTree = "<group>"; };
+		9CB3A450221B06A30099ADE4 /* AcceptanceTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AcceptanceTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CB3A453221B06A30099ADE4 /* AcceptanceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AcceptanceTests.m; sourceTree = "<group>"; };
+		9CB3A456221B06A30099ADE4 /* FixtureExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureExample.swift; sourceTree = "<group>"; };
+		9CB3A458221B06A30099ADE4 /* SlimTables.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlimTables.h; sourceTree = "<group>"; };
+		9CB3A459221B06A30099ADE4 /* AcceptanceTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AcceptanceTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		9CB3A45A221B06A30099ADE4 /* Empty.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Empty.xib; sourceTree = "<group>"; };
+		9CB3A45C221B06A30099ADE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CC53D85220B01B700267849 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		9CC53D87220B01D400267849 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9CC53D89220B04CE00267849 /* GoogleService-Info-Debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Debug.plist"; sourceTree = "<group>"; };
@@ -268,14 +255,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9C3FA421221AD71300F24AC3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				822A9E00A8AAD1C5CEA47D25 /* Pods_BitUncle_AcceptanceTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9C4E5B50220ADCF7004B15C1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -289,6 +268,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				67AC350B9145F46F1651CB84 /* Pods_BitUncleTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CB3A44C221B06A30099ADE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,101 +370,12 @@
 			path = CustomClasses;
 			sourceTree = "<group>";
 		};
-		9C3FA3AA2216FDE800F24AC3 /* AcceptanceTests */ = {
-			isa = PBXGroup;
-			children = (
-				9C3FA3B52216FDE800F24AC3 /* Info.plist */,
-				9C3FA3AE2216FDE800F24AC3 /* Fixtures */,
-				9C3FA3AB2216FDE800F24AC3 /* Supporting Files */,
-			);
-			path = AcceptanceTests;
-			sourceTree = "<group>";
-		};
-		9C3FA3AB2216FDE800F24AC3 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				9C3FA3AC2216FDE800F24AC3 /* AcceptanceTests.m */,
-				9C3FA3B12216FDE800F24AC3 /* SlimTables.h */,
-				9C3FA3B22216FDE800F24AC3 /* AcceptanceTests-Bridging-Header.h */,
-				9C3FA3B32216FDE800F24AC3 /* Empty.xib */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		9C3FA3AE2216FDE800F24AC3 /* Fixtures */ = {
-			isa = PBXGroup;
-			children = (
-				9C3FA3AF2216FDE800F24AC3 /* FixtureExample.swift */,
-			);
-			name = Fixtures;
-			sourceTree = "<group>";
-		};
-		9C3FA410221AD64F00F24AC3 /* AcceptanceTests */ = {
-			isa = PBXGroup;
-			children = (
-				9C3FA41B221AD64F00F24AC3 /* Info.plist */,
-				9C3FA414221AD64F00F24AC3 /* Fixtures */,
-				9C3FA411221AD64F00F24AC3 /* Supporting Files */,
-			);
-			path = AcceptanceTests;
-			sourceTree = "<group>";
-		};
-		9C3FA411221AD64F00F24AC3 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				9C3FA412221AD64F00F24AC3 /* AcceptanceTests.m */,
-				9C3FA417221AD64F00F24AC3 /* SlimTables.h */,
-				9C3FA418221AD64F00F24AC3 /* AcceptanceTests-Bridging-Header.h */,
-				9C3FA419221AD64F00F24AC3 /* Empty.xib */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		9C3FA414221AD64F00F24AC3 /* Fixtures */ = {
-			isa = PBXGroup;
-			children = (
-				9C3FA415221AD64F00F24AC3 /* FixtureExample.swift */,
-			);
-			name = Fixtures;
-			sourceTree = "<group>";
-		};
-		9C3FA426221AD71300F24AC3 /* AcceptanceTests */ = {
-			isa = PBXGroup;
-			children = (
-				9C3FA431221AD71300F24AC3 /* Info.plist */,
-				9C3FA42A221AD71300F24AC3 /* Fixtures */,
-				9C3FA427221AD71300F24AC3 /* Supporting Files */,
-			);
-			path = AcceptanceTests;
-			sourceTree = "<group>";
-		};
-		9C3FA427221AD71300F24AC3 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				9C3FA428221AD71300F24AC3 /* AcceptanceTests.m */,
-				9C3FA42D221AD71300F24AC3 /* SlimTables.h */,
-				9C3FA42E221AD71300F24AC3 /* AcceptanceTests-Bridging-Header.h */,
-				9C3FA42F221AD71300F24AC3 /* Empty.xib */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		9C3FA42A221AD71300F24AC3 /* Fixtures */ = {
-			isa = PBXGroup;
-			children = (
-				9C3FA42B221AD71300F24AC3 /* FixtureExample.swift */,
-			);
-			name = Fixtures;
-			sourceTree = "<group>";
-		};
 		9C4E5B4A220ADCF7004B15C1 = {
 			isa = PBXGroup;
 			children = (
 				9C4E5B55220ADCF7004B15C1 /* BitUncle */,
 				9C4E5B6A220ADCF8004B15C1 /* BitUncleTests */,
-				9C3FA3AA2216FDE800F24AC3 /* AcceptanceTests */,
-				9C3FA410221AD64F00F24AC3 /* AcceptanceTests */,
-				9C3FA426221AD71300F24AC3 /* AcceptanceTests */,
+				9CB3A451221B06A30099ADE4 /* AcceptanceTests */,
 				9C4E5B54220ADCF7004B15C1 /* Products */,
 				5BD275C48605AD8E63B95903 /* Pods */,
 				1BA662DF9109DDD975D3F065 /* Frameworks */,
@@ -490,7 +387,7 @@
 			children = (
 				9C4E5B53220ADCF7004B15C1 /* BitUncle debug.app */,
 				9C4E5B67220ADCF8004B15C1 /* BitUncleTests.xctest */,
-				9C3FA425221AD71300F24AC3 /* AcceptanceTests.app */,
+				9CB3A450221B06A30099ADE4 /* AcceptanceTests.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -677,6 +574,35 @@
 			path = Build;
 			sourceTree = "<group>";
 		};
+		9CB3A451221B06A30099ADE4 /* AcceptanceTests */ = {
+			isa = PBXGroup;
+			children = (
+				9CB3A45C221B06A30099ADE4 /* Info.plist */,
+				9CB3A455221B06A30099ADE4 /* Fixtures */,
+				9CB3A452221B06A30099ADE4 /* Supporting Files */,
+			);
+			path = AcceptanceTests;
+			sourceTree = "<group>";
+		};
+		9CB3A452221B06A30099ADE4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9CB3A453221B06A30099ADE4 /* AcceptanceTests.m */,
+				9CB3A458221B06A30099ADE4 /* SlimTables.h */,
+				9CB3A459221B06A30099ADE4 /* AcceptanceTests-Bridging-Header.h */,
+				9CB3A45A221B06A30099ADE4 /* Empty.xib */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9CB3A455221B06A30099ADE4 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				9CB3A456221B06A30099ADE4 /* FixtureExample.swift */,
+			);
+			name = Fixtures;
+			sourceTree = "<group>";
+		};
 		9CC53D9D220B34ED00267849 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -706,26 +632,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9C3FA424221AD71300F24AC3 /* AcceptanceTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9C3FA435221AD71600F24AC3 /* Build configuration list for PBXNativeTarget "AcceptanceTests" */;
-			buildPhases = (
-				4329E9F68E61BCDC7C3E55B4 /* [CP] Check Pods Manifest.lock */,
-				9C3FA420221AD71300F24AC3 /* Sources */,
-				9C3FA421221AD71300F24AC3 /* Frameworks */,
-				9C3FA422221AD71300F24AC3 /* Resources */,
-				9C3FA423221AD71300F24AC3 /* [OCSP] Generate Fitnesse Test System Scripts */,
-				EFDAB9B7CAE0CDB26DDBAA10 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = AcceptanceTests;
-			productName = AcceptanceTests;
-			productReference = 9C3FA425221AD71300F24AC3 /* AcceptanceTests.app */;
-			productType = "com.apple.product-type.application";
-		};
 		9C4E5B52220ADCF7004B15C1 /* BitUncle */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9C4E5B70220ADCF8004B15C1 /* Build configuration list for PBXNativeTarget "BitUncle" */;
@@ -764,19 +670,35 @@
 			productReference = 9C4E5B67220ADCF8004B15C1 /* BitUncleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		9CB3A44F221B06A30099ADE4 /* AcceptanceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CB3A45D221B06A30099ADE4 /* Build configuration list for PBXNativeTarget "AcceptanceTests" */;
+			buildPhases = (
+				9CB3A44B221B06A30099ADE4 /* Sources */,
+				9CB3A44C221B06A30099ADE4 /* Frameworks */,
+				9CB3A44D221B06A30099ADE4 /* Resources */,
+				9CB3A44E221B06A30099ADE4 /* [OCSP] Generate Fitnesse Test System Scripts */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AcceptanceTests;
+			productName = AcceptanceTests;
+			productReference = 9CB3A450221B06A30099ADE4 /* AcceptanceTests.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		9C4E5B4B220ADCF7004B15C1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				DefaultBuildSystemTypeForWorkspace = Original;
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Eugène Peschard";
 				TargetAttributes = {
-					9C3FA424221AD71300F24AC3 = {
-						CreatedOnToolsVersion = 10.1;
-					};
 					9C4E5B52220ADCF7004B15C1 = {
 						CreatedOnToolsVersion = 10.1;
 						SystemCapabilities = {
@@ -788,6 +710,9 @@
 					9C4E5B66220ADCF8004B15C1 = {
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = 9C4E5B52220ADCF7004B15C1;
+					};
+					9CB3A44F221B06A30099ADE4 = {
+						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
@@ -806,20 +731,12 @@
 			targets = (
 				9C4E5B52220ADCF7004B15C1 /* BitUncle */,
 				9C4E5B66220ADCF8004B15C1 /* BitUncleTests */,
-				9C3FA424221AD71300F24AC3 /* AcceptanceTests */,
+				9CB3A44F221B06A30099ADE4 /* AcceptanceTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9C3FA422221AD71300F24AC3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9C3FA430221AD71300F24AC3 /* Empty.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9C4E5B51220ADCF7004B15C1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -841,35 +758,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9CB3A44D221B06A30099ADE4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CB3A45B221B06A30099ADE4 /* Empty.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4329E9F68E61BCDC7C3E55B4 /* [CP] Check Pods Manifest.lock */ = {
+		9CB3A44E221B06A30099ADE4 /* [OCSP] Generate Fitnesse Test System Scripts */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BitUncle-AcceptanceTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9C3FA423221AD71300F24AC3 /* [OCSP] Generate Fitnesse Test System Scripts */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+			inputFileListPaths = (
 			);
 			inputPaths = (
 			);
 			name = "[OCSP] Generate Fitnesse Test System Scripts";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -948,56 +859,9 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EFDAB9B7CAE0CDB26DDBAA10 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-BitUncle-AcceptanceTests/Pods-BitUncle-AcceptanceTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
-				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/StanwoodCore/StanwoodCore.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftRichString/SwiftRichString.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-				"${BUILT_PRODUCTS_DIR}/cslim/cslim.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StanwoodCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftRichString.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/cslim.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitUncle-AcceptanceTests/Pods-BitUncle-AcceptanceTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9C3FA420221AD71300F24AC3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9C3FA42C221AD71300F24AC3 /* FixtureExample.swift in Sources */,
-				9C3FA429221AD71300F24AC3 /* AcceptanceTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9C4E5B4F220ADCF7004B15C1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1106,6 +970,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9CB3A44B221B06A30099ADE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CB3A457221B06A30099ADE4 /* FixtureExample.swift in Sources */,
+				9CB3A454221B06A30099ADE4 /* AcceptanceTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1117,69 +990,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		9C3FA432221AD71400F24AC3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9178B221183EA1C85E9CD4ED /* Pods-BitUncle-AcceptanceTests.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 76898M8GJ2;
-				INFOPLIST_FILE = AcceptanceTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				PRODUCT_BUNDLE_IDENTIFIER = app.pesch.AcceptanceTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_OBJC_BRIDGING_HEADER = "AcceptanceTests/AcceptanceTests-Bridging-Header.h";
-				SWIFT_VERSION = 4.2;
-			};
-			name = Debug;
-		};
-		9C3FA433221AD71400F24AC3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 73B3DE4DE9639A33EF2258A2 /* Pods-BitUncle-AcceptanceTests.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 76898M8GJ2;
-				INFOPLIST_FILE = AcceptanceTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				PRODUCT_BUNDLE_IDENTIFIER = app.pesch.AcceptanceTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_OBJC_BRIDGING_HEADER = "AcceptanceTests/AcceptanceTests-Bridging-Header.h";
-				SWIFT_VERSION = 4.2;
-			};
-			name = Release;
-		};
-		9C3FA434221AD71400F24AC3 /* Stage */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1FC9F98567A292FB8DF8A0C0 /* Pods-BitUncle-AcceptanceTests.stage.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 76898M8GJ2;
-				INFOPLIST_FILE = AcceptanceTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				PRODUCT_BUNDLE_IDENTIFIER = app.pesch.AcceptanceTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_OBJC_BRIDGING_HEADER = "AcceptanceTests/AcceptanceTests-Bridging-Header.h";
-				SWIFT_VERSION = 4.2;
-			};
-			name = Stage;
-		};
 		9C4E5B6E220ADCF8004B15C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1465,19 +1275,69 @@
 			};
 			name = Stage;
 		};
+		9CB3A45E221B06A30099ADE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 76898M8GJ2;
+				INFOPLIST_FILE = AcceptanceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = app.pesch.AcceptanceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "AcceptanceTests/AcceptanceTests-Bridging-Header.h";
+				SWIFT_VERSION = 3.0.1;
+			};
+			name = Debug;
+		};
+		9CB3A45F221B06A30099ADE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 76898M8GJ2;
+				INFOPLIST_FILE = AcceptanceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = app.pesch.AcceptanceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "AcceptanceTests/AcceptanceTests-Bridging-Header.h";
+				SWIFT_VERSION = 3.0.1;
+			};
+			name = Release;
+		};
+		9CB3A460221B06A30099ADE4 /* Stage */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 76898M8GJ2;
+				INFOPLIST_FILE = AcceptanceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = app.pesch.AcceptanceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "AcceptanceTests/AcceptanceTests-Bridging-Header.h";
+				SWIFT_VERSION = 3.0.1;
+			};
+			name = Stage;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9C3FA435221AD71600F24AC3 /* Build configuration list for PBXNativeTarget "AcceptanceTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9C3FA432221AD71400F24AC3 /* Debug */,
-				9C3FA433221AD71400F24AC3 /* Release */,
-				9C3FA434221AD71400F24AC3 /* Stage */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		9C4E5B4E220ADCF7004B15C1 /* Build configuration list for PBXProject "BitUncle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1504,6 +1364,16 @@
 				9C4E5B74220ADCF8004B15C1 /* Debug */,
 				9C4E5B75220ADCF8004B15C1 /* Release */,
 				9C4E5B96220AF150004B15C1 /* Stage */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CB3A45D221B06A30099ADE4 /* Build configuration list for PBXNativeTarget "AcceptanceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CB3A45E221B06A30099ADE4 /* Debug */,
+				9CB3A45F221B06A30099ADE4 /* Release */,
+				9CB3A460221B06A30099ADE4 /* Stage */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
