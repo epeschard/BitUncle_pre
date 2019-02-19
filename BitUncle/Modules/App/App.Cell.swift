@@ -32,10 +32,8 @@ extension App {
             let label = UILabel()
             label.numberOfLines = 0
             label.textAlignment = .center
-            label.font = UIFont.systemFont(ofSize: 30)
+            label.font = UIFont.systemFont(ofSize: 30, weight: .heavy)
             label.textColor = .white
-//            label.layer.cornerRadius = 9
-//            label.clipsToBounds = true
             return label
         }()
         
@@ -169,7 +167,7 @@ extension App {
                 stackView0.removeArrangedSubview(initials)
             } else {
                 stackView0.removeArrangedSubview(avatar)
-                initials.text = "\(title?.first.uppercased() ?? "1")\(title?.last.uppercased() ?? "9")"
+                initials.text = "\(title?.first.uppercased() ?? "<")\(title?.last.uppercased() ?? ">")"
                 initials.backgroundColor = UIColor.Bitrise.green
             }
             self.platformLogo.image = (type as? DataModel)?.projectType == "ios" ? #imageLiteral(resourceName: "apple.pdf") : #imageLiteral(resourceName: "android.pdf")
