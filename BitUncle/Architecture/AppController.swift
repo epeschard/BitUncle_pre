@@ -55,12 +55,7 @@ class AppController: NSObject {
             }
         }
     }
-    
-    private func loadInitialData() {
-        loadInitialData { [weak self] (success) in
-            self?.checkForToken()
-        }
-    }
+
 }
 
 // MARK:- AppDelegate Functions
