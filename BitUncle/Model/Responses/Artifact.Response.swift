@@ -13,11 +13,9 @@ extension Artifact {
     typealias Completion = (Result<[DataModel]>) -> Void
     
     struct Response: Codable {
-        //        let paging: Paging
         let artifacts: [DataModel]
         
         private enum CodingKeys: String, CodingKey {
-            //            case paging
             case artifacts = "data"
         }
     }

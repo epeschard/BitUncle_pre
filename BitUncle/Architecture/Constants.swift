@@ -36,7 +36,15 @@ struct Constants {
         #endif
     }
     
+    enum CodingKeys {
+        static let data = "data"
+    }
+    
     enum RemoteConfig {
         static let plist = "RemoteConfig"
+    }
+    
+    enum Token {
+        static let key = "token"
     }
 }

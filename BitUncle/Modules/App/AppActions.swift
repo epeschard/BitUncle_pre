@@ -16,9 +16,8 @@ protocol AppActions: ErrorActionable {
 extension Actions: AppActions {
     
     func getApps(completion: @escaping App.Completion) {
-        let nextPage: String? = nil
-        //TODO: add here - response.paging.next
-        //        let nextPage: String? = Apps.Paging.next
+        let nextPage: String? = appData.nextPage
+        print("nextPage: \(nextPage)")
         
         dataProvider.networkManager.getApps(nextPage: nextPage, append: false, completion: completion)
     }

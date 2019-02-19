@@ -150,6 +150,7 @@ extension App {
                 avatar.widthAnchor.constraint(equalToConstant: 65),
                 initials.heightAnchor.constraint(equalTo: avatar.heightAnchor),
                 initials.widthAnchor.constraint(equalTo: initials.heightAnchor),
+                stackView1.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 73),
                 initials.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
                 initials.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
                 platformLogo.heightAnchor.constraint(equalToConstant: 25),
@@ -180,14 +181,23 @@ extension App {
         
         private func setStatus(with type: Type?) {
             let status = (type as? DataModel)?.status
-            if status == 1 {
+            setStatus(for: status)
+        }
+        
+        private func setStatus(for status: Int?) {
+            switch status {
+            case 1:
                 self.statusLabel.text = "✓"
                 self.statusLabel.textColor = UIColor.Bitrise.success
                 self.statusLabel.layer.borderColor = UIColor.Bitrise.success.cgColor
-            } else {
+            case 0:
                 self.statusLabel.text = "✗"
                 self.statusLabel.textColor = UIColor.Bitrise.failed
-                self.statusLabel.layer.borderColor = UIColor.Bitrise.success.cgColor
+                self.statusLabel.layer.borderColor = UIColor.Bitrise.failed.cgColor
+            default:
+                statusLabel.text = "…"
+                self.statusLabel.textColor = UIColor.Bitrise.purple
+                self.statusLabel.layer.borderColor = UIColor.Bitrise.purple.cgColor
             }
         }
         

@@ -23,7 +23,7 @@ class AlertFactory {
             if let tokenTextField = alert.textFields?[0],
                 let tokenText = tokenTextField.text,
                 let token = tokenText.data(using: .utf8) {
-                _ = KeyChain.save(key: "token", data: token)
+                _ = KeyChain.save(key: Token.key, data: token)
                 completion()
             }
         })

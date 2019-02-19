@@ -7,6 +7,8 @@
 //
 
 typealias RemoteConf = Constants.RemoteConfig
+typealias RemoteConfigKey = Configuration.RemoteConfigKeys
+typealias Token = Constants.Token
 typealias ReachabilityBlock = () -> Void
 typealias SuccessCompletion = (_ success: Bool) -> Void
 typealias Completion = () -> Void

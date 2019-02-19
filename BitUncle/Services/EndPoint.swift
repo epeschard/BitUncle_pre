@@ -8,7 +8,7 @@
 
 import Moya
 
-private let DEFAULT_PAGE = 20
+private let PAGE_ITEM_LIMIT = 20
 
 enum EndPoint {
     case getProfile
@@ -53,7 +53,6 @@ extension EndPoint: TargetType {
         }
     }
     
-    
     var method: Moya.Method {
         switch self {
         case .getProfile, .getApps, .getBuilds, .getBuild, .getLog, .getArtifacts: return .get
@@ -70,22 +69,22 @@ extension EndPoint: TargetType {
             return .requestParameters(parameters: [:], encoding: URLEncoding.default)
         case .getApps(let next):
             if let nextPage = next {
-                return .requestParameters(parameters: ["limit": DEFAULT_PAGE, "sort_by": "last_build_at", "next": nextPage], encoding: URLEncoding.default)
+                return .requestParameters(parameters: ["limit": PAGE_ITEM_LIMIT, "sort_by": "last_build_at", "next": nextPage], encoding: URLEncoding.default)
             } else {
-                return .requestParameters(parameters: ["limit": DEFAULT_PAGE, "sort_by": "last_build_at"], encoding: URLEncoding.default)
+                return .requestParameters(parameters: ["limit": PAGE_ITEM_LIMIT, "sort_by": "last_build_at"], encoding: URLEncoding.default)
             }
         case .getBuild(_):
             return .requestParameters(parameters: ["limit": "1"], encoding: URLEncoding.default)
         case .getBuilds(_, let next):
             if let nextPage = next {
-                return .requestParameters(parameters: ["limit": DEFAULT_PAGE, "next": nextPage], encoding: URLEncoding.default)
+                return .requestParameters(parameters: ["limit": PAGE_ITEM_LIMIT, "next": nextPage], encoding: URLEncoding.default)
             } else {
-                return .requestParameters(parameters: ["limit": DEFAULT_PAGE], encoding: URLEncoding.default)
+                return .requestParameters(parameters: ["limit": PAGE_ITEM_LIMIT], encoding: URLEncoding.default)
             }
         case .getLog(_, _):
-            return .requestParameters(parameters: ["limit": DEFAULT_PAGE], encoding: URLEncoding.default)
+            return .requestParameters(parameters: ["limit": PAGE_ITEM_LIMIT], encoding: URLEncoding.default)
         case .getArtifacts(_, _):
-            return .requestParameters(parameters: ["limit": DEFAULT_PAGE], encoding: URLEncoding.default)
+            return .requestParameters(parameters: ["limit": PAGE_ITEM_LIMIT], encoding: URLEncoding.default)
         }
     }
     
