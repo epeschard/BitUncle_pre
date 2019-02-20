@@ -62,17 +62,24 @@ extension String {
         //MARK: - Build Module
         enum Build {
             enum Label {
-                static let noDuration = "BUILD_LABEL_NODURATION".localized
+                static let emptyMessage = "BUILD_LABEL_EMPTYMESSAGE".localized
                 static let triggeredAt = "BUILD_LABEL_TRIGGEREDAT".localized
                 static let noTriggeredDate = "BUILD_LABEL_NOTRIGGEREDDATE".localized
+                static let noDuration = "BUILD_LABEL_NODURATION".localized
                 static let na = "BUILD_LABEL_NA".localized
             }
         }
-        
         //MARK: - Log Module
         enum Log {
             enum BarButton {
                 static let artifacts = "LOG_BARBUTTON_ARTIFACTS".localized
+            }
+        }
+
+        //MARK: - Log Artifact        
+        enum Artifact {
+            enum Label {
+                static let emptyMessage = "ARTIFACT_LABEL_EMPTYMESSAGE".localized
             }
         }
     }

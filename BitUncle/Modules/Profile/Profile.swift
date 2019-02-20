@@ -6,7 +6,6 @@
 //  Copyright © 2019 pesch.app All rights reserved.
 //
 
-import UIKit
 
 enum Profile: Wireframeable {
 
@@ -16,6 +15,7 @@ enum Profile: Wireframeable {
     
     static func makeViewController(with actions: Actions, and parameters: Parameters) -> ViewController {
         let controller = ViewController(with: actions, and: parameters)
+        
         return controller
     }
 

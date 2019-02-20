@@ -46,9 +46,13 @@ extension Log {
             delegate.presenter = self
             dataSource.presenter = self
         }
-                
-        func showArtifacts(from viewController: UIViewController) {
-            actions.presentArtifacts(from: viewController)
+        
+        func didSelect(_ log: DataModel) {
+//            actionable.unfoldLogChunk(for: buildSlug)
+        }
+        
+        func showArtifacts(from navigable: Navigable) {
+            actions.presentArtifacts(from: navigable)
         }
     }
 }

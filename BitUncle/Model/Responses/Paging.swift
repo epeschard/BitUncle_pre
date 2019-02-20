@@ -7,7 +7,7 @@
 //
 
 struct Paging: Codable {
-    let next: String
+    let next: String?
     let pageItemLimit: Int
     let totalItemCount: Int
 }

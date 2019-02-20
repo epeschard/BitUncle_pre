@@ -6,7 +6,6 @@
 //  Copyright © 2019 pesch.app All rights reserved.
 //
 
-import UIKit
 import StanwoodCore
 
 extension App {
@@ -20,6 +19,12 @@ extension App {
         let dataSource = DataSource(dataType: Stanwood.Elements<DataModel>(items: []))
         let delegate = Delegate(dataType: Stanwood.Elements<DataModel>(items: []))
         
+        var profile: Profile.DataModel? {
+            didSet {
+                viewable?.updateProfile()
+            }
+        }
+        
         required init(_ view: Viewable? = nil, with actions: Actions, and parameters: Parameters) {
             self.viewable = view
             self.actions = actions
@@ -27,37 +32,64 @@ extension App {
         }
         
         func viewDidLoad() {
+<<<<<<< HEAD
+            delegate.presenter = self
+//            dataSource.presenter = self
+        }
+        
+        func fetchApps() {
+=======
+>>>>>>> develop
+            viewable?.setLoading(visible: true)
             actions.getApps {
-                result in
+                [weak self] result in
                 switch result {
                 case .success(let data):
                     let elements = Stanwood.Elements(items: data)
-                    self.dataSource.update(with: elements)
-                    self.delegate.update(with: elements)
-                    self.viewable?.reload()
+                    self?.dataSource.update(with: elements)
+                    self?.delegate.update(with: elements)
+                    self?.viewable?.reload()
                 case .failure(let error):
-                    self.actions.showAlert(error)
+                    self?.actions.showAlert(error)
                 }
-                self.actions.setLoading(visible: false)
+                self?.viewable?.setLoading(visible: false)
             }
+<<<<<<< HEAD
+=======
             delegate.presenter = self
 //            dataSource.presenter = self
+            getProfile()
+>>>>>>> develop
         }
         
         func didSelect(_ app: DataModel) {
             parameters.appSlug = app.slug
             parameters.appName = app.title
-            actions.showBuilds()
+<<<<<<< HEAD
+            actions.showDetailBuilds()
         }
-<<<<<<< Updated upstream
         
-        func showProfile() {
-            actions.showProfile()
+        func showProfile(from navigable: Navigable) {
+            actions.presentProfile(from: navigable)
 =======
+            actions.presentBuilds()
+        }
                 
-        func showPopover(from viewController: UIViewController) {
-            actionable.showProfile(from: viewController)
->>>>>>> Stashed changes
+        func showProfile(from viewController: UIViewController) {
+            actions.presentProfile(from: viewController)
+        }
+        
+        func getProfile() {
+            actions.getProfile {
+                [weak self] result in
+                switch result {
+                case .success(let profile):
+                    self?.profile = profile
+                case .failure(let error):
+                    self?.actions.showAlert(error)
+                }
+            }
+>>>>>>> develop
         }
         
     }

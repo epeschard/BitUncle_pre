@@ -7,13 +7,13 @@
 //
 
 protocol AppParameters {
-    var nextPage: String { get set }
+    var nextPage: String? { get set }
     var appSlug: String { get set }
     var appName: String { get set }
 }
 
 extension Parameters: AppParameters {
-    var nextPage: String {
+    var nextPage: String? {
         get {
             return appData.nextPage
         }

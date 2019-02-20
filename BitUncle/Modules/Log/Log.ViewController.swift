@@ -11,14 +11,14 @@ import UIKit
 extension Log {
     
     @objc (LogViewController)
-    class ViewController: UIViewController, Viewable {
+    class ViewController: UIViewController, Viewable, Navigable, PopoverPresenter {
         
         var presenter: Presenter!
         var tableView: UITableView!
         var spinner: UIActivityIndicatorView!
         
         var artifactsBarButtonItem: UIBarButtonItem {
-            return UIBarButtonItem(title: Localized.Log.BarButton.artifacts, style: .plain, target: self, action: #selector(showArtifacts))
+            return UIBarButtonItem(title: Localized.Log.BarButton.artifacts, style: .plain, target: self, action: #selector(presentArtifacts))
         }
         
         // MARK: - Run Loop
@@ -50,6 +50,7 @@ extension Log {
             
             setupTableView()
             setupSpinner()
+            addProfileBarButton()
         }
         
         private func setupTableView() {
@@ -74,7 +75,12 @@ extension Log {
             self.spinner?.centerYAnchor.constraint(equalTo: self.tableView.centerYAnchor).isActive = true
         }
         
-        @objc private func showArtifacts() {
+        private func addProfileBarButton() {
+            let profileButton = UIBarButtonItem(image: #imageLiteral(resourceName: "profile.pdf"), style: .plain, target: self, action: #selector(presentArtifacts))
+            navigationItem.rightBarButtonItem = profileButton
+        }
+        
+        @objc private func presentArtifacts() {
             presenter.showArtifacts(from: self)
         }
         
@@ -90,6 +96,21 @@ extension Log {
             } else {
                 spinner.stopAnimating()
             }
+        }
+        
+        // MARK: - PopoverPresenter
+        
+        func present(_ navigable: Navigable, sender: Any?) {
+            guard let window = navigable as? UIViewController, let host = sender as? UIViewController, let rBarButtton = host.navigationItem.rightBarButtonItem else { return }
+            window.modalPresentationStyle = .popover
+            
+            if let popover = window.popoverPresentationController, let delegate = window as? UIPopoverPresentationControllerDelegate {
+                popover.barButtonItem = rBarButtton
+                popover.delegate = delegate
+                popover.permittedArrowDirections = .up
+                popover.presentedViewController.preferredContentSize = CGSize(width: 300, height: 132)
+            }
+            host.present(window, animated: true, completion: nil)
         }
         
     }

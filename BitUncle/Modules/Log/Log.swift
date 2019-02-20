@@ -6,7 +6,6 @@
 //  Copyright © 2019 pesch.app All rights reserved.
 //
 
-import UIKit
 
 enum Log: Wireframeable {
     
@@ -14,10 +13,9 @@ enum Log: Wireframeable {
     typealias Actions = LogActions
     typealias Parameters = LogParameters
     
-    static func makeViewController(with actions: Actions, and parameters: Parameters) -> UINavigationController {
+    static func makeViewController(with actions: Actions, and parameters: Parameters) -> ViewController {
         let controller = ViewController(with: actions, and: parameters)
-        let navController = UINavigationController(rootViewController: controller)
-        return navController
+        return controller
     }
     
 }

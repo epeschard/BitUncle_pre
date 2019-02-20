@@ -148,9 +148,9 @@ extension App {
                 avatar.widthAnchor.constraint(equalToConstant: 65),
                 initials.heightAnchor.constraint(equalTo: avatar.heightAnchor),
                 initials.widthAnchor.constraint(equalTo: initials.heightAnchor),
+                stackView1.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 73),
                 initials.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
                 initials.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-                stackView1.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 73),
                 platformLogo.heightAnchor.constraint(equalToConstant: 25),
                 platformLogo.widthAnchor.constraint(equalTo: platformLogo.heightAnchor),
                 statusLabel.widthAnchor.constraint(equalTo: statusLabel.heightAnchor),
@@ -167,7 +167,7 @@ extension App {
                 stackView0.removeArrangedSubview(initials)
             } else {
                 stackView0.removeArrangedSubview(avatar)
-                initials.text = "\(title?.first.uppercased() ?? "1")\(title?.last.uppercased() ?? "9")"
+                initials.text = "\(title?.first.uppercased() ?? "<")\(title?.last.uppercased() ?? ">")"
                 initials.backgroundColor = UIColor.Bitrise.green
             }
             self.platformLogo.image = (type as? DataModel)?.projectType == "ios" ? #imageLiteral(resourceName: "apple.pdf") : #imageLiteral(resourceName: "android.pdf")
@@ -179,14 +179,23 @@ extension App {
         
         private func setStatus(with type: Type?) {
             let status = (type as? DataModel)?.status
-            if status == 1 {
+            setStatus(for: status)
+        }
+        
+        private func setStatus(for status: Int?) {
+            switch status {
+            case 1:
                 self.statusLabel.text = "✓"
                 self.statusLabel.textColor = UIColor.Bitrise.success
                 self.statusLabel.layer.borderColor = UIColor.Bitrise.success.cgColor
-            } else {
+            case 0:
                 self.statusLabel.text = "✗"
                 self.statusLabel.textColor = UIColor.Bitrise.failed
-                self.statusLabel.layer.borderColor = UIColor.Bitrise.success.cgColor
+                self.statusLabel.layer.borderColor = UIColor.Bitrise.failed.cgColor
+            default:
+                statusLabel.text = "…"
+                self.statusLabel.textColor = UIColor.Bitrise.purple
+                self.statusLabel.layer.borderColor = UIColor.Bitrise.purple.cgColor
             }
         }
         

@@ -11,7 +11,7 @@ import UIKit
 extension Profile {
     
     @objc (ProfileViewController)
-    class ViewController: UIViewController, Viewable, UIPopoverPresentationControllerDelegate {
+    class ViewController: UIViewController, Navigable, Viewable, UIPopoverPresentationControllerDelegate {
         
         var presenter: Presenter!
         var tableView: UITableView!
@@ -42,7 +42,7 @@ extension Profile {
         // MARK: - Internal
         
         private func setup() {
-            assert(self.navigationController != nil)
+            
             title = Localized.Profile.Label.title
             setupTableView()
             setupSpinner()
@@ -85,8 +85,7 @@ extension Profile {
                 spinner.stopAnimating()
             }
         }
-        
+
     }
     
 }
-

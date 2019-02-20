@@ -9,7 +9,9 @@
 import Foundation
 
 class AppData {
-    var nextPage = ""
+    var pageItemLimit = 20
+    var totalItemCount = 0
+    var nextPage: String? = nil
     var appSlug = ""
     var appName = ""
     var buildSlug = ""
