@@ -41,6 +41,10 @@ extension Log {
             navigationItem.rightBarButtonItem = artifactsBarButtonItem
         }
         
+        override var preferredStatusBarStyle: UIStatusBarStyle {
+            return .lightContent
+        }
+        
         private func setup() {
             assert(self.navigationController != nil)
             

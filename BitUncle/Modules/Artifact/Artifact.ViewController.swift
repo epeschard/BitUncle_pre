@@ -35,6 +35,12 @@ extension Artifact {
             presenter.viewDidLoad()
         }
         
+        override var preferredStatusBarStyle: UIStatusBarStyle {
+            return .lightContent
+        }
+        
+        // MARK: - Internal
+        
         private func setup() {
             title = "Artifacts"
             setupTableView()
@@ -60,7 +66,13 @@ extension Artifact {
             spinner?.centerYAnchor.constraint(equalTo: tableView.centerYAnchor).isActive = true
         }
         
-        //MARK: - AppViewable
+        // MARK: - UIPopoverPresentationControllerDelegate
+        
+        func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+            return .none
+        }
+        
+        // MARK: - AppViewable
         
         func reload() {
             self.tableView.reloadData()
@@ -76,12 +88,6 @@ extension Artifact {
         
         func showEmptyView(with message: String) {
             tableView.showEmptyView(with: message)
-        }
-        
-        // MARK: - UIPopoverPresentationControllerDelegate
-        
-        func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
-            return .none
         }
         
     }

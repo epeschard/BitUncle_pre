@@ -19,6 +19,12 @@ extension App {
         let dataSource = DataSource(dataType: Stanwood.Elements<DataModel>(items: []))
         let delegate = Delegate(dataType: Stanwood.Elements<DataModel>(items: []))
         
+        var profile: Profile.DataModel? {
+            didSet {
+                viewable?.updateProfile()
+            }
+        }
+        
         required init(_ view: Viewable? = nil, with actions: Actions, and parameters: Parameters) {
             self.viewable = view
             self.actions = actions

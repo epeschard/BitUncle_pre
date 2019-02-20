@@ -16,7 +16,7 @@ extension Log {
         
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             guard let log = dataType?[indexPath] as? DataModel else { return }
-            presenter.didSelect(log)
+//            presenter.didSelect(log.chunk)
         }
         
     }

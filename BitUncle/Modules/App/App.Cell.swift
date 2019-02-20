@@ -203,12 +203,14 @@ extension App {
             didSet {
                 if self.isSelected {
                     self.transform = CGAffineTransform(scaleX: 1.05, y: 1.05)
+                    self.contentView.clipsToBounds = false
                     self.contentView.backgroundColor = UIColor.Bitrise.backgroundGrey
                     self.statusLabel.isHidden = true
                     self.ownerLabel.textColor = .black
                     self.projectLabel.textColor = .black
                 } else {
                     self.transform = CGAffineTransform.identity
+                    self.contentView.clipsToBounds = true
                     self.contentView.backgroundColor = .white
                     self.statusLabel.isHidden = false
                     self.ownerLabel.textColor = .darkGray
@@ -216,6 +218,5 @@ extension App {
                 }
             }
         }
-
     }
 }

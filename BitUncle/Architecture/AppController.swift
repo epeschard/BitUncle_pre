@@ -25,11 +25,8 @@ class AppController: NSObject {
 
         let networkManager = NetworkManager(internetRequest: networkService)
         dataProvider = DataProvider(appData: appData, networkManager: networkManager)
-        
         parameters = Parameters(appData: appData)
-        
         coordinator = Coordinator(with: navigator)
-        
         actions = Actions(appData: appData, dataProvider: dataProvider, coordinator: coordinator)
         super.init()
         coordinator.actions = actions
@@ -40,9 +37,10 @@ class AppController: NSObject {
         let remoteConfig = RemoteConfig.remoteConfig()
         remoteConfig.setDefaults(fromPlist: RemoteConf.plist)
         Configuration.downloadRemoteConfigValues { (success) in
-            debugPrint("downloadRemoteConfigValues: \(success)")
+            self.networkService.request {
+                debugPrint("downloadRemoteConfigValues: \(success)")
+            }
         }
-        
         checkForToken()
     }
     

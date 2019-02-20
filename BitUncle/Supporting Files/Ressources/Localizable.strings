@@ -6,18 +6,22 @@
   Copyright © 2019 pesch.app All rights reserved.
 */
 
+//MARK: - Splash
 "SPLASH_LABEL_FOOTER" = "BITrise UNofficial CLiEnt";
 
+//MARK: - Error
 "ERROR_UNKNOWNDESCRIPTION" = "Unknown error appeared";
 "ERROR_TRYAGAIN" = "Please try again later";
 "ERROR_OK" = "OK";
 
+//MARK: - Token Alert
 "TOKEN_ALERT_TITLE" = "Enter Bitrise Token";
 "TOKEN_ALERT_MESSAGE" = "Please enter your token for bitrise.io Tap on 'Guide Me' for instructions";
 "TOKEN_ALERT_PLACEHOLDER" = "your Token goes here";
 "TOKEN_ALERT_OK" = "OK";
 "TOKEN_ALERT_GUIDE" = "Guide me";
 
+//MARK: - Profile Module
 "PROFILE_LABEL_TITLE" = "Profile";
 "PROFILE_LABEL_EMAIL" = "Email";
 "PROFILE_LABEL_USERNAME" = "Username";
@@ -25,15 +29,19 @@
 "PROFILE_LABEL_LOGOUT" = "Log out";
 "PROFILE_LABEL_LOADING" = "Loading...";
 
+//MARK: - App Module
 "APP_LABEL_TITLE" = "All apps";
 "APP_LABEL_EMPTYMESSAGE" = "No apps on current repo";
 
+//MARK: - Build Module
 "BUILD_LABEL_EMPTYMESSAGE" = "No app selected to show builds from";
 "BUILD_LABEL_TRIGGEREDAT" = "Triggered @";
 "BUILD_LABEL_NOTRIGGEREDDATE" = "No triggered date";
 "BUILD_LABEL_NODURATION" = "No duration";
 "BUILD_LABEL_NA" = "N/A";
 
+//MARK: - Log Module
 "LOG_BARBUTTON_ARTIFACTS" = "Artifacts";
 
+//MARK: - Artifact Module
 "ARTIFACT_LABEL_EMPTYMESSAGE" = "No Artifacts for this build";

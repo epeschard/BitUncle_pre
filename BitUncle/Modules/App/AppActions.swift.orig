@@ -1,0 +1,49 @@
+//
+//  AppActions.swift
+//  BitUncle
+//
+//  Created by Eugène Peschard on 08/02/2019.
+//  Copyright © 2019 pesch.app All rights reserved.
+//
+
+import UIKit
+
+protocol AppActions: ErrorActionable {
+    func getApps(completion: @escaping App.Completion)
+<<<<<<< HEAD
+    func presentProfile(from navigable: Navigable)
+    func showDetailBuilds()
+=======
+    func getProfile(completion: @escaping Profile.Completion)
+    func presentProfile(from viewController: UIViewController)
+    func presentBuilds()
+>>>>>>> develop
+}
+
+extension Actions: AppActions {
+    
+    func getApps(completion: @escaping App.Completion) {
+        let nextPage: String? = appData.nextPage
+        print("nextPage: \(nextPage)")
+        
+        dataProvider.networkManager.getApps(nextPage: nextPage, append: false, completion: completion)
+    }
+    
+<<<<<<< HEAD
+    func presentProfile(from navigable: Navigable) {
+        coordinator.presentProfile(from: navigable)
+    }
+    
+    func showDetailBuilds() {
+        coordinator.showBuildListView()
+=======
+    func presentProfile(from viewController: UIViewController) {
+        coordinator.presentProfile(from: viewController)
+    }
+    
+    func presentBuilds() {
+        coordinator.presentBuilds()
+>>>>>>> develop
+    }
+    
+}

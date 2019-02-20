@@ -9,17 +9,15 @@
 
 protocol AppActions: ErrorActionable {
     func getApps(completion: @escaping App.Completion)
+    func getProfile(completion: @escaping Profile.Completion)
     func presentProfile(from navigable: Navigable)
     func showDetailBuilds()
 }
 
 extension Actions: AppActions {
     
-    func getApps(completion: @escaping App.Completion) {
-        let nextPage: String? = appData.nextPage
-        print("nextPage: \(nextPage)")
-        
-        dataProvider.networkManager.getApps(nextPage: nextPage, append: false, completion: completion)
+    func getApps(completion: @escaping App.Completion) {        
+        dataProvider.networkManager.getApps(nextPage: appData.nextPage, append: false, completion: completion)
     }
     
     func presentProfile(from navigable: Navigable) {

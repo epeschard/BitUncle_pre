@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 extension App {
     
@@ -17,9 +18,8 @@ extension App {
         var collectionView: UICollectionView!
         var collectionViewLayout: UICollectionViewFlowLayout!
         var spinner: UIActivityIndicatorView!
-        
-        var profile: UIImage?
-        var profileIcon = #imageLiteral(resourceName: "profile.pdf")
+        var profileBarButton: UIBarButtonItem!
+        var profileView = UIImageView(image: #imageLiteral(resourceName: "profile.pdf"))
         
         // MARK: - Run Loop
         
@@ -38,6 +38,17 @@ extension App {
             setup()
             presenter.viewDidLoad()
         }
+        
+        override func viewWillAppear(_ animated: Bool) {
+            super.viewWillAppear(animated)
+            
+        }
+        
+        override var preferredStatusBarStyle: UIStatusBarStyle {
+            return .lightContent
+        }
+        
+        // MARK: - Internal
         
         private func setup() {
             assert(self.navigationController != nil)
@@ -85,6 +96,10 @@ extension App {
         
         func reload() {
             self.collectionView.reloadData()
+        }
+        
+        func updateProfile() {
+            //TODO: Pending implementation
         }
         
         func setLoading(visible: Bool) {

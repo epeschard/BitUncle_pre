@@ -6,6 +6,7 @@
 //  Copyright © 2019 pesch.app All rights reserved.
 //
 
+import UIKit
 
 protocol LogActions: ErrorActionable {
     func getLog(for appSlug: String, with buildSlug: String, completion: @escaping Log.Completion)

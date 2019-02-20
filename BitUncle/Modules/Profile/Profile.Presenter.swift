@@ -17,6 +17,9 @@ extension Profile {
         var parameters: Parameters
         var actions: Actions
         
+        var dataSource: DataSource!
+        var delegate: Delegate!
+        
         var profile: DataModel? {
             didSet {
                 viewable?.reload()
@@ -27,6 +30,11 @@ extension Profile {
             self.viewable = view
             self.actions = actions
             self.parameters = parameters
+            
+            delegate = Delegate()
+            dataSource = DataSource()
+            delegate.presenter = self
+            dataSource.presenter = self
         }
         
         func viewDidLoad() {
@@ -34,6 +42,7 @@ extension Profile {
         }
         
         func getProfile() {
+            viewable?.setLoading(visible: true)
             actions.getProfile {
                 [weak self] result in
                 switch result {
@@ -42,6 +51,7 @@ extension Profile {
                 case .failure(let error):
                     self?.actions.showAlert(error)
                 }
+                self?.viewable?.setLoading(visible: false)
             }
         }
         

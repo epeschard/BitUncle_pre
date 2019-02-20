@@ -81,6 +81,7 @@ extension NetworkManager {
                             dateDecodingStrategy: endpoint.dateDecodingStrategy,
                             keyDecodingStrategy: endpoint.keyDecodingStrategy)
                         let model = transformResponseToModel(response)
+                        
                         completion(.success(model))
                     } catch {
                         debugPrint(error)
