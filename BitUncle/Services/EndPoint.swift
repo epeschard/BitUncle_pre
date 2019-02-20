@@ -60,7 +60,12 @@ extension EndPoint: TargetType {
     }
     
     var sampleData: Data {
-        fatalError()
+        switch self {
+        case .getProfile:
+            return "{\"data\": {\"avatar_url\": \"www.google.com\",\"email\": \"eugene@peschard.me\",\"slug\": \"abcd12345\",\"unconfirmed_email\": \"e@peschard.me\",\"username\": \"epeschard\"}}".data(using: .utf8)!
+        default:
+            return "{\"data\": {\"avatar_url\" = \"<null>\";\"is_disabled\" = 0;\"is_public\" = 0;owner = {\"account_type\" = organization;name = stanwood;slug = 598674de431b389a;};\"project_type\" = ios;provider = github;\"repo_owner\" = stanwood;\"repo_slug\" = \"IPS_Swift\";\"repo_url\" = \"git@github.com:stanwood/IPS_Swift.git\";slug = 66c13e5d3a45b63c;status = 1;title = \"IPS_iOS\";}".data(using: .utf8)!
+        }
     }
     
     var task: Task {

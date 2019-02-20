@@ -29,3 +29,15 @@ extension Profile {
         }
     }
 }
+
+/*
+ {
+ "data": {
+ "avatar_url": "string",
+ "email": "string",
+ "slug": "string",
+ "unconfirmed_email": "string",
+ "username": "string"
+ }
+ }
+ */
