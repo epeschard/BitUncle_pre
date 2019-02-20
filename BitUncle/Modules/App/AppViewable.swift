@@ -10,7 +10,7 @@ import Foundation
 
 protocol AppViewable: AnyObject {
     func reload()
-    func presentProfile()
     func updateProfile()
     func setLoading(visible: Bool)
+    func showEmptyView(with message: String)
 }

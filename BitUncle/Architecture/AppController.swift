@@ -6,13 +6,12 @@
 //  Copyright © 2019 pesch.app All rights reserved.
 //
 
-import UIKit
 import Firebase
 
 class AppController: NSObject {
     
     let appData = AppData()
-    var window: UIWindow
+    let navigator: Navigator
     let dataProvider: DataProvider
     
     let coordinator: Coordinator
@@ -21,46 +20,40 @@ class AppController: NSObject {
     
     let networkService = NetworkService()
         
-    init(with window: UIWindow) {
-        self.window = window
+    init(with navigator: Navigator) {
+        self.navigator = navigator
 
         let networkManager = NetworkManager(internetRequest: networkService)
         dataProvider = DataProvider(appData: appData, networkManager: networkManager)
-        
         parameters = Parameters(appData: appData)
-        
-        coordinator = Coordinator(window: window)
-        
+        coordinator = Coordinator(with: navigator)
         actions = Actions(appData: appData, dataProvider: dataProvider, coordinator: coordinator)
         super.init()
         coordinator.actions = actions
         coordinator.parameters = parameters
     }
     
-    func start(with application: UIApplication) {
-        RemoteConfig.remoteConfig().setDefaults(fromPlist: "RemoteConfig")
-        
-        window.rootViewController?.removeFromParent()
-        window.rootViewController = nil
-        let splashScreen = Splash.makeViewController(with: parameters)
-        window.rootViewController = splashScreen
-        
-        self.networkService.request {
-            self.loadInitialData()
+    func start() {
+        let remoteConfig = RemoteConfig.remoteConfig()
+        remoteConfig.setDefaults(fromPlist: RemoteConf.plist)
+        Configuration.downloadRemoteConfigValues { (success) in
+            self.networkService.request {
+                debugPrint("downloadRemoteConfigValues: \(success)")
+            }
         }
+        checkForToken()
     }
     
-    private func loadInitialData() {
-        loadInitialData { [weak self] (success) in
-            if let _ = KeyChain.getToken() {
-                self?.coordinator.insertSplitViewController()
-            } else {
-                self?.coordinator.askForToken() {
-                    self?.loadInitialData()
-                }
+    private func checkForToken() {
+        if let _ = KeyChain.getToken() {
+            coordinator.start()
+        } else {
+            coordinator.askForToken() {
+                self.coordinator.start()
             }
         }
     }
+
 }
 
 // MARK:- AppDelegate Functions
@@ -107,7 +100,7 @@ extension AppController {
     
     func didBecomeActive(_ application: UIApplication) {
         print("Came back from background")
-        loadInitialData()
+//        loadInitialData()
     }
     
     func willEnterForeground(_ application: UIApplication) {

@@ -6,6 +6,9 @@
 //  Copyright © 2019 pesch.app All rights reserved.
 //
 
+typealias RemoteConf = Constants.RemoteConfig
+typealias RemoteConfigKey = Configuration.RemoteConfigKeys
+typealias Token = Constants.Token
 typealias ReachabilityBlock = () -> Void
 typealias SuccessCompletion = (_ success: Bool) -> Void
-typealias VoidBlock = () -> Void
+typealias Completion = () -> Void

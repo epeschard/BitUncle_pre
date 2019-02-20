@@ -7,18 +7,25 @@
 //
 
 import UIKit
+import SDWebImage
 
 extension App {
     
     @objc (AppViewController)
-    class ViewController: UIViewController, Viewable {
+    class ViewController: UIViewController, Viewable, Navigable, UISplitViewControllerDelegate, PopoverPresenter {
         
         var presenter: Presenter!
         var collectionView: UICollectionView!
         var collectionViewLayout: UICollectionViewFlowLayout!
+        var spinner: UIActivityIndicatorView!
+<<<<<<< HEAD
         
         var profile: UIImage?
         var profileIcon = #imageLiteral(resourceName: "profile.pdf")
+=======
+        var profileBarButton: UIBarButtonItem!
+        var profileView = UIImageView(image: #imageLiteral(resourceName: "profile.pdf"))
+>>>>>>> develop
         
         // MARK: - Run Loop
         
@@ -34,24 +41,39 @@ extension App {
         
         override func viewDidLoad() {
             super.viewDidLoad()
-            title = Localized.App.Label.title
             setup()
             presenter.viewDidLoad()
-            addProfileBarButton()
+<<<<<<< HEAD
+=======
         }
         
-        func reload() {
-            self.collectionView.reloadData()
+        override func viewWillAppear(_ animated: Bool) {
+            super.viewWillAppear(animated)
+            
+>>>>>>> develop
         }
+        
+        override var preferredStatusBarStyle: UIStatusBarStyle {
+            return .lightContent
+        }
+        
+        // MARK: - Internal
         
         private func setup() {
             assert(self.navigationController != nil)
-            
+            title = Localized.App.Label.title
             setupCollectionView()
+<<<<<<< HEAD
+            addProfileBarButton()
+            setupSpinner()
+=======
+            setupSpinner()
+            addProfileBarButton()
+>>>>>>> develop
         }
         
         private func setupCollectionView() {
-            let collectionViewLayout = ColumnFlowLayout()
+            collectionViewLayout = ColumnFlowLayout()
             collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
             view.addSubview(collectionView)
             collectionView.pinToSuperview()
@@ -61,17 +83,62 @@ extension App {
             collectionView.delegate = presenter.delegate
         }
         
+        private func setupSpinner() {
+            self.spinner = UIActivityIndicatorView(style: .whiteLarge)
+            self.spinner.color = UIColor.Bitrise.purple
+            self.spinner.hidesWhenStopped = true
+            self.spinner.translatesAutoresizingMaskIntoConstraints = false
+            collectionView.addSubview(spinner)
+            self.spinner?.centerXAnchor.constraint(equalTo: self.collectionView.centerXAnchor).isActive = true
+            self.spinner?.centerYAnchor.constraint(equalTo: self.collectionView.centerYAnchor).isActive = true
+        }
+        
         private func addProfileBarButton() {
-            let profileButton = UIBarButtonItem(image: #imageLiteral(resourceName: "profile.pdf"), style: .plain, target: self, action: #selector(presentProfile))
-            navigationItem.rightBarButtonItem = profileButton
+            profileBarButton = UIBarButtonItem(image: #imageLiteral(resourceName: "profile.pdf"), style: .plain, target: self, action: #selector(presentProfile))
+            navigationItem.rightBarButtonItem = profileBarButton
         }
         
-        @objc func presentProfile() {
-            presenter.showPopover(from: self)
+<<<<<<< HEAD
+        private func setupSpinner() {
+            spinner = UIActivityIndicatorView(style: .whiteLarge)
+            spinner.color = UIColor.Bitrise.purple
+            spinner.hidesWhenStopped = true
+            spinner.translatesAutoresizingMaskIntoConstraints = false
+            collectionView.addSubview(spinner)
+            spinner?.centerXAnchor.constraint(equalTo: collectionView.centerXAnchor).isActive = true
+            spinner?.centerYAnchor.constraint(equalTo: collectionView.centerYAnchor).isActive = true
         }
-<<<<<<< Updated upstream
         
-        //MARK: - UISplitViewControllerDelegate
+        @objc private func presentProfile() {
+            presenter.showProfile(from: self)
+        }
+        
+        private func isSetup() -> Bool {
+            return (collectionView != nil) && (spinner != nil)
+        }
+        
+        // MARK: - Viewable
+        
+        func reload() {
+            self.collectionView.reloadData()
+        }
+        
+        func setLoading(visible: Bool) {
+            if !isSetup() {
+                setup()
+            }
+            if visible {
+                spinner.startAnimating()
+            } else {
+                spinner.stopAnimating()
+            }
+        }
+        
+        func showEmptyView(with message: String) {
+            collectionView.showEmptyView(with: message)
+        }
+        
+        // MARK: - UISplitViewControllerDelegate
         
         func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController:UIViewController, onto primaryViewController:UIViewController) -> Bool {
             guard let detailAsNavController = secondaryViewController as? UINavigationController else { return false }
@@ -82,7 +149,53 @@ extension App {
             return false
         }
         
+        // MARK: - PopoverPresenter
+        
+        func present(_ navigable: Navigable, sender: Any?) {
+            guard let window = navigable as? UIViewController, let host = sender as? UIViewController, let rBarButtton = host.navigationItem.rightBarButtonItem else { return }
+            window.modalPresentationStyle = .popover
+            
+            if let popover = window.popoverPresentationController, let delegate = window as? UIPopoverPresentationControllerDelegate {
+                popover.barButtonItem = rBarButtton
+                popover.delegate = delegate
+                popover.permittedArrowDirections = .up
+                popover.presentedViewController.preferredContentSize = CGSize(width: 300, height: 170)
+            }
+            host.present(window, animated: true, completion: nil)
 =======
->>>>>>> Stashed changes
+        // MARK: - AppViewable
+        
+        func reload() {
+            self.collectionView.reloadData()
+        }
+        
+        @objc func presentProfile() {
+            presenter.showProfile(from: self)
+        }
+        
+        func updateProfile() {
+            //TODO: Update barButton with profile avatar
+            navigationItem.title = presenter.profile?.username ?? Localized.App.Label.title
+        }
+        
+        func setLoading(visible: Bool) {
+            if visible {
+                spinner.startAnimating()
+            } else {
+                spinner.stopAnimating()
+            }
+        }
+        
+        // MARK: - UISplitViewControllerDelegate
+        
+        func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController:UIViewController, onto primaryViewController:UIViewController) -> Bool {
+            guard let detailAsNavController = secondaryViewController as? UINavigationController else { return false }
+            guard let buildsViewController = detailAsNavController.topViewController as? Build.ViewController else { return false }
+            if buildsViewController.presenter.parameters.appSlug == "" {
+                return true
+            }
+            return false
+>>>>>>> develop
+        }
     }
 }

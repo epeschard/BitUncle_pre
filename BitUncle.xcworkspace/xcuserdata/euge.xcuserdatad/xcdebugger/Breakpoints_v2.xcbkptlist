@@ -9,14 +9,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BitUncle/Modules/Log/LogPresenter.swift"
-            timestampString = "571585907.914085"
+            filePath = "BitUncle/Modules/Profile/ProfileActions.swift"
+            timestampString = "572276671.959242"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "Presenter"
-            landmarkType = "3">
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "getProfile(completion:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -25,44 +25,59 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BitUncle/Utililties/Extensions/UINavigationController+Extension.swift"
-            timestampString = "571665828.123096"
+            filePath = "BitUncle/Services/NetworkManager.swift"
+            timestampString = "572276671.959401"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
-            landmarkName = "preferredStatusBarStyle"
-            landmarkType = "24">
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "request(endpoint:transformResponseToModel:completion:)"
+            landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "@objc (extension in BitUncle):__C.UINavigationController.preferredStatusBarStyle.getter : __C.UIStatusBarStyle"
+                  symbolName = "generic specialization &lt;BitUncle.Artifact.Response, Swift.Array&lt;BitUncle.Artifact.DataModel&gt;&gt; of closure #1 (Result.Result&lt;Moya.Response, Moya.MoyaError&gt;) -&gt; () in closure #1 () -&gt; () in BitUncle.NetworkManager.(request in _74A362E4665EB7B3A2D5D48B474637DA)&lt;A, B where A: Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable&gt;(endpoint: BitUncle.EndPoint, transformResponseToModel: (A) -&gt; B, completion: (BitUncle.Result&lt;B&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "BitUncle"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/euge/Library/Developer/Peschard/BitUncle/BitUncle/Utililties/Extensions/UINavigationController+Extension.swift"
-                  timestampString = "571842223.017946"
+                  urlString = "file:///Users/euge/Library/Developer/Peschard/BitUncle/BitUncle/Services/NetworkManager.swift"
+                  timestampString = "572280667.446249"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "18">
+                  startingLineNumber = "94"
+                  endingLineNumber = "94"
+                  offsetFromSymbolStart = "1601">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "(extension in BitUncle):__C.UINavigationController.preferredStatusBarStyle.getter : __C.UIStatusBarStyle"
+                  symbolName = "generic specialization &lt;BitUncle.Log.Response, Swift.Array&lt;BitUncle.Log.DataModel&gt;&gt; of closure #1 (Result.Result&lt;Moya.Response, Moya.MoyaError&gt;) -&gt; () in closure #1 () -&gt; () in BitUncle.NetworkManager.(request in _74A362E4665EB7B3A2D5D48B474637DA)&lt;A, B where A: Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable&gt;(endpoint: BitUncle.EndPoint, transformResponseToModel: (A) -&gt; B, completion: (BitUncle.Result&lt;B&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "BitUncle"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/euge/Library/Developer/Peschard/BitUncle/BitUncle/Utililties/Extensions/UINavigationController+Extension.swift"
-                  timestampString = "571842223.020461"
+                  urlString = "file:///Users/euge/Library/Developer/Peschard/BitUncle/BitUncle/Services/NetworkManager.swift"
+                  timestampString = "572280667.450362"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "4">
+                  startingLineNumber = "94"
+                  endingLineNumber = "94"
+                  offsetFromSymbolStart = "1646">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "generic specialization &lt;BitUncle.Profile.Response, BitUncle.Profile.DataModel&gt; of closure #1 (Result.Result&lt;Moya.Response, Moya.MoyaError&gt;) -&gt; () in closure #1 () -&gt; () in BitUncle.NetworkManager.(request in _74A362E4665EB7B3A2D5D48B474637DA)&lt;A, B where A: Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable&gt;(endpoint: BitUncle.EndPoint, transformResponseToModel: (A) -&gt; B, completion: (BitUncle.Result&lt;B&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "BitUncle"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/euge/Library/Developer/Peschard/BitUncle/BitUncle/Services/NetworkManager.swift"
+                  timestampString = "572280667.460324"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "94"
+                  endingLineNumber = "94"
+                  offsetFromSymbolStart = "1748">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -73,13 +88,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BitUncle/Modules/Artifact/Artifact.ViewController.swift"
-            timestampString = "571767588.9065681"
+            filePath = "BitUncle/Architecture/Actions.swift"
+            timestampString = "572313251.552791"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "adaptivePresentationStyle(for:)"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "showAlert(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -89,14 +104,46 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BitUncle/Modules/Build/Build.ViewController.swift"
-            timestampString = "571767588.906667"
+            filePath = "BitUncle/Modules/Build/Build.Presenter.swift"
+            timestampString = "572311399.0635771"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "adaptivePresentationStyle(for:)"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "fetchBuilds()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (BitUncle.Result&lt;Swift.Array&lt;BitUncle.Build.DataModel&gt;&gt;) -&gt; () in BitUncle.Build.Presenter.fetchBuilds() -&gt; ()"
+                  moduleName = "BitUncle"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/euge/Library/Developer/Peschard/BitUncle/BitUncle/Modules/Build/Build.Presenter.swift"
+                  timestampString = "572280667.505428"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "92">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (BitUncle.Result&lt;Swift.Array&lt;BitUncle.Build.DataModel&gt;&gt;) -&gt; () in BitUncle.Build.Presenter.fetchBuilds() -&gt; ()"
+                  moduleName = "BitUncle"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/euge/Library/Developer/Peschard/BitUncle/BitUncle/Modules/Build/Build.Presenter.swift"
+                  timestampString = "572280667.510141"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "133">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -105,13 +152,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BitUncle/Modules/App/App.ViewController.swift"
-            timestampString = "571842222.813606"
+            filePath = "BitUncle/Modules/Build/Build.DataSource.swift"
+            timestampString = "572311399.063843"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
-            landmarkName = "setLoading(visible:)"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

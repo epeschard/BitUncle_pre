@@ -11,7 +11,7 @@ import UIKit
 extension Artifact {
     
     @objc (ArtifactViewController)
-    class ViewController: UIViewController, Viewable, UIPopoverPresentationControllerDelegate {
+    class ViewController: UIViewController, Viewable, Navigable, UIPopoverPresentationControllerDelegate {
         
         var presenter: Presenter!
         var tableView: UITableView!
@@ -41,7 +41,8 @@ extension Artifact {
         
         // MARK: - Internal
         
-        private func setup() {            
+        private func setup() {
+            title = "Artifacts"
             setupTableView()
             setupSpinner()
         }
@@ -56,13 +57,13 @@ extension Artifact {
         }
         
         private func setupSpinner() {
-            self.spinner = UIActivityIndicatorView(style: .whiteLarge)
-            self.spinner.color = UIColor.Bitrise.purple
-            self.spinner.hidesWhenStopped = true
-            self.spinner.translatesAutoresizingMaskIntoConstraints = false
+            spinner = UIActivityIndicatorView(style: .whiteLarge)
+            spinner.color = UIColor.Bitrise.purple
+            spinner.hidesWhenStopped = true
+            spinner.translatesAutoresizingMaskIntoConstraints = false
             tableView.addSubview(spinner)
-            self.spinner?.centerXAnchor.constraint(equalTo: self.tableView.centerXAnchor).isActive = true
-            self.spinner?.centerYAnchor.constraint(equalTo: self.tableView.centerYAnchor).isActive = true
+            spinner?.centerXAnchor.constraint(equalTo: tableView.centerXAnchor).isActive = true
+            spinner?.centerYAnchor.constraint(equalTo: tableView.centerYAnchor).isActive = true
         }
         
         // MARK: - UIPopoverPresentationControllerDelegate
@@ -83,6 +84,10 @@ extension Artifact {
             } else {
                 spinner.stopAnimating()
             }
+        }
+        
+        func showEmptyView(with message: String) {
+            tableView.showEmptyView(with: message)
         }
         
     }

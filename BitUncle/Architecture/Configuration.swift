@@ -52,8 +52,8 @@ struct Configuration {
         let remoteConfigSettings = RemoteConfigSettings(developerModeEnabled: Constants.Environment == .debug)
         remoteConfig.configSettings = remoteConfigSettings
         remoteConfig.fetch { (status, error) in
-            if status == .success {
-                remoteConfig.activateFetched()
+            if let error = error {
+                debugPrint(error.localizedDescription)
             }
             onCompletion(status == .success)
         }

@@ -25,4 +25,22 @@ extension UITableView {
         }
         return cell
     }
+    
+    func showEmptyView(with message: String) {
+        self.separatorStyle = .none
+        let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
+        messageLabel.text = message
+        messageLabel.textColor = .black
+        messageLabel.numberOfLines = 0;
+        messageLabel.textAlignment = .center;
+        messageLabel.font = UIFont.systemFont(ofSize: 19.0, weight: .light)
+        messageLabel.sizeToFit()
+        
+        self.backgroundView = messageLabel;
+    }
+    
+    func removeEmptyView() {
+        self.separatorStyle = .singleLine
+        self.backgroundView = nil
+    }
 }

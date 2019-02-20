@@ -6,7 +6,6 @@
 //  Copyright © 2019 pesch.app All rights reserved.
 //
 
-import UIKit
 import StanwoodCore
 
 extension App {
@@ -33,6 +32,11 @@ extension App {
         }
         
         func viewDidLoad() {
+            delegate.presenter = self
+//            dataSource.presenter = self
+        }
+        
+        func fetchApps() {
             viewable?.setLoading(visible: true)
             actions.getApps {
                 [weak self] result in
@@ -47,31 +51,16 @@ extension App {
                 }
                 self?.viewable?.setLoading(visible: false)
             }
-            delegate.presenter = self
-//            dataSource.presenter = self
-            getProfile()
         }
         
         func didSelect(_ app: DataModel) {
             parameters.appSlug = app.slug
             parameters.appName = app.title
-            actions.presentBuilds()
-        }
-                
-        func showProfile(from viewController: UIViewController) {
-            actions.presentProfile(from: viewController)
+            actions.showDetailBuilds()
         }
         
-        func getProfile() {
-            actions.getProfile {
-                [weak self] result in
-                switch result {
-                case .success(let profile):
-                    self?.profile = profile
-                case .failure(let error):
-                    self?.actions.showAlert(error)
-                }
-            }
+        func showProfile(from navigable: Navigable) {
+            actions.presentProfile(from: navigable)
         }
         
     }

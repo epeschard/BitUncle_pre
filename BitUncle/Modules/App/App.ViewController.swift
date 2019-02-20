@@ -12,7 +12,7 @@ import SDWebImage
 extension App {
     
     @objc (AppViewController)
-    class ViewController: UIViewController, Viewable, UISplitViewControllerDelegate {
+    class ViewController: UIViewController, Viewable, Navigable, UISplitViewControllerDelegate, PopoverPresenter {
         
         var presenter: Presenter!
         var collectionView: UICollectionView!
@@ -35,7 +35,6 @@ extension App {
         
         override func viewDidLoad() {
             super.viewDidLoad()
-            title = Localized.App.Label.title
             setup()
             presenter.viewDidLoad()
         }
@@ -53,10 +52,10 @@ extension App {
         
         private func setup() {
             assert(self.navigationController != nil)
-            
+            title = Localized.App.Label.title
             setupCollectionView()
-            setupSpinner()
             addProfileBarButton()
+            setupSpinner()
         }
         
         private func setupCollectionView() {
@@ -70,42 +69,52 @@ extension App {
             collectionView.delegate = presenter.delegate
         }
         
-        private func setupSpinner() {
-            self.spinner = UIActivityIndicatorView(style: .whiteLarge)
-            self.spinner.color = UIColor.Bitrise.purple
-            self.spinner.hidesWhenStopped = true
-            self.spinner.translatesAutoresizingMaskIntoConstraints = false
-            collectionView.addSubview(spinner)
-            self.spinner?.centerXAnchor.constraint(equalTo: self.collectionView.centerXAnchor).isActive = true
-            self.spinner?.centerYAnchor.constraint(equalTo: self.collectionView.centerYAnchor).isActive = true
-        }
-        
         private func addProfileBarButton() {
-            profileBarButton = UIBarButtonItem(image: #imageLiteral(resourceName: "profile.pdf"), style: .plain, target: self, action: #selector(presentProfile))
-            navigationItem.rightBarButtonItem = profileBarButton
+            let profileButton = UIBarButtonItem(image: #imageLiteral(resourceName: "profile.pdf"), style: .plain, target: self, action: #selector(presentProfile))
+            navigationItem.rightBarButtonItem = profileButton
         }
         
-        // MARK: - AppViewable
+        private func setupSpinner() {
+            spinner = UIActivityIndicatorView(style: .whiteLarge)
+            spinner.color = UIColor.Bitrise.purple
+            spinner.hidesWhenStopped = true
+            spinner.translatesAutoresizingMaskIntoConstraints = false
+            collectionView.addSubview(spinner)
+            spinner?.centerXAnchor.constraint(equalTo: collectionView.centerXAnchor).isActive = true
+            spinner?.centerYAnchor.constraint(equalTo: collectionView.centerYAnchor).isActive = true
+        }
+        
+        @objc private func presentProfile() {
+            presenter.showProfile(from: self)
+        }
+        
+        private func isSetup() -> Bool {
+            return (collectionView != nil) && (spinner != nil)
+        }
+        
+        // MARK: - Viewable
         
         func reload() {
             self.collectionView.reloadData()
         }
         
-        @objc func presentProfile() {
-            presenter.showProfile(from: self)
-        }
-        
         func updateProfile() {
-            //TODO: Update barButton with profile avatar
-            navigationItem.title = presenter.profile?.username ?? Localized.App.Label.title
+            //TODO: Pending implementation
         }
         
         func setLoading(visible: Bool) {
+            if !isSetup() {
+                setup()
+            }
             if visible {
                 spinner.startAnimating()
             } else {
                 spinner.stopAnimating()
             }
+        }
+        
+        func showEmptyView(with message: String) {
+            collectionView.showEmptyView(with: message)
         }
         
         // MARK: - UISplitViewControllerDelegate
@@ -117,6 +126,21 @@ extension App {
                 return true
             }
             return false
+        }
+        
+        // MARK: - PopoverPresenter
+        
+        func present(_ navigable: Navigable, sender: Any?) {
+            guard let window = navigable as? UIViewController, let host = sender as? UIViewController, let rBarButtton = host.navigationItem.rightBarButtonItem else { return }
+            window.modalPresentationStyle = .popover
+            
+            if let popover = window.popoverPresentationController, let delegate = window as? UIPopoverPresentationControllerDelegate {
+                popover.barButtonItem = rBarButtton
+                popover.delegate = delegate
+                popover.permittedArrowDirections = .up
+                popover.presentedViewController.preferredContentSize = CGSize(width: 300, height: 170)
+            }
+            host.present(window, animated: true, completion: nil)
         }
     }
 }

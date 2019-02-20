@@ -10,7 +10,7 @@ import UIKit
 
 protocol LogActions: ErrorActionable {
     func getLog(for appSlug: String, with buildSlug: String, completion: @escaping Log.Completion)
-    func presentArtifacts(from viewController: UIViewController)
+    func presentArtifacts(from navigable: Navigable)
 }
 
 extension Actions: LogActions {
@@ -19,8 +19,8 @@ extension Actions: LogActions {
         dataProvider.networkManager.getLog(for: appSlug, with: buildSlug, completion: completion)
     }
     
-    func presentArtifacts(from viewController: UIViewController) {
-        coordinator.presentArtifacts(from: viewController)
+    func presentArtifacts(from navigable: Navigable) {
+        coordinator.presentArtifacts(from: navigable)
     }
     
 }

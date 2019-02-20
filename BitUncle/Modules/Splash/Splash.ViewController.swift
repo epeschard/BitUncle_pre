@@ -70,7 +70,7 @@ extension Splash {
                 ])
         }
         
-        func hide(onCompletion: @escaping VoidBlock) {
+        func hide(onCompletion: @escaping Completion) {
             UIView.animate(withDuration: 0.3, animations: {
                 self.logoImage.alpha = 0.0
             }) { (success) in

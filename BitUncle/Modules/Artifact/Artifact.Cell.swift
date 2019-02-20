@@ -27,11 +27,11 @@ extension Artifact {
             
             self.textLabel?.text = (type as? DataModel)?.title
             if title.contains("plist") {
-                self.imageView?.image = #imageLiteral(resourceName: "plist.pdf")
+                self.imageView?.image = #imageLiteral(resourceName: "plist.pdf").image(with: UIColor.Bitrise.purple)
             } else if title.contains("dSYM") {
-                self.imageView?.image = #imageLiteral(resourceName: "dSYM.pdf")
+                self.imageView?.image = #imageLiteral(resourceName: "dSYM.pdf").image(with: UIColor.Bitrise.purple)
             } else if title.contains("ipa") {
-                self.imageView?.image = #imageLiteral(resourceName: "IPA.pdf")
+                self.imageView?.image = #imageLiteral(resourceName: "IPA.pdf").image(with: UIColor.Bitrise.purple)
             }
         }
     }

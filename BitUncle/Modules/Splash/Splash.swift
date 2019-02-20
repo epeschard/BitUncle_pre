@@ -8,7 +8,7 @@
 
 enum Splash: Wireframeable {    
     
-    typealias Viewable = SplashView
+    typealias Viewable = SplashViewable
     typealias Actions = SplashActions
     typealias Parameters = SplashParameters
 
