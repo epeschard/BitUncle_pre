@@ -38,6 +38,16 @@
                ReferencedContainer = "container:BitUncle.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9C4AB44E22245AC2005FB1DF"
+               BuildableName = "BitUncleKitTests.xctest"
+               BlueprintName = "BitUncleKitTests"
+               ReferencedContainer = "container:BitUncle.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
