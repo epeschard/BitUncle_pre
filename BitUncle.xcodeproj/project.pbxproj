@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		67AC350B9145F46F1651CB84 /* Pods_BitUncleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD71B5F977EB659A7D4B7A72 /* Pods_BitUncleTests.framework */; };
-		9BE2CDDD520A94CD807EDD1F /* Pods_BitUncle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 923D21718396DEB669B9F0AA /* Pods_BitUncle.framework */; };
+		2F27249E397F0F5474C287E0 /* Pods_BitUncle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F79680BC9D1733625D35F51 /* Pods_BitUncle.framework */; };
+		71D63D440BCDBE3C2CB518C7 /* Pods_BitUncleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3825B41BB15C766AB24F9689 /* Pods_BitUncleTests.framework */; };
+		9115E883914263B5888E3FCF /* Pods_AcceptanceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 458F0B21659308E4EC178763 /* Pods_AcceptanceTests.framework */; };
 		9C0288FC220C544800AD82A7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C0288F7220C544800AD82A7 /* Localizable.strings */; };
 		9C0288FD220C544800AD82A7 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 9C0288F8220C544800AD82A7 /* Base.lproj */; };
 		9C0288FE220C544800AD82A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C0288F9220C544800AD82A7 /* Assets.xcassets */; };
@@ -116,7 +117,6 @@
 		9CC53D9F220B350F00267849 /* Wireframeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC53D9E220B350F00267849 /* Wireframeable.swift */; };
 		9CC53DA1220B3DE600267849 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC53DA0220B3DE600267849 /* UIView+Extension.swift */; };
 		9CC53DA3220B46A100267849 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC53DA2220B46A100267849 /* UIColor+Extension.swift */; };
-		C252744022FCD19C80C95424 /* Pods_BitUncle_AcceptanceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76828568CBCCA9ADA23CFD25 /* Pods_BitUncle_AcceptanceTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,12 +131,11 @@
 
 /* Begin PBXFileReference section */
 		18279204D9C4622F126259A7 /* Pods-BitUncleTests.stage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitUncleTests.stage.xcconfig"; path = "Pods/Target Support Files/Pods-BitUncleTests/Pods-BitUncleTests.stage.xcconfig"; sourceTree = "<group>"; };
-		1FC9F98567A292FB8DF8A0C0 /* Pods-BitUncle-AcceptanceTests.stage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitUncle-AcceptanceTests.stage.xcconfig"; path = "Pods/Target Support Files/Pods-BitUncle-AcceptanceTests/Pods-BitUncle-AcceptanceTests.stage.xcconfig"; sourceTree = "<group>"; };
+		2635C59A2322E725AB3025D6 /* Pods-AcceptanceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcceptanceTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AcceptanceTests/Pods-AcceptanceTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2D5F51CBF3FB2163E767CCB8 /* Pods-AcceptanceTests.stage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcceptanceTests.stage.xcconfig"; path = "Pods/Target Support Files/Pods-AcceptanceTests/Pods-AcceptanceTests.stage.xcconfig"; sourceTree = "<group>"; };
 		35C0CD17F2C95E0A087C4F05 /* Pods-BitUncle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitUncle.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitUncle/Pods-BitUncle.release.xcconfig"; sourceTree = "<group>"; };
-		73B3DE4DE9639A33EF2258A2 /* Pods-BitUncle-AcceptanceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitUncle-AcceptanceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitUncle-AcceptanceTests/Pods-BitUncle-AcceptanceTests.release.xcconfig"; sourceTree = "<group>"; };
-		76828568CBCCA9ADA23CFD25 /* Pods_BitUncle_AcceptanceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitUncle_AcceptanceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9178B221183EA1C85E9CD4ED /* Pods-BitUncle-AcceptanceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitUncle-AcceptanceTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitUncle-AcceptanceTests/Pods-BitUncle-AcceptanceTests.debug.xcconfig"; sourceTree = "<group>"; };
-		923D21718396DEB669B9F0AA /* Pods_BitUncle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitUncle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3825B41BB15C766AB24F9689 /* Pods_BitUncleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitUncleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		458F0B21659308E4EC178763 /* Pods_AcceptanceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AcceptanceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C0288F7220C544800AD82A7 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		9C0288F8220C544800AD82A7 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
 		9C0288F9220C544800AD82A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -255,9 +254,10 @@
 		9CC53D9E220B350F00267849 /* Wireframeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wireframeable.swift; sourceTree = "<group>"; };
 		9CC53DA0220B3DE600267849 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		9CC53DA2220B46A100267849 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		9F79680BC9D1733625D35F51 /* Pods_BitUncle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitUncle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A334922A936BD5D8A58D12F1 /* Pods-BitUncleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitUncleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitUncleTests/Pods-BitUncleTests.debug.xcconfig"; sourceTree = "<group>"; };
-		BD71B5F977EB659A7D4B7A72 /* Pods_BitUncleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitUncleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C45E168ADF85D538921B9E40 /* Pods-BitUncleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitUncleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitUncleTests/Pods-BitUncleTests.release.xcconfig"; sourceTree = "<group>"; };
+		D24B6B8DEA78EBCAD6A1156D /* Pods-AcceptanceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcceptanceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AcceptanceTests/Pods-AcceptanceTests.release.xcconfig"; sourceTree = "<group>"; };
 		E0E9919CF96B6AA9D102818A /* Pods-BitUncle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitUncle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitUncle/Pods-BitUncle.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -266,7 +266,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BE2CDDD520A94CD807EDD1F /* Pods_BitUncle.framework in Frameworks */,
+				2F27249E397F0F5474C287E0 /* Pods_BitUncle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,7 +274,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67AC350B9145F46F1651CB84 /* Pods_BitUncleTests.framework in Frameworks */,
+				71D63D440BCDBE3C2CB518C7 /* Pods_BitUncleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +282,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C252744022FCD19C80C95424 /* Pods_BitUncle_AcceptanceTests.framework in Frameworks */,
+				9115E883914263B5888E3FCF /* Pods_AcceptanceTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,9 +292,9 @@
 		1BA662DF9109DDD975D3F065 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				923D21718396DEB669B9F0AA /* Pods_BitUncle.framework */,
-				BD71B5F977EB659A7D4B7A72 /* Pods_BitUncleTests.framework */,
-				76828568CBCCA9ADA23CFD25 /* Pods_BitUncle_AcceptanceTests.framework */,
+				458F0B21659308E4EC178763 /* Pods_AcceptanceTests.framework */,
+				9F79680BC9D1733625D35F51 /* Pods_BitUncle.framework */,
+				3825B41BB15C766AB24F9689 /* Pods_BitUncleTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -307,9 +307,9 @@
 				A334922A936BD5D8A58D12F1 /* Pods-BitUncleTests.debug.xcconfig */,
 				C45E168ADF85D538921B9E40 /* Pods-BitUncleTests.release.xcconfig */,
 				18279204D9C4622F126259A7 /* Pods-BitUncleTests.stage.xcconfig */,
-				9178B221183EA1C85E9CD4ED /* Pods-BitUncle-AcceptanceTests.debug.xcconfig */,
-				73B3DE4DE9639A33EF2258A2 /* Pods-BitUncle-AcceptanceTests.release.xcconfig */,
-				1FC9F98567A292FB8DF8A0C0 /* Pods-BitUncle-AcceptanceTests.stage.xcconfig */,
+				2635C59A2322E725AB3025D6 /* Pods-AcceptanceTests.debug.xcconfig */,
+				D24B6B8DEA78EBCAD6A1156D /* Pods-AcceptanceTests.release.xcconfig */,
+				2D5F51CBF3FB2163E767CCB8 /* Pods-AcceptanceTests.stage.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -699,7 +699,7 @@
 				9CB3A44C221B06A30099ADE4 /* Frameworks */,
 				9CB3A44D221B06A30099ADE4 /* Resources */,
 				9CB3A44E221B06A30099ADE4 /* [OCSP] Generate Fitnesse Test System Scripts */,
-				F5C518A9FE7F179D03CB7688 /* [CP] Embed Pods Frameworks */,
+				AADEEB656B3BADACE23CCAF7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -802,7 +802,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BitUncle-AcceptanceTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-AcceptanceTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -839,6 +839,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AADEEB656B3BADACE23CCAF7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AcceptanceTests/Pods-AcceptanceTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/cslim/cslim.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/cslim.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AcceptanceTests/Pods-AcceptanceTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BD2AF1DEEAAA695B5B4C93ED /* [CP] Embed Pods Frameworks */ = {
@@ -893,44 +911,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F5C518A9FE7F179D03CB7688 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-BitUncle-AcceptanceTests/Pods-BitUncle-AcceptanceTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
-				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/StanwoodCore/StanwoodCore.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftRichString/SwiftRichString.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-				"${BUILT_PRODUCTS_DIR}/cslim/cslim.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StanwoodCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftRichString.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/cslim.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitUncle-AcceptanceTests/Pods-BitUncle-AcceptanceTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1364,7 +1344,7 @@
 		};
 		9CB3A45E221B06A30099ADE4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9178B221183EA1C85E9CD4ED /* Pods-BitUncle-AcceptanceTests.debug.xcconfig */;
+			baseConfigurationReference = 2635C59A2322E725AB3025D6 /* Pods-AcceptanceTests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -1385,7 +1365,7 @@
 		};
 		9CB3A45F221B06A30099ADE4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 73B3DE4DE9639A33EF2258A2 /* Pods-BitUncle-AcceptanceTests.release.xcconfig */;
+			baseConfigurationReference = D24B6B8DEA78EBCAD6A1156D /* Pods-AcceptanceTests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -1406,7 +1386,7 @@
 		};
 		9CB3A460221B06A30099ADE4 /* Stage */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1FC9F98567A292FB8DF8A0C0 /* Pods-BitUncle-AcceptanceTests.stage.xcconfig */;
+			baseConfigurationReference = 2D5F51CBF3FB2163E767CCB8 /* Pods-AcceptanceTests.stage.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;

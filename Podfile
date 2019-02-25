@@ -15,6 +15,7 @@ target 'BitUncle' do
     end
     
     target 'AcceptanceTests' do
+        platform :osx, 10.14
         pod 'OCSlimProject'
     end
 end
