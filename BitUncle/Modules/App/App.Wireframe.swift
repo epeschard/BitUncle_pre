@@ -7,7 +7,7 @@
 //
 
 
-enum App: Wireframeable {
+extension App: Wireframe {
     
     typealias Viewable = AppViewable
     typealias Actions = AppActions

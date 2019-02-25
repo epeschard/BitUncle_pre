@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol Wireframeable {
+protocol Wireframe {
     associatedtype Viewable
     associatedtype Actions
     associatedtype Parameters
@@ -16,7 +16,7 @@ protocol Wireframeable {
 //    static func makeViewController(with actions: Actions, and parameters: Parameters) -> ViewController
 }
 
-//extension Wireframeable {
+//extension Wireframe {
 //    static func makeViewController(with actions: Actions, and parameters: Parameters) -> ViewController {
 //        let controller = ViewController(with: actions, and: parameters)
 //        return controller

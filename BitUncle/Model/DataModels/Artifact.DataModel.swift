@@ -8,7 +8,7 @@
 
 import StanwoodCore
 
-extension Artifact {
+enum Artifact {
     
     struct DataModel: Typeable, Codable {
         

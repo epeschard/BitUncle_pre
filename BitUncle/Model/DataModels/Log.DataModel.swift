@@ -8,7 +8,7 @@
 
 import StanwoodCore
 
-extension Log {
+enum Log {
     
     struct DataModel: Typeable, Codable {
         

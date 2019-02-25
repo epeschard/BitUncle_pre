@@ -6,7 +6,7 @@
 //  Copyright © 2019 pesch.app All rights reserved.
 //
 
-enum Splash: Wireframeable {    
+enum Splash: Wireframe {    
     
     typealias Viewable = SplashViewable
     typealias Actions = SplashActions

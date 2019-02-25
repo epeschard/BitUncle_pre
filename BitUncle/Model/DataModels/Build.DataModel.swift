@@ -8,7 +8,7 @@
 
 import StanwoodCore
 
-extension Build {
+enum Build {
     
     struct DataModel: Typeable, Codable {
         var abortReason: String?

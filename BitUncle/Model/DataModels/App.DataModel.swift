@@ -8,7 +8,7 @@
 
 import StanwoodCore
 
-extension App {
+enum App {
     
     struct DataModel: Typeable, Codable {
         

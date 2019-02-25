@@ -8,7 +8,7 @@
 
 import StanwoodCore
 
-extension Profile {
+enum Profile {
     
     struct DataModel: Typeable, Codable {
         
